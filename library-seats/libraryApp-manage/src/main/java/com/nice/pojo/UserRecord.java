@@ -14,7 +14,7 @@ public class UserRecord {
 
     private Integer userId;
 
-    private Integer signinId;
+    private Integer signInId;
 
     private String illegalText;
 
@@ -36,12 +36,12 @@ public class UserRecord {
         this.userId = userId;
     }
 
-    public Integer getSigninId() {
-        return signinId;
+    public Integer getSignInId() {
+        return signInId;
     }
 
-    public void setSigninId(Integer signinId) {
-        this.signinId = signinId;
+    public void setSignInId(Integer signInId) {
+        this.signInId = signInId;
     }
 
     public String getIllegalText() {
