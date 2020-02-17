@@ -4,4 +4,7 @@
     <select id="findUserRecordByUserId" resultType="com.nice.pojo.UserRecord" parameterType="com.nice.pojo.UserRecord">
         select * from user_record where user_id=#{userId}
     </select>
+    <insert id="insertUserRecord" parameterType="com.nice.pojo.UserRecord" >
+        insert into user_record  (user_id,signIn_id,illegal_text,illegal_time) value (#{userId},#{signInId},#{illegalText},#{illegalTime})
+    </insert>
 </mapper>
