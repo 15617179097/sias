@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nice.mapper.SignInMapper" >
+
+  <insert id="insertSignIn" parameterType="com.nice.pojo.SignIn">
+    insert into sign_in (subscribe_id,signIn_time,state) value (#{subscribeId},#{signInTime},0)
+  </insert>
+  <update id="updateSignIn">
+    update sign_in set state=#{state} where subscribe_id=#{subscribeId}
+  </update>
+</mapper>

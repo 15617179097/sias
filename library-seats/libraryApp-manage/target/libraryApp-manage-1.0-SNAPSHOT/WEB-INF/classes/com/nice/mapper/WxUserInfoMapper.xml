@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nice.mapper.WxUserInfoMapper" >
+    <select id="findWxUserInfoByOpenId" resultType="com.nice.pojo.WxUserInfo">
+    select * from wx_user_info where openId=#{openid}
+    </select>
+  <insert id="insertUserInfo" parameterType="com.nice.pojo.WxUserInfo" useGeneratedKeys="true" keyProperty="id">
+       insert into wx_user_info(openId,nickName,avatarUrl,gender,city,province,country,language,unionId,timestamp)
+      values(#{openId},#{nickName},#{avatarUrl},#{gender},#{city},#{province},#{country},#{language},
+      #{unionId},#{watermark.timestamp})
+  </insert>
+    <update id="updataUserInfo" parameterType="com.nice.pojo.WxUserInfo">
+        update wx_user_info set
+        openId=#{openId},
+        nickName=#{nickName},
+        avatarUrl=#{avatarUrl},
+        gender=#{gender},
+        city=#{city},
+        province=#{province},
+        country=#{country},
+        language=#{language},
+        unionId=#{unionId},
+        timestamp=#{watermark.timestamp}
+        where id=#{id}
+    </update>
+</mapper>

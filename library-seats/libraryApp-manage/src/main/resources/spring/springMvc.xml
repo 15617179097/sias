@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+	http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+    http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd">
+    <!--扫描controller 进行sping管理-->
+    <context:component-scan base-package="com.com.nice.controller"></context:component-scan>
+    <!--注解驱动 解析注解-->
+    <mvc:annotation-driven/>
+    <!--配置视图解析器-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+    <!--拦截器配置-->
+<!--    <mvc:interceptors>-->
+<!--        <mvc:interceptor>-->
+<!--            <mvc:mapping path="/**"/>-->
+<!--            &lt;!&ndash; mvc:exclude-mapping是另外一种拦截，它可以在你后来的测试中对某个页面进行不拦截，这样就不用在-->
+<!--				LoginInterceptor的preHandler方法里面获取不拦截的请求uri地址了(优选)-->
+<!--            <mvc:exclude-mapping path="/system/login" />&ndash;&gt;-->
+<!--            <bean class="com.com.nice.interceptor.LoginInterceptor"></bean>-->
+<!--        </mvc:interceptor>-->
+<!--    </mvc:interceptors>-->
+    <!--文件上传解析器-->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="defaultEncoding" value="UTF-8"/>
+        <!--5M 1024*1024*5 最大上传5M-->
+        <property name="maxUploadSize" value="5242880"/>
+    </bean>
+    <!-- 执行线程池配置 可以指定执行线程池的初始大小 -->
+    <task:executor id="executor" pool-size="5"></task:executor>
+    <!-- 配置定时任务的线程池,调度线程池配置  调度线程池的大小-->
+    <task:scheduler id="scheduler" pool-size="10"></task:scheduler>
+    <!-- 启用注解驱动的定时任务,定时任务配置 scheduler 方式 注解 -->
+    <task:annotation-driven executor="executor" scheduler="scheduler" ></task:annotation-driven>
+    <context:component-scan base-package="com.com.nice.service.common"></context:component-scan>
+</beans>
