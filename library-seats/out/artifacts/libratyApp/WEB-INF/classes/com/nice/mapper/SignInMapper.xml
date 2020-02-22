@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nice.mapper.SignInMapper" >
+
+  <select id="findSignIn" resultType="com.nice.pojo.SignIn">
+   		select
+		subscribe_id subscribeId,
+		signIn_time		signInTime,
+		range_time rangeTime,
+		cancel_time	cancelTime,
+		leaving_time		leavingTime,
+		end_time		endTime,
+        state
+        from sign_in
+        where signIn_time
+        BETWEEN  #{tomorrowCreateTime} and #{tomorrowEndTime}
+        and state=0
+        </select>
+  <insert id="insertSignIn" parameterType="com.nice.pojo.SignIn">
+    insert into sign_in (subscribe_id,signIn_time,state) value (#{subscribeId},#{signInTime},0)
+  </insert>
+  <update id="updateSignIn">
+    update sign_in set state=#{state} where subscribe_id=#{subscribeId}
+  </update>
+</mapper>

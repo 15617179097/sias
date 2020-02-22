@@ -6,7 +6,151 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a09462e4-e80a-4d62-9931-3aabac5d6e5a" name="Default Changelist" comment="" />
+    <list default="true" id="a09462e4-e80a-4d62-9931-3aabac5d6e5a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/libraryApp_manage_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/libraryApp_war.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/src/main/java/com/nice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryApp-manage/src/main/java/com/nice/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/src/main/java/com/nice/controller/WxLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryApp-manage/src/main/java/com/nice/controller/WxLoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/src/main/java/com/nice/interceptor/LoginInterceptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/src/main/resources/spring/applicationContext-dao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libraryApp-manage/src/main/resources/spring/applicationContext-dao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/src/main/resources/spring/springMvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libraryApp-manage/src/main/resources/spring/springMvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libraryApp-manage/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/controller/WxLoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/controller/WxLoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/interceptor/LoginInterceptor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/pojo/UserRecord.class" beforeDir="false" afterPath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/pojo/UserRecord.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/spring/applicationContext-dao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libraryApp-manage/target/classes/spring/applicationContext-dao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/spring/springMvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libraryApp-manage/target/classes/spring/springMvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/META-INF/libraryApp-manage.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/common/RedisClinet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/common/Scan.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/common/impl/RedisClusterClinet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/controller/ClassRoomController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/controller/SeatsController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/controller/SignInController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/controller/SubscribeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/controller/SuspentController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/controller/UserRecordController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/controller/WxLoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/interceptor/LoginInterceptor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/mapper/ClassRoomMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/mapper/ClassRoomMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/mapper/SeatsMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/mapper/SeatsMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/mapper/SignInMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/mapper/SignInMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/mapper/SubscribeMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/mapper/SubscribeMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/mapper/SuspendMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/mapper/SuspendMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/mapper/UserInfoMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/mapper/UserInfoMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/mapper/UserRecordMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/mapper/UserRecordMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/mapper/WxUserInfoMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/mapper/WxUserInfoMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/pojo/Classroom.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/pojo/Seats.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/pojo/SignIn.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/pojo/Subscribe.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/pojo/Suspend.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/pojo/UserFeedback.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/pojo/UserInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/pojo/UserRecord.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/pojo/Watermark.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/pojo/WxUserInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/service/CheckLoginService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/service/ClassRoomService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/service/RedisService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/service/SeatsService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/service/SignInService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/service/SubscribeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/service/SuspendService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/service/UserRecordService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/service/WxUserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/service/common/TimerManage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/service/common/WebSocket.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/service/common/WebSocketConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/service/impl/CheckLoginServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/service/impl/ClassRoomServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/service/impl/RedisServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/service/impl/SeatsServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/service/impl/SignInServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/service/impl/SubscribeServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/service/impl/SuspendServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/service/impl/UserRecordServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/service/impl/UserServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/service/impl/WxUserSerivceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/utils/DataResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/utils/DateUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/utils/HttpClientUtil$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/utils/HttpClientUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/utils/JsonUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/utils/ParameterUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/utils/QRBarCodeUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/utils/ResultCode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/utils/SginInState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/utils/WxCheckPojo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/utils/WxUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/db.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/mybatis/mybatis.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/rediss.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/resource/redis.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/spring/applicationContext-dao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/spring/applicationContext-redis.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/spring/applicationContext-trancation.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/classes/spring/springMvc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/lib/aspectjweaver-1.8.9.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/lib/bcprov-jdk15on-1.60.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/lib/commons-codec-1.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/lib/commons-fileupload-1.3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/lib/commons-io-1.3.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/lib/commons-lang3-3.3.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/lib/commons-logging-1.1.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/lib/commons-net-3.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/lib/commons-pool2-2.4.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/lib/core-3.3.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/lib/druid-1.1.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/lib/httpclient-4.3.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/lib/httpcore-4.3.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/lib/jackson-annotations-2.4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/lib/jackson-core-2.4.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/lib/jackson-databind-2.4.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/lib/jai-imageio-core-1.4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/lib/javase-3.3.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/lib/jcommander-1.72.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/lib/jedis-2.9.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/lib/joda-time-2.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/lib/jsqlparser-0.9.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/lib/log4j-1.2.17.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/lib/mybatis-3.4.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/lib/mybatis-paginator-1.2.15.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/lib/mybatis-spring-1.3.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/lib/mysql-connector-java-5.1.32.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/lib/pagehelper-3.7.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/lib/slf4j-api-1.7.22.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/lib/slf4j-log4j12-1.7.22.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/lib/spring-aop-4.3.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/lib/spring-aspects-4.3.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/lib/spring-beans-4.3.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/lib/spring-context-4.3.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/lib/spring-core-4.3.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/lib/spring-expression-4.3.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/lib/spring-jdbc-4.3.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/lib/spring-tx-4.3.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/lib/spring-web-4.3.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/lib/spring-webmvc-4.3.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/yuyue.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/src/main/resources/spring/springMvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libraryWeb-manage/src/main/resources/spring/springMvc.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,6 +178,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -63,10 +210,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="F:/sias/sias/library-seats" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -76,7 +224,7 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="vcs.Subversion" />
+    <property name="settings.editor.selected.configurable" value="preferences.general" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -164,7 +312,8 @@
       </method>
     </configuration>
     <configuration name="Tomcat 8.5.35" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.35" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/index" />
+      <option name="OPEN_IN_BROWSER" value="false" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8081" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="libraryApp-manage:war exploded">
@@ -175,6 +324,7 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Unnamed_library-seats" />
+        <option name="HTTP_PORT" value="8081" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -393,12 +543,17 @@
     <option name="viewStates">
       <list>
         <serviceView>
-          <option name="contentProportion" value="0.20788254" />
+          <option name="contentProportion" value="0.013921114" />
           <treeState>
             <expand>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -450,6 +605,10 @@
       <workItem from="1581939793895" duration="2460000" />
       <workItem from="1581943739382" duration="3441000" />
       <workItem from="1581947482768" duration="143000" />
+      <workItem from="1582344945502" duration="5442000" />
+      <workItem from="1582365205634" duration="1905000" />
+      <workItem from="1582367338549" duration="7959000" />
+      <workItem from="1582379220490" duration="2959000" />
     </task>
     <servers />
   </component>
@@ -465,18 +624,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="22" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1581147295000" />
-    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581946157112">
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582382144478">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1581946157112" />
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1582382144478" />
     <state x="401" y="167" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580297623612">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="401" y="167" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1580297623612" />
-    <state x="488" y="48" key="#com.intellij.ide.util.MemberChooser" timestamp="1581076204579">
+    <state x="488" y="48" key="#com.intellij.ide.util.MemberChooser" timestamp="1582365554089">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="48" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1581076204579" />
+    <state x="488" y="48" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1582365554089" />
     <state x="303" y="42" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1581941164612">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -505,10 +664,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="231" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1580460477297" />
-    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581147206607">
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582376833570">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1581147206607" />
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1582376833570" />
     <state width="587" height="442" key="DebuggerActiveHint" timestamp="1581944381697">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -517,70 +676,70 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1581946425155" />
-    <state width="1024" height="179" key="GridCell.Tab.0.bottom" timestamp="1581947449586">
+    <state width="1275" height="226" key="GridCell.Tab.0.bottom" timestamp="1582382147150">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1024" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1581947449586" />
-    <state width="1024" height="179" key="GridCell.Tab.0.center" timestamp="1581947449586">
+    <state width="1275" height="226" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582382147150" />
+    <state width="1275" height="226" key="GridCell.Tab.0.center" timestamp="1582382147149">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1024" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1581947449586" />
-    <state width="1024" height="179" key="GridCell.Tab.0.left" timestamp="1581947449586">
+    <state width="1275" height="226" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582382147149" />
+    <state width="1275" height="226" key="GridCell.Tab.0.left" timestamp="1582382147149">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1024" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1581947449586" />
-    <state width="1024" height="179" key="GridCell.Tab.0.right" timestamp="1581947449586">
+    <state width="1275" height="226" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582382147149" />
+    <state width="1275" height="226" key="GridCell.Tab.0.right" timestamp="1582382147150">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1024" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1581947449586" />
-    <state width="1024" height="179" key="GridCell.Tab.1.bottom" timestamp="1581947449587">
+    <state width="1275" height="226" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582382147150" />
+    <state width="1275" height="226" key="GridCell.Tab.1.bottom" timestamp="1582382147151">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1024" height="179" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1581947449587" />
-    <state width="1024" height="179" key="GridCell.Tab.1.center" timestamp="1581947449587">
+    <state width="1275" height="226" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582382147151" />
+    <state width="1275" height="226" key="GridCell.Tab.1.center" timestamp="1582382147150">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1024" height="179" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1581947449587" />
-    <state width="1024" height="179" key="GridCell.Tab.1.left" timestamp="1581947449587">
+    <state width="1275" height="226" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1582382147150" />
+    <state width="1275" height="226" key="GridCell.Tab.1.left" timestamp="1582382147150">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1024" height="179" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1581947449586" />
-    <state width="1024" height="179" key="GridCell.Tab.1.right" timestamp="1581947449587">
+    <state width="1275" height="226" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1582382147150" />
+    <state width="1275" height="226" key="GridCell.Tab.1.right" timestamp="1582382147151">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1024" height="179" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1581947449587" />
-    <state width="1024" height="179" key="GridCell.Tab.2.bottom" timestamp="1581947449587">
+    <state width="1275" height="226" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1582382147151" />
+    <state width="1275" height="226" key="GridCell.Tab.2.bottom" timestamp="1582382146780">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1024" height="179" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1581947449587" />
-    <state width="1024" height="179" key="GridCell.Tab.2.center" timestamp="1581947449587">
+    <state width="1275" height="226" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582382146780" />
+    <state width="1275" height="226" key="GridCell.Tab.2.center" timestamp="1582382146780">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1024" height="179" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1581947449587" />
-    <state width="1024" height="179" key="GridCell.Tab.2.left" timestamp="1581947449587">
+    <state width="1275" height="226" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1582382146780" />
+    <state width="1275" height="226" key="GridCell.Tab.2.left" timestamp="1582382146779">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1024" height="179" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1581947449587" />
-    <state width="1024" height="179" key="GridCell.Tab.2.right" timestamp="1581947449587">
+    <state width="1275" height="226" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1582382146779" />
+    <state width="1275" height="226" key="GridCell.Tab.2.right" timestamp="1582382146780">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1024" height="179" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1581947449587" />
-    <state width="1024" height="179" key="GridCell.Tab.3.bottom" timestamp="1581947449587">
+    <state width="1275" height="226" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1582382146780" />
+    <state width="1275" height="226" key="GridCell.Tab.3.bottom" timestamp="1582382146780">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1024" height="179" key="GridCell.Tab.3.bottom/0.0.1366.728@0.0.1366.728" timestamp="1581947449587" />
-    <state width="1024" height="179" key="GridCell.Tab.3.center" timestamp="1581947449587">
+    <state width="1275" height="226" key="GridCell.Tab.3.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582382146780" />
+    <state width="1275" height="226" key="GridCell.Tab.3.center" timestamp="1582382146780">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1024" height="179" key="GridCell.Tab.3.center/0.0.1366.728@0.0.1366.728" timestamp="1581947449587" />
-    <state width="1024" height="179" key="GridCell.Tab.3.left" timestamp="1581947449587">
+    <state width="1275" height="226" key="GridCell.Tab.3.center/0.0.1366.728@0.0.1366.728" timestamp="1582382146780" />
+    <state width="1275" height="226" key="GridCell.Tab.3.left" timestamp="1582382146780">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1024" height="179" key="GridCell.Tab.3.left/0.0.1366.728@0.0.1366.728" timestamp="1581947449587" />
-    <state width="1024" height="179" key="GridCell.Tab.3.right" timestamp="1581947449587">
+    <state width="1275" height="226" key="GridCell.Tab.3.left/0.0.1366.728@0.0.1366.728" timestamp="1582382146780" />
+    <state width="1275" height="226" key="GridCell.Tab.3.right" timestamp="1582382146780">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1024" height="179" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1581947449587" />
+    <state width="1275" height="226" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1582382146780" />
     <state width="1275" height="331" key="GridCell.Tab.6.bottom" timestamp="1580015969512">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -597,18 +756,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1275" height="331" key="GridCell.Tab.6.right/0.0.1366.728@0.0.1366.728" timestamp="1580015969512" />
-    <state x="184" y="0" key="SettingsEditor" timestamp="1581941719121">
+    <state x="184" y="0" key="SettingsEditor" timestamp="1582381992570">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1581941719121" />
+    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1582381992570" />
     <state width="691" height="372" key="XDebugger.FullValuePopup" timestamp="1580631026415">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="691" height="372" key="XDebugger.FullValuePopup/0.0.1366.728@0.0.1366.728" timestamp="1580631026415" />
-    <state x="363" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1581947483738">
+    <state x="363" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1582379235532">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="363" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1581947483738" />
+    <state x="363" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582379235532" />
     <state x="331" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1580560032410">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

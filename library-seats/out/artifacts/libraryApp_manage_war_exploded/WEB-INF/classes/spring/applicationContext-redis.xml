@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+    <!--加载数据连接属性文件-->
+    <context:property-placeholder location="classpath:resource/redis.properties"></context:property-placeholder>
+    <!-- redis连接池配置 -->
+    <bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
+       <!-- 最大连接数 -->
+      <!--  <property name="maxTotal" value="${redis.maxActive}"/>-->
+        <!-- 最大空闲连接数 -->
+        <!--<property name="maxIdle" value="${redis.maxIdle}"/>-->
+        <!-- 获取连接时的最大等待毫秒数,小于零:阻塞不确定的时间,默认-1 -->
+        <!-- <property name="maxWaitMillis" value="${redis.maxWaitMillis}"/>-->
+         <!-- 在获取连接的时候检查有效性, 默认false -->
+        <!--  <property name="testOnBorrow" value="${redis.testOnBorrow}" />-->
+          <!-- 在空闲时检查有效性, 默认false -->
+        <!-- <property name="testWhileIdle" value="${redis.testWhileIdle}" />-->
+    </bean>
+    <bean id="jedisPools" class="redis.clients.jedis.JedisPool">
+        <constructor-arg name="poolConfig" ref="jedisPoolConfig"></constructor-arg>
+        <constructor-arg name="host" value="47.94.104.224"></constructor-arg>
+        <constructor-arg name="port" value="6379"></constructor-arg>
+        <constructor-arg name="timeout" value="300"></constructor-arg>
+        <constructor-arg name="password" value="root"></constructor-arg>
+    </bean>
+    <bean id="jedisPool" class="com.nice.common.impl.RedisClusterClinet">
+    </bean>
+
+    <!--  <bean id="redisCluster" class="redis.clients.jedis.JedisCluster">
+      <constructor-arg name="jedisClusterNode">
+          <set>
+
+              <bean class="redis.clients.jedis.HostAndPort">
+                  <constructor-arg name="host" value="172.24.53.57"/>
+                  <constructor-arg name="port" value="7001"/>
+              </bean>
+              <bean class="redis.clients.jedis.HostAndPort">
+                  <constructor-arg name="host" value="172.24.53.57"/>
+                  <constructor-arg name="port" value="7002"/>
+              </bean>
+              <bean class="redis.clients.jedis.HostAndPort">
+                  <constructor-arg name="host" value="172.24.53.57"/>
+                  <constructor-arg name="port" value="7003"/>
+              </bean>
+              <bean class="redis.clients.jedis.HostAndPort">
+                  <constructor-arg name="host" value="172.24.53.57"/>
+                  <constructor-arg name="port" value="7004"/>
+              </bean>
+              <bean class="redis.clients.jedis.HostAndPort">
+                  <constructor-arg name="host" value="172.24.53.57"/>
+                  <constructor-arg name="port" value="7005"/>
+              </bean>
+              <bean class="redis.clients.jedis.HostAndPort">
+                  <constructor-arg name="host" value="172.24.53.57"/>
+                  <constructor-arg name="port" value="7006"/>
+              </bean>
+          </set>
+      </constructor-arg>
+      <constructor-arg name="poolConfig" ref="jedisPoolConfig"></constructor-arg>
+      <constructor-arg name="connectionTimeout" value="300"/>
+      <constructor-arg name="soTimeout" value="300"/>
+      <constructor-arg name="maxAttempts" value="10"/>
+      <constructor-arg name="password" value="root"/>
+  </bean>-->
+  <bean id="jedisCluster" class="com.nice.common.impl.RedisClusterClinet">
+  </bean>
+
+</beans>
