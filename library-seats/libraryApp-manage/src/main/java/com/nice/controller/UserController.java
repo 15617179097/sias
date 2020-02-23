@@ -27,7 +27,7 @@ public class UserController {
     @Autowired
     private RedisService redisService;
 
-    @RequestMapping(value = "/index",method = RequestMethod.POST)
+    @RequestMapping(value = "/index",method = RequestMethod.GET)
     public DataResult index(){
         return  DataResult.ok();
     }
