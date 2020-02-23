@@ -23,9 +23,10 @@
     </bean>
     <!--加载扫描mapper 加载mapper动态代理-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.com.nice.mapper"/>
+        <property name="basePackage" value="com.nice.mapper"/>
     </bean>
     <!--扫描service包 进行sping管理-->
     <context:component-scan base-package="com.nice.service"/>
     <context:component-scan base-package="com.nice.common"/>
+    <context:component-scan base-package="com.nice.interceptor"/>
 </beans>
