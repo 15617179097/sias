@@ -21,4 +21,8 @@
     UPDATE userinfo set credit_score=credit_score-1 WHERE credit_score>0
   </update>
 
+  <select id="findAllUsers"  resultType="java.util.Map">
+    select id,name,nickName,phone,studentId,credit_score creditScore,state from userInfo
+  </select>
+
 </mapper>

@@ -23,6 +23,7 @@ public class UserRecordServiceImpl implements UserRecordService {
     private UserRecordMapper userRecordMapper;
     @Autowired
     private WxUserService wxUserService;
+
     @Override
     public DataResult findUserRecordByUserId(String loginStateUUID) {
 

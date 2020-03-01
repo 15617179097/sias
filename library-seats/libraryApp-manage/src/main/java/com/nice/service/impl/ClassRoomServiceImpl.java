@@ -23,12 +23,14 @@ public class ClassRoomServiceImpl implements ClassRoomService {
     @Autowired
     private ClassRoomMapper classRoomMapper;
 
+    /* 查询明天的教室 信息  */
     @Override
     public List<Map<String,Object>> findTomorrowClassRoom() {
 
         return classRoomMapper.findAllClassRoom(null, DateUtil.TomorrowCreateTime(), DateUtil.TomorrowEndTime());
     }
 
+    /*查询今天的教室 信息 */
     @Override
     public List<Map<String, Object>> findTodayClassRoom() {
         return classRoomMapper.findAllClassRoom(null, DateUtil.nowCreateTime(), DateUtil.nowEndTime());

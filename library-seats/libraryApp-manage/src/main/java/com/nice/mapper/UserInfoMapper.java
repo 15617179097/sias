@@ -5,6 +5,8 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
 
+import java.awt.*;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -31,4 +33,7 @@ public interface UserInfoMapper {
 
     //违规信誉减一
     int updateUserInfoCreditScore();
+
+    //用户列表
+    List<Map<String,Object>> findAllUsers();
 }

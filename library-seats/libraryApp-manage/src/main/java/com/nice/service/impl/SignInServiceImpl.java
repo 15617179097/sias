@@ -30,12 +30,19 @@ public class SignInServiceImpl implements SignInService {
     private UserRecordMapper userRecordMapper;
     @Autowired
     private UserInfoMapper userInfoMapper;
+
+    /*
+        记录签到
+     */
     @Override
     public DataResult insertSignInById(Integer subscribeId) {
         signInMapper.updateSignIn(1,subscribeId);
         return DataResult.ok();
     }
 
+    /*
+        未签到 进行记录
+     */
     @Override
     public DataResult updateSignInById(Integer subscribeId) {
         try {

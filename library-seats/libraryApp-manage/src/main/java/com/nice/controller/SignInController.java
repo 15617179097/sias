@@ -6,18 +6,28 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-
+/**
+ * Company: 签到  <br>
+ * Description:  <br>
+ * Date: 2020-01-12 23:01
+ *
+ * @author wmj
+ * @version 1.0
+ */
 @RestController
 @RequestMapping("/signIn")
 public class SignInController {
     @Autowired
     private SignInService signInService;
 
+    // 签到
     @RequestMapping(value = "/insertSignIn",method = RequestMethod.POST)
     public DataResult insertSignInById(Integer subscribeId){
 
         return signInService.insertSignInById(subscribeId);
     }
+
+    //修改签到
     @RequestMapping(value = "/updateSignInById",method = RequestMethod.POST)
     public DataResult updateSignInById(Integer subscribeId){
 

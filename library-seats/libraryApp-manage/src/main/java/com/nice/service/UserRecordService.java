@@ -11,5 +11,7 @@ import com.nice.utils.DataResult;
  * @version 1.0
  */
 public interface UserRecordService {
+
+    //查询我的违约记录
     DataResult findUserRecordByUserId(String loginStateUUID);
 }

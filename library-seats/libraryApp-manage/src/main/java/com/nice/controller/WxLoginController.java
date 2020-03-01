@@ -10,16 +10,28 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 
+/**
+ * Company: 登陆  <br>
+ * Description:  <br>
+ * Date: 2020-01-12 23:01
+ *
+ * @author wmj
+ * @version 1.0
+ */
+
 @RestController
 @CrossOrigin(origins = "*",maxAge = 3600)
 public class WxLoginController {
     @Autowired
     private CheckLoginService checkLoginService;
 
+    //用户登陆
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public DataResult login(String studentId,String password, HttpServletRequest request){
+
         return checkLoginService.login(studentId,password,request);
     }
+
     /*
     wx登陆
      */
@@ -29,7 +41,7 @@ public class WxLoginController {
         return DataResult.ok(token);
     }
     /*
-  wx注册
+    wx注册
    */
     @RequestMapping("/saveUserInfo")
     public DataResult saveUserInfo(String loginStateUUID,String encryptedData ,String iv){

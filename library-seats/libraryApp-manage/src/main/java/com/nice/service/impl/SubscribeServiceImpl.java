@@ -17,6 +17,7 @@ import java.util.Map;
 
 @Service
 public class SubscribeServiceImpl implements SubscribeService {
+
     @Autowired
     private SubscribeMapper subscribeMapper;
     @Autowired
@@ -25,12 +26,19 @@ public class SubscribeServiceImpl implements SubscribeService {
     private SignInMapper signInMapper;
     @Autowired
     private SuspendMapper suspendMapper;
+
+    /*
+        查询所以预约
+     */
     @Override
     public List<Subscribe> findAllSubscribe() {
         List<Subscribe> allSubscribe = subscribeMapper.findAllSubscribe(null);
         return allSubscribe;
     }
 
+    /*
+        座位预约
+     */
     @Override
     public boolean saveSubscribe(String loginStateUUID,String createTime,String endTime,Integer seatsId,Integer classroomId){
         Subscribe subscribe=new Subscribe();
@@ -62,11 +70,9 @@ public class SubscribeServiceImpl implements SubscribeService {
         List<Subscribe> allSubscribe = subscribeMapper.findAllSubscribe(subscribe);
         if (allSubscribe.size()>0)
             return true;
-    /*    List<Subscribe> subscribes = subscribeMapper.findSubscribe(DateUtil.TomorrowCreateTime(), DateUtil.TomorrowEndTime(),null, userId);
-       if (subscribes.size()>0)
-           return true;*/
         return false;
     }
+
     //查询我的预约
     @Override
     public DataResult findMySubscribe(String loginStateUUID) {
@@ -78,11 +84,13 @@ public class SubscribeServiceImpl implements SubscribeService {
             return DataResult.ok();
     }
 
+    /*
+        取消预约
+     */
     @Override
     public DataResult delSubscribe(String loginStateUUID, Integer subscribeId) {
         int userId = wxUserService.getWxUserId(loginStateUUID);
         try {
-
             subscribeMapper.delSubscribe(subscribeId, DateUtil.getStringTime(),2);
             signInMapper.updateSignIn(2,subscribeId);
         }catch (Exception e){

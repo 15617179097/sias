@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * Company:  <br>
+ * Company: 教室 <br>
  * Description:  <br>
  * Date: 2020-01-12 23:01
  *
@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ClassRoomController {
     @Autowired
     private ClassRoomService classRoomService;
+
     //查询今天教室信息以及预约的座位数量
     @RequestMapping("/findTodayClassRoom")
     public DataResult findTodayClassRoom(){

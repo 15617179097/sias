@@ -44,6 +44,9 @@ public class UserServiceImpl implements UserService {
             return DataResult.ok(user);
     }
 
+    /*
+        添加学号
+     */
     @Override
     public DataResult saveUserByLoginStateUUid(String loginStateUUID, String studentId) {
         int userId = wxUserService.getWxUserId(loginStateUUID);
@@ -72,61 +75,10 @@ public class UserServiceImpl implements UserService {
     public DataResult findMyAllSubscribe(String loginStateUUID) {
         return DataResult.ok(subscribeMapper.findMyAllSubscribe( wxUserService.getWxUserId(loginStateUUID)));
     }
-   /* private void main() {
 
-            for (int i = 1; i <= 150; i++) {
-
-            Seats seats = new Seats();
-            seats.setClassroomId(9);
-            seats.setSeatMunber(i);
-            userMapper.insertSeats(seats);
-        }
-        for (int i = 1; i <= 150; i++) {
-
-            Seats seats = new Seats();
-            seats.setClassroomId(10);
-            seats.setSeatMunber(i);
-            userMapper.insertSeats(seats);
-        }
-        for (int i = 1; i <= 150; i++) {
-
-            Seats seats = new Seats();
-            seats.setClassroomId(11);
-            seats.setSeatMunber(i);
-            userMapper.insertSeats(seats);
-        }
-        for (int i = 1; i <= 150; i++) {
-
-            Seats seats = new Seats();
-            seats.setClassroomId(12);
-            seats.setSeatMunber(i);
-            userMapper.insertSeats(seats);
-        }
-        for (int i = 1; i <= 200; i++) {
-
-            Seats seats = new Seats();
-            seats.setClassroomId(13);
-            seats.setSeatMunber(i);
-            userMapper.insertSeats(seats);
-        }
-        for (int i = 1; i <= 200; i++) {
-
-            Seats seats = new Seats();
-            seats.setClassroomId(14);
-            seats.setSeatMunber(i);
-            userMapper.insertSeats(seats);
-        }
-
-        for(int j=15;j<=22;j++){
-            for (int i = 1; i <= 75; i++) {
-                Seats seats = new Seats();
-                seats.setClassroomId(j);
-                seats.setSeatMunber(i);
-                userMapper.insertSeats(seats);
-            }
-        }
-
-
-    }*/
+    @Override
+    public DataResult findAllUsers() {
+        return DataResult.ok(userMapper.findAllUsers());
+    }
 
 }

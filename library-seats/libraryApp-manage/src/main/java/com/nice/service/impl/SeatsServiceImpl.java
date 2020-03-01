@@ -26,12 +26,19 @@ public class SeatsServiceImpl implements SeatsService {
     private SeatsMapper seatsMapper;
     @Autowired
     private SubscribeMapper subscribeMapper;
+        /*
+        查询 座位信息
+         */
     @Override
     public List<Seats> findSeatsByClassRoomId(int classroomId) {
         Seats seats=new Seats();
         seats.setClassroomId(classroomId);
         return seatsMapper.findSeats(seats);
     }
+
+    /*
+        查询 座位信息 是否 被预约
+     */
 
     @Override
     public List<Map<String,Object>> findSeatsByClassRoomIdAndCreateTime(int classroomId,String createTime,Integer timeState) {

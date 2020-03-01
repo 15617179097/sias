@@ -43,9 +43,14 @@ public class TimerManage {
     private UserInfoMapper userInfoMapper;
     @Autowired
     private SignInMapper signInMapper;
+
     //每天的23：35定时执行任任务(cron = "0 35 23  * * ? ")
     private static final SimpleDateFormat simpleDateFormat= new SimpleDateFormat("yyyy-MM-dd HH:mm");
 
+    /*
+        springTask 定时器 进行处理
+
+     */
     @Scheduled(cron = "0 0-59 8-23  * * ? ")
     public void manageData() {
         DateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -70,9 +75,11 @@ public class TimerManage {
              });
          }
          if (allSubscribe.size()>0){
+
              //判断当天结束的进行自动结束
              allSubscribe.forEach(list->{
                  long entTime= DateUtil.StringToDate(list.getEndTime()).getTime();
+
                  //到结束时间自动结束
                  if (entTime<nowTime){
                      subscribeMapper.delSubscribe(list.getId(),null,1);
@@ -113,8 +120,6 @@ public class TimerManage {
                     }
                 }
             }
-
-
         }
     }
 

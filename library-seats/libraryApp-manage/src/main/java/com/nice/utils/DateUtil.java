@@ -7,7 +7,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 /**
- * @ClassName DateUtil
+ * @ClassName DateUtil  时间工具类
  * @Description: TODO
  * @Author wmj
  * @Date 2020/1/30

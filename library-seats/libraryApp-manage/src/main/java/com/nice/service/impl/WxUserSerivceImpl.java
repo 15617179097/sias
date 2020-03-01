@@ -19,6 +19,9 @@ public class WxUserSerivceImpl implements WxUserService {
     private RedisService redisService;
     @Autowired
     private WxUserInfoMapper wxUserInfoMapper;
+    /*
+        获取缓存中的 用户id
+     */
     @Override
     public int getWxUserId(String loginStateUUID) {
         String json = redisService.getV(loginStateUUID);

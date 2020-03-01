@@ -28,7 +28,6 @@ public class SuspendServiceImpl implements SuspendService {
         try {
             suspendMapper.insertSuspend(suspend);
         }catch (Exception e){
-    System.out.println(e);
             return DataResult.fail(500,"错误",e);
         }
 

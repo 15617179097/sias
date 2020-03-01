@@ -15,10 +15,13 @@ import java.util.Map;
  * @version 1.0
  */
 public interface ClassRoomService {
+
     //查询今天的教室信息
     public List<Map<String,Object>> findTodayClassRoom();
+
     //查询明天的教室信息
     public List<Map<String,Object>> findTomorrowClassRoom();
+
     //查询教室的信息
     public DataResult findClassRoom();
 }

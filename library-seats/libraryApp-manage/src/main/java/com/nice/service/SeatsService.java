@@ -14,7 +14,10 @@ import java.util.Map;
  * @version 1.0
  */
 public interface SeatsService {
+
+    //查询所以座位
     public List<Seats> findSeatsByClassRoomId(int classroomId);
+
     //查询未被预约的座位
     public List<Map<String,Object>> findSeatsByClassRoomIdAndCreateTime(int classroomId, String createTime, Integer timeState);
 }

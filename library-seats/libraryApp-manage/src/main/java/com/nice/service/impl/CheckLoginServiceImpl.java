@@ -78,6 +78,7 @@ public class CheckLoginServiceImpl implements CheckLoginService {
         if (login.get("password").equals(password)){
             UUID token= UUID.randomUUID();
             redisService.setV(token.toString(),login.get("id").toString());
+            redisService.expire(token.toString(),0);
             return DataResult.ok(token.toString());
         }
         return DataResult.ok();

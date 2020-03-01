@@ -14,10 +14,14 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+
 /**
- * Created by Administrator on 2018/11/8 0008.
- * 二维码、条形码工具类
- */
+ * @ClassName DateUtil  二维码、条形码工具类
+ * @Description: TODO
+ * @Author wmj
+ * @Date 2020/1/30
+ * @Version V1.0
+ **/
 public class QRBarCodeUtil {
 
     /**

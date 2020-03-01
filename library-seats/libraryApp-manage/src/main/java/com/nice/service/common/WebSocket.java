@@ -12,7 +12,7 @@ import java.util.concurrent.CopyOnWriteArraySet;
 
 /**
  * @ClassName WebSocket
- * @Description: TODO
+ * @Description: TODO 双工通信
  * @Author wmj
  * @Date 2020/2/8
  * @Version V1.0
@@ -21,6 +21,8 @@ import java.util.concurrent.CopyOnWriteArraySet;
 @ServerEndpoint("/webSocket/{loginStateUUID}")
 @Component
 public class WebSocket {
+
+
     //用来存放每个客户端对应的WebSocket对象，适用于同时与多个客户端通信
     public static CopyOnWriteArraySet<WebSocket> webSocketSet = new CopyOnWriteArraySet<WebSocket>();
     //若要实现服务端与指定客户端通信的话，可以使用Map来存放，其中Key可以为用户标识

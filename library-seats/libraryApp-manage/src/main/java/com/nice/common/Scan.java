@@ -1,5 +1,8 @@
 package com.nice.common;
 
+import com.nice.utils.QRBarCodeUtil;
+
+import java.io.File;
 import java.util.Date;
 
 /**
@@ -11,20 +14,9 @@ import java.util.Date;
  **/
 public class Scan {
     public static void main(String[] args) {
-        String string="123";
-        switch (string) {
-            case "123":
-                System.out.println("123");
-                break;
-            case "abc":
-                System.out.println("abc");
-                break;
-            default:
-                System.out.println("defauls");
-                break;
-        }
-        Date date=new Date();
 
-     // QRBarCodeUtil.createCodeToFile("130", new File("D:/codes"),"130"+".jpg");
+    //生成二维码
+    QRBarCodeUtil.createCodeToFile("130", new File("D:/codes"),"130"+".jpg");
+
     }
 }

@@ -31,7 +31,14 @@
     <!-- 启用注解驱动的定时任务,定时任务配置 scheduler 方式 注解 -->
     <task:annotation-driven executor="executor" scheduler="scheduler" ></task:annotation-driven>
     <context:component-scan base-package="com.nice.service.common"></context:component-scan>
-
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <mvc:exclude-mapping path="/index"/>
+            <mvc:exclude-mapping path="/login"/>
+            <bean class="com.nice.interceptor.MyInterceptor"></bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
     <!-- 接口跨域配置 -->
     <mvc:cors>
         <mvc:mapping path="/**"/>
