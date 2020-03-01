@@ -1,6 +1,7 @@
 package com.nice.service.impl;
 
 import com.nice.mapper.UserInfoMapper;
+import com.nice.pojo.UserInfo;
 import com.nice.service.UserInfoService;
 import com.nice.utils.DataResult;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,4 +22,6 @@ public class UserInfoServiceImpl implements UserInfoService {
     public DataResult findUserInfo() {
         return DataResult.ok(userInfoMapper.findUserInfo());
     }
+
+
 }
