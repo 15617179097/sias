@@ -33,7 +33,7 @@ public class ClassRoomController {
     }
 
 
-    //查询教室信息
+    //查询教室信息的
     @RequestMapping("/findClassRoom")
     public DataResult findClassRoom(){
         return  DataResult.ok(classRoomService.findClassRoom());
