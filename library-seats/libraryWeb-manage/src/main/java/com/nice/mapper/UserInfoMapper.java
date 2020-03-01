@@ -13,6 +13,7 @@ import java.util.Map;
 public interface UserInfoMapper {
     List<Map<String,Object>> findUserInfo();
 
+
 }
 
 

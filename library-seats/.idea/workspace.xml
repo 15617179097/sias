@@ -2,55 +2,56 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="libraryApp" />
+      <artifact name="libraryWeb-manage:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a06a09c-3bbb-4825-889c-96f74e0bb296" name="Default Changelist" comment="web">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/libraryApp.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libraryWeb-manage/src/main/java/com/nice/service/UserInfoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libraryWeb-manage/src/main/java/com/nice/service/impl/UserInfoServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libraryWeb-manage/target/classes/META-INF/libraryWeb-manage.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/controller/LoginController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/mapper/UserInfoMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/service/UserInfoService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/service/impl/UserInfoServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/libraryApp_war.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraryWeb-manage/src/main/java/com/nice/mapper/WebUserInfoMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraryWeb-manage/src/main/java/com/nice/service/ClassRoomService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraryWeb-manage/src/main/java/com/nice/service/impl/ClassRoomServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraryWeb-manage/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/libraryApp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/libraryApp_manage_war_exploded.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/libraryWeb_manage_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/libraryWeb_manage_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/src/main/java/com/nice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryApp-manage/src/main/java/com/nice/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryApp-manage/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/libraryApp-manage/src/main/resources/db.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/libraryApp-manage/target/classes/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/libraryWeb-manage.iml" beforeDir="false" afterPath="$PROJECT_DIR$/libraryWeb-manage/libraryWeb-manage.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/src/main/java/com/nice/controller/ClassRoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryWeb-manage/src/main/java/com/nice/controller/ClassRoomController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/src/main/java/com/nice/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryWeb-manage/src/main/java/com/nice/controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libraryWeb-manage/src/main/java/com/nice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryWeb-manage/src/main/java/com/nice/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/src/main/java/com/nice/mapper/ClassRoomMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryWeb-manage/src/main/java/com/nice/mapper/ClassRoomMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libraryWeb-manage/src/main/java/com/nice/mapper/ClassRoomMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libraryWeb-manage/src/main/java/com/nice/mapper/ClassRoomMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/src/main/java/com/nice/mapper/SeatsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libraryWeb-manage/src/main/java/com/nice/mapper/SeatsMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/src/main/java/com/nice/mapper/SignInMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libraryWeb-manage/src/main/java/com/nice/mapper/SignInMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/src/main/java/com/nice/mapper/SubscribeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libraryWeb-manage/src/main/java/com/nice/mapper/SubscribeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/src/main/java/com/nice/mapper/SuspendMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libraryWeb-manage/src/main/java/com/nice/mapper/SuspendMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libraryWeb-manage/src/main/java/com/nice/mapper/UserInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryWeb-manage/src/main/java/com/nice/mapper/UserInfoMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libraryWeb-manage/src/main/java/com/nice/mapper/UserInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libraryWeb-manage/src/main/java/com/nice/mapper/UserInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/src/main/java/com/nice/mapper/UserRecordMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libraryWeb-manage/src/main/java/com/nice/mapper/UserRecordMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/src/main/java/com/nice/service/UserInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryWeb-manage/src/main/java/com/nice/service/UserInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/src/main/java/com/nice/service/impl/UserInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryWeb-manage/src/main/java/com/nice/service/impl/UserInfoServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libraryWeb-manage/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/libraryWeb-manage/src/main/resources/db.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libraryWeb-manage/src/main/resources/spring/applicationContext-dao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libraryWeb-manage/src/main/resources/spring/applicationContext-dao.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libraryWeb-manage/src/main/resources/spring/springMvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libraryWeb-manage/src/main/resources/spring/springMvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libraryWeb-manage/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/controller/WxLoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/controller/ClassRoomController.class" beforeDir="false" afterPath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/controller/ClassRoomController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/mapper/ClassRoomMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/mapper/ClassRoomMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/mapper/ClassRoomMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/mapper/ClassRoomMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/mapper/SeatsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/mapper/SeatsMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/mapper/SignInMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/mapper/SignInMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/mapper/SubscribeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/mapper/SubscribeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/mapper/SuspendMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/mapper/SuspendMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/mapper/UserInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/mapper/UserInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/mapper/UserRecordMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/mapper/UserRecordMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/service/common/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/pojo/UserRecord.class" beforeDir="false" afterPath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/pojo/UserRecord.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/service/impl/UserInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/service/impl/UserInfoServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/libraryWeb-manage/target/classes/db.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/spring/applicationContext-dao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libraryWeb-manage/target/classes/spring/applicationContext-dao.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/spring/springMvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libraryWeb-manage/target/classes/spring/springMvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/libraryApp_manage_war_exploded/WEB-INF/classes/com/nice/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/libraryApp_manage_war_exploded/WEB-INF/classes/com/nice/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/libraryApp_manage_war_exploded/WEB-INF/classes/com/nice/utils/HttpClientUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/libraryApp_manage_war_exploded/WEB-INF/classes/com/nice/utils/HttpClientUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/libraryApp_manage_war_exploded/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/libraryApp_manage_war_exploded/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/libraryApp_manage_war_exploded/WEB-INF/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/libraryApp_manage_war_exploded/WEB-INF/classes/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/libraryWeb_manage_war_exploded/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/libraryWeb_manage_war_exploded/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/libraryWeb_manage_war_exploded/WEB-INF/classes/com/nice/controller/ClassRoomController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/libraryWeb_manage_war_exploded/WEB-INF/classes/com/nice/controller/ClassRoomController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/libraryWeb_manage_war_exploded/WEB-INF/classes/com/nice/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/libraryWeb_manage_war_exploded/WEB-INF/classes/com/nice/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/libraryWeb_manage_war_exploded/WEB-INF/classes/com/nice/mapper/ClassRoomMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/libraryWeb_manage_war_exploded/WEB-INF/classes/com/nice/mapper/ClassRoomMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/libraryWeb_manage_war_exploded/WEB-INF/classes/com/nice/mapper/ClassRoomMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/libraryWeb_manage_war_exploded/WEB-INF/classes/com/nice/mapper/ClassRoomMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/libraryWeb_manage_war_exploded/WEB-INF/classes/com/nice/mapper/UserInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/libraryWeb_manage_war_exploded/WEB-INF/classes/com/nice/mapper/UserInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/libraryWeb_manage_war_exploded/WEB-INF/classes/com/nice/pojo/UserRecord.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/libraryWeb_manage_war_exploded/WEB-INF/classes/com/nice/pojo/UserRecord.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/libraryWeb_manage_war_exploded/WEB-INF/classes/com/nice/service/impl/UserInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/libraryWeb_manage_war_exploded/WEB-INF/classes/com/nice/service/impl/UserInfoServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/libraryWeb_manage_war_exploded/WEB-INF/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/libraryWeb_manage_war_exploded/WEB-INF/classes/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/libraryWeb_manage_war_exploded/WEB-INF/classes/spring/applicationContext-dao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/libraryWeb_manage_war_exploded/WEB-INF/classes/spring/applicationContext-dao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/libraryWeb_manage_war_exploded/WEB-INF/classes/spring/springMvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/libraryWeb_manage_war_exploded/WEB-INF/classes/spring/springMvc.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +61,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Jsp File" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -75,6 +77,18 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="userSettingsFile" value="E:\maven\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1YBwcAFcukjlPwR1JsGcZkxufqP" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -87,6 +101,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/libraryWeb-manage/src/main/java/com/nice/mapper" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -95,10 +110,30 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="spring" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat">
-    <configuration name="Tomcat 8.5.35" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.35" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.nice.controller" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\马胜林\Desktop\test\sias\library-seats\libraryWeb-manage\src\main\java\com\nice\mapper" />
+      <recent name="C:\Users\马胜林\Desktop\test\sias\library-seats\libraryWeb-manage\src\main\webapp\WEB-INF\pages" />
+      <recent name="C:\Users\马胜林\Desktop\test\sias\library-seats\libraryWeb-manage\src\main\webapp" />
+      <recent name="C:\Users\马胜林\Desktop\test\sias\library-seats\libraryWeb-manage\src\main\java\com\nice\service" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.nice.controller" />
+      <recent name="com.nice.service.impl" />
+      <recent name="com.nice.service" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\马胜林\Desktop\test\sias\library-seats\libraryWeb-manage\src\main\webapp\WEB-INF\pages" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 9.0.27" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.27" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="BROWSER_ID" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="libraryWeb-manage:war exploded">
@@ -108,7 +143,7 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_library-seats_3" />
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_library-seats_9" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -116,7 +151,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="54035" />
+        <option name="DEBUG_PORT" value="5660" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -167,87 +202,9 @@
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
           <artifact name="libraryWeb-manage:war exploded" />
-          <artifact name="libraryWeb-manage:war exploded" />
         </option>
       </method>
     </configuration>
-    <configuration name="Tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.35" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8">
-      <option name="UPDATING_POLICY" value="restart-server" />
-      <deployment>
-        <artifact name="libraryApp">
-          <settings>
-            <option name="CONTEXT_PATH" value="/" />
-          </settings>
-        </artifact>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_library-seats_3" />
-        <option name="HTTP_PORT" value="8081" />
-      </server-settings>
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="57368" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="libraryApp" />
-        </option>
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Tomcat Server.Tomcat" />
-      <item itemvalue="Tomcat Server.Tomcat 8.5.35" />
-    </list>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -264,11 +221,6 @@
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
                 <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -289,6 +241,12 @@
       <updated>1582429377829</updated>
       <workItem from="1582429393919" duration="2739000" />
       <workItem from="1582439310844" duration="3893000" />
+      <workItem from="1582509950019" duration="10028000" />
+      <workItem from="1582609786359" duration="404000" />
+      <workItem from="1582953209191" duration="8000" />
+      <workItem from="1582954592165" duration="5798000" />
+      <workItem from="1582960865641" duration="8274000" />
+      <workItem from="1583038959233" duration="9350000" />
     </task>
     <task id="LOCAL-00001" summary="web">
       <created>1582441731451</created>
@@ -308,18 +266,25 @@
     <option name="LAST_COMMIT_MESSAGE" value="web" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582442571917">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="361" y="71" key="#Inspections" timestamp="1582957375033">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1582957375033" />
+    <state x="154" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583047544418">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1582442571917" />
-    <state x="488" y="74" key="#com.intellij.ide.util.MemberChooser" timestamp="1582441000290">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="154" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1583047544418" />
+    <state x="549" y="84" key="#com.intellij.ide.util.MemberChooser" timestamp="1582966220564">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="488" y="74" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1582441000290" />
-    <state x="275" y="22" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1582383771253">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="549" y="84" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1582966220564" />
+    <state x="309" y="25" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1582512011907">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="275" y="22" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/0.0.1366.728@0.0.1366.728" timestamp="1582383771253" />
+    <state x="309" y="25" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/0.0.1536.824@0.0.1536.824" timestamp="1582512011907" />
     <state x="423" y="288" key="#com.intellij.javaee.module.view.common.J2EE.J2EEDeploymentDescriptorLocationPanel.changeDDPath" timestamp="1582440358464">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -328,58 +293,86 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="472" y="271" key="#com.intellij.javaee.module.view.web.EditWebRootDialog/0.0.1366.728@0.0.1366.728" timestamp="1582440334296" />
+    <state x="314" y="338" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1583047591937">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="314" y="338" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1583047591937" />
+    <state x="531" y="271" width="473" height="291" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1582979894811">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="531" y="271" width="473" height="291" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1582979894811" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583041394292">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1583041394292" />
     <state x="246" y="0" key="CommitChangelistDialog2" timestamp="1582441728009">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="246" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1582441728009" />
-    <state width="1275" height="123" key="GridCell.Tab.0.bottom" timestamp="1582442576240">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="438" y="117" key="FileChooserDialogImpl" timestamp="1582967357109">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="438" y="117" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1582967357109" />
+    <state width="1443" height="173" key="GridCell.Tab.0.bottom" timestamp="1583047862090">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1275" height="123" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582442576240" />
-    <state width="1275" height="123" key="GridCell.Tab.0.center" timestamp="1582442576239">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1443" height="173" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583047862090" />
+    <state width="1443" height="173" key="GridCell.Tab.0.center" timestamp="1583047862090">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1275" height="123" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582442576239" />
-    <state width="1275" height="123" key="GridCell.Tab.0.left" timestamp="1582442576239">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1443" height="173" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583047862090" />
+    <state width="1443" height="173" key="GridCell.Tab.0.left" timestamp="1583047862090">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1275" height="123" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582442576239" />
-    <state width="1275" height="123" key="GridCell.Tab.0.right" timestamp="1582442576240">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1443" height="173" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583047862090" />
+    <state width="1443" height="173" key="GridCell.Tab.0.right" timestamp="1583047862090">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1275" height="123" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582442576240" />
-    <state width="1275" height="123" key="GridCell.Tab.1.bottom" timestamp="1582442607595">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1443" height="173" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583047862090" />
+    <state width="1443" height="173" key="GridCell.Tab.1.bottom" timestamp="1583047861878">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1275" height="123" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582442607595" />
-    <state width="1275" height="123" key="GridCell.Tab.1.center" timestamp="1582442607594">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1443" height="173" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583047861878" />
+    <state width="1443" height="173" key="GridCell.Tab.1.center" timestamp="1583047861877">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1275" height="123" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1582442607594" />
-    <state width="1275" height="123" key="GridCell.Tab.1.left" timestamp="1582442607593">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1443" height="173" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1583047861877" />
+    <state width="1443" height="173" key="GridCell.Tab.1.left" timestamp="1583047861877">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1275" height="123" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1582442607593" />
-    <state width="1275" height="123" key="GridCell.Tab.1.right" timestamp="1582442607594">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1443" height="173" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1583047861877" />
+    <state width="1443" height="173" key="GridCell.Tab.1.right" timestamp="1583047861877">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1275" height="123" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1582442607594" />
-    <state width="1275" height="123" key="GridCell.Tab.2.bottom" timestamp="1582442575883">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1443" height="173" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1583047861877" />
+    <state width="1443" height="173" key="GridCell.Tab.2.bottom" timestamp="1583047861878">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1275" height="123" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582442575883" />
-    <state width="1275" height="123" key="GridCell.Tab.2.center" timestamp="1582442575883">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1443" height="173" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583047861878" />
+    <state width="1443" height="173" key="GridCell.Tab.2.center" timestamp="1583047861878">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1275" height="123" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1582442575883" />
-    <state width="1275" height="123" key="GridCell.Tab.2.left" timestamp="1582442575883">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1443" height="173" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1583047861878" />
+    <state width="1443" height="173" key="GridCell.Tab.2.left" timestamp="1583047861878">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1275" height="123" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1582442575883" />
-    <state width="1275" height="123" key="GridCell.Tab.2.right" timestamp="1582442575883">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1443" height="173" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1583047861878" />
+    <state width="1443" height="173" key="GridCell.Tab.2.right" timestamp="1583047861878">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1275" height="123" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1582442575883" />
+    <state width="1443" height="173" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1583047861878" />
     <state width="1275" height="123" key="GridCell.Tab.3.bottom" timestamp="1582442575884">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -396,28 +389,36 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1275" height="123" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1582442575884" />
-    <state x="163" y="0" key="SettingsEditor" timestamp="1582440751356">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="183" y="0" key="SettingsEditor" timestamp="1583047525369">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1582440751356" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1582441745282">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="183" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1583047525369" />
+    <state x="309" y="110" key="Vcs.Push.Dialog.v2" timestamp="1583039543206">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1582441745282" />
-    <state x="363" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1582439316234">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="309" y="110" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1583039543206" />
+    <state x="408" y="213" key="com.intellij.ide.util.TipDialog" timestamp="1583039278675">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="363" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582439316234" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/libraryApp-manage/src/main/java/com/nice/controller/WxLoginController.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="408" y="213" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1583039278675" />
+    <state x="93" y="93" width="1350" height="638" key="dock-window-1" timestamp="1582956342422">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1582956342422" />
+    <state x="93" y="93" width="1350" height="638" key="dock-window-2" timestamp="1582956342422">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="dock-window-2/0.0.1536.824@0.0.1536.824" timestamp="1582956342422" />
+    <state x="479" y="204" key="git4idea.merge.GitPullDialog" timestamp="1583059371106">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="479" y="204" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1583059371106" />
+    <state x="642" y="146" width="672" height="678" key="search.everywhere.popup" timestamp="1582966229670">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="642" y="146" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1582966229670" />
   </component>
 </project>

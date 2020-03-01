@@ -1,5 +1,6 @@
 package com.nice.service;
 
+import com.nice.pojo.UserInfo;
 import com.nice.utils.DataResult;
 
 import java.util.List;
@@ -14,4 +15,6 @@ import java.util.Map;
  **/
 public interface UserInfoService {
     DataResult findUserInfo();
+
+
 }

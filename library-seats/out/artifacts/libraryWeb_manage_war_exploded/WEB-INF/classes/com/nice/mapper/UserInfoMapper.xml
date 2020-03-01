@@ -5,4 +5,8 @@
     <select id="findUserInfo" resultType="java.util.Map">
     select * from UserInfo
     </select>
+
+    <select id="login" resultType="com.nice.pojo.UserInfo">
+        select * from UserInfo where studentId=#{studentId} and password = #{password};
+    </select>
 </mapper>
