@@ -8,152 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ebe7d54d-1f75-4b72-b067-274d5aaa83d2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/common/RedisClinet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/common/Scan.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/common/impl/RedisClusterClinet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/controller/ClassRoomController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/controller/SeatsController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/controller/SignInController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/controller/SubscribeController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/controller/SuspentController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/controller/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/controller/UserRecordController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/controller/WxLoginController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/interceptor/MyInterceptor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/mapper/ClassRoomMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/mapper/ClassRoomMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/mapper/ModularMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/mapper/ModularMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/mapper/SeatsMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/mapper/SeatsMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/mapper/SignInMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/mapper/SignInMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/mapper/SubscribeMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/mapper/SubscribeMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/mapper/SuspendMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/mapper/SuspendMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/mapper/UserInfoMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/mapper/UserInfoMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/mapper/UserRecordMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/mapper/UserRecordMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/mapper/WxUserInfoMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/mapper/WxUserInfoMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/pojo/Admin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/pojo/Classroom.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/pojo/Modular.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/pojo/Seats.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/pojo/SignIn.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/pojo/Subscribe.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/pojo/Suspend.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/pojo/UserFeedback.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/pojo/UserInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/pojo/UserRecord.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/pojo/Watermark.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/pojo/WxUserInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/service/CheckLoginService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/service/ClassRoomService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/service/ModularService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/service/RedisService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/service/SeatsService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/service/SignInService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/service/SubscribeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/service/SuspendService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/service/UserRecordService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/service/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/service/WxUserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/service/common/TimerManage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/service/common/WebSocket.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/service/impl/CheckLoginServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/service/impl/ClassRoomServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/service/impl/ModularServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/service/impl/RedisServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/service/impl/SeatsServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/service/impl/SignInServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/service/impl/SubscribeServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/service/impl/SuspendServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/service/impl/UserRecordServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/service/impl/UserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/service/impl/WxUserSerivceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/utils/DataResult.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/utils/DateUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/utils/HttpClientUtil$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/utils/HttpClientUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/utils/JsonUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/utils/ParameterUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/utils/QRBarCodeUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/utils/ResultCode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/utils/SginInState.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/utils/SimpleCORSFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/utils/WxCheckPojo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/utils/WxUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/db.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/mybatis/mybatis.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/rediss.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/resource/redis.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/spring/applicationContext-dao.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/spring/applicationContext-redis.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/spring/applicationContext-trancation.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/spring/springMvc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/common/RedisClinet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/common/impl/RedisClusterClinet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/controller/ClassRoomController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/controller/LoginController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/controller/SeatsController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/controller/SignInController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/controller/SubscribeController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/controller/SuspentController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/controller/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/controller/WebSocket.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/interceptor/LoginInterceptor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/mapper/ClassRoomMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/mapper/ClassRoomMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/mapper/SeatsMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/mapper/SeatsMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/mapper/SignInMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/mapper/SignInMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/mapper/SubscribeMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/mapper/SubscribeMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/mapper/SuspendMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/mapper/SuspendMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/mapper/UserInfoMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/mapper/UserInfoMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/mapper/UserRecordMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/mapper/UserRecordMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/pojo/Classroom.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/pojo/Seats.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/pojo/SignIn.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/pojo/Subscribe.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/pojo/Suspend.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/pojo/UserFeedback.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/pojo/UserInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/pojo/UserRecord.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/pojo/Watermark.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/pojo/WxUserInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/service/UserInfoService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/service/common/TimerManage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/service/impl/UserInfoServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/utils/DataResult.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/utils/DateUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/utils/HttpClientUtil$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/utils/HttpClientUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/utils/JsonUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/utils/ParameterUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/utils/QRBarCodeUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/utils/ResultCode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/utils/SginInState.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/utils/WxCheckPojo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/utils/WxUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/db.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/mybatis/mybatis.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/rediss.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/resource/redis.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/spring/applicationContext-dao.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/spring/applicationContext-redis.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/spring/applicationContext-trancation.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/spring/springMvc.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,18 +70,34 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1583065699747</updated>
-      <workItem from="1583065707955" duration="64000" />
+      <workItem from="1583065707955" duration="432000" />
     </task>
+    <task id="LOCAL-00001" summary="提交">
+      <created>1583065859416</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1583065859416</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="提交" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="289" y="19" key="#Notifications" timestamp="1583064574808">
+    <state x="289" y="19" key="#Notifications" timestamp="1583066138878">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="289" y="19" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1583064574808" />
+    <state x="289" y="19" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1583066138878" />
+    <state x="250" y="0" key="CommitChangelistDialog2" timestamp="1583065856467">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="250" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1583065856467" />
     <state width="1306" height="174" key="GridCell.Tab.0.bottom" timestamp="1583065790438">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -248,10 +118,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="177" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1583065774030" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1583064566697">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1583065871884">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1583064566697" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1583065871884" />
     <state x="377" y="185" key="com.intellij.ide.util.TipDialog" timestamp="1583065727509">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
