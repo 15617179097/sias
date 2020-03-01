@@ -5,6 +5,7 @@
 
   <select id="findModular" resultType="java.util.Map">
    SELECT id,name,m_id mId,path,lever from modular
+
   </select>
 
 </mapper>

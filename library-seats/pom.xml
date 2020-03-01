@@ -31,7 +31,6 @@
         <commons-io.version>1.3.2</commons-io.version>
         <commons-net.version>3.3</commons-net.version>
         <pagehelper.version>3.7.5</pagehelper.version>
-        <commons-fileupload.version>1.3.1</commons-fileupload.version>
         <httpclient.version>4.3.5</httpclient.version>
         <bouncycastle.version>1.60</bouncycastle.version>
         <google-core.version>3.3.3</google-core.version>
@@ -185,7 +184,7 @@
         <dependency>
             <groupId>commons-fileupload</groupId>
             <artifactId>commons-fileupload</artifactId>
-            <version>${commons-fileupload.version}</version>
+            <version>1.3.3</version>
         </dependency>
         <!-- redis -->
         <dependency>
