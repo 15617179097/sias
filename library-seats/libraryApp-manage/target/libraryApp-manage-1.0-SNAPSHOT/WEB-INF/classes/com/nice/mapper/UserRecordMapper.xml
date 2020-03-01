@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nice.mapper.UserRecordMapper" >
+    <select id="findUserRecordByUserId" resultType="com.nice.pojo.UserRecord" parameterType="com.nice.pojo.UserRecord">
+        select * from user_record where user_id=#{userId}
+    </select>
+    <insert id="insertUserRecord" parameterType="com.nice.pojo.UserRecord" >
+        insert into user_record  (user_id,signIn_id,illegal_text,illegal_time) value (#{userId},#{signInId},#{illegalText},#{illegalTime})
+    </insert>
+</mapper>

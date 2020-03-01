@@ -7,9 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ebe7d54d-1f75-4b72-b067-274d5aaa83d2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/libraryApp_manage_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/libraryApp_manage_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/META-INF/libraryApp-manage.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/common/RedisClinet.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/common/Scan.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/com/nice/common/impl/RedisClusterClinet.class" beforeDir="false" />
@@ -97,134 +95,7 @@
       <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/spring/applicationContext-redis.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/spring/applicationContext-trancation.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/classes/spring/springMvc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/common/RedisClinet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/common/Scan.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/common/impl/RedisClusterClinet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/controller/ClassRoomController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/controller/SeatsController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/controller/SignInController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/controller/SubscribeController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/controller/SuspentController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/controller/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/controller/WxLoginController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/interceptor/LoginInterceptor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/mapper/ClassRoomMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/mapper/ClassRoomMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/mapper/SeatsMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/mapper/SeatsMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/mapper/SignInMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/mapper/SignInMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/mapper/SubscribeMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/mapper/SubscribeMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/mapper/SuspendMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/mapper/SuspendMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/mapper/UserInfoMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/mapper/UserInfoMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/mapper/UserRecordMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/mapper/UserRecordMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/mapper/WxUserInfoMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/mapper/WxUserInfoMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/pojo/Classroom.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/pojo/Seats.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/pojo/SignIn.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/pojo/Subscribe.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/pojo/Suspend.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/pojo/UserFeedback.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/pojo/UserInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/pojo/UserRecord.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/pojo/Watermark.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/pojo/WxUserInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/service/CheckLoginService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/service/ClassRoomService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/service/RedisService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/service/SeatsService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/service/SignInService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/service/SubscribeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/service/SuspendService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/service/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/service/WxUserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/service/common/TimerManage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/service/impl/CheckLoginServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/service/impl/ClassRoomServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/service/impl/RedisServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/service/impl/SeatsServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/service/impl/SignInServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/service/impl/SubscribeServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/service/impl/SuspendServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/service/impl/UserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/service/impl/WxUserSerivceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/utils/DataResult.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/utils/DateUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/utils/HttpClientUtil$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/utils/HttpClientUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/utils/JsonUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/utils/ParameterUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/utils/QRBarCodeUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/utils/ResultCode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/utils/SginInState.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/utils/WxCheckPojo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/com/nice/utils/WxUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/db.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/mybatis/mybatis.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/rediss.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/resource/redis.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/spring/applicationContext-dao.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/spring/applicationContext-redis.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/spring/applicationContext-trancation.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/classes/spring/springMvc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/lib/aspectjweaver-1.8.9.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/lib/bcprov-jdk15on-1.60.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/lib/commons-codec-1.6.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/lib/commons-fileupload-1.3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/lib/commons-io-1.3.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/lib/commons-lang3-3.3.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/lib/commons-logging-1.1.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/lib/commons-net-3.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/lib/commons-pool2-2.4.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/lib/core-3.3.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/lib/druid-1.1.6.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/lib/httpclient-4.3.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/lib/httpcore-4.3.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/lib/jackson-annotations-2.4.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/lib/jackson-core-2.4.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/lib/jackson-databind-2.4.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/lib/jai-imageio-core-1.4.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/lib/javase-3.3.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/lib/jcommander-1.72.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/lib/jedis-2.9.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/lib/joda-time-2.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/lib/jsqlparser-0.9.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/lib/log4j-1.2.17.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/lib/mybatis-3.4.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/lib/mybatis-paginator-1.2.15.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/lib/mybatis-spring-1.3.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/lib/mysql-connector-java-5.1.32.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/lib/pagehelper-3.7.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/lib/slf4j-api-1.7.22.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/lib/slf4j-log4j12-1.7.22.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/lib/spring-aop-4.3.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/lib/spring-aspects-4.3.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/lib/spring-beans-4.3.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/lib/spring-context-4.3.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/lib/spring-core-4.3.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/lib/spring-expression-4.3.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/lib/spring-jdbc-4.3.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/lib/spring-tx-4.3.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/lib/spring-web-4.3.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/lib/spring-webmvc-4.3.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/library-manage-1.0-SNAPSHOT/yuyue.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT.war" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/libraryApp-manage-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryApp-manage/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/META-INF/libraryWeb-manage.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/common/RedisClinet.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/common/impl/RedisClusterClinet.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/com/nice/controller/ClassRoomController.class" beforeDir="false" />
@@ -283,7 +154,6 @@
       <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/spring/applicationContext-redis.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/spring/applicationContext-trancation.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/libraryWeb-manage/target/classes/spring/springMvc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -297,13 +167,31 @@
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="1.8" />
+    <option name="vmOptions" value="-Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true" />
+  </component>
+  <component name="ProjectId" id="1YWkNVq1qPAPOaEvaEJVif9C9Cf" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -322,33 +210,52 @@
     <configuration />
   </component>
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ebe7d54d-1f75-4b72-b067-274d5aaa83d2" name="Default Changelist" comment="" />
+      <created>1583065699747</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583065699747</updated>
+      <workItem from="1583065707955" duration="64000" />
+    </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
     <state x="289" y="19" key="#Notifications" timestamp="1583064574808">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="289" y="19" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1583064574808" />
-    <state width="1306" height="174" key="GridCell.Tab.0.bottom" timestamp="1583065246657">
+    <state width="1306" height="174" key="GridCell.Tab.0.bottom" timestamp="1583065790438">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="174" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1583065246657" />
-    <state width="1306" height="174" key="GridCell.Tab.0.center" timestamp="1583065246657">
+    <state width="1306" height="174" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1583065790438" />
+    <state width="1306" height="174" key="GridCell.Tab.0.center" timestamp="1583065790438">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="174" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1583065246657" />
-    <state width="1306" height="174" key="GridCell.Tab.0.left" timestamp="1583065246656">
+    <state width="1306" height="174" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1583065790438" />
+    <state width="1306" height="174" key="GridCell.Tab.0.left" timestamp="1583065790437">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="174" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1583065246656" />
-    <state width="1306" height="174" key="GridCell.Tab.0.right" timestamp="1583065246657">
+    <state width="1306" height="174" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1583065790437" />
+    <state width="1306" height="174" key="GridCell.Tab.0.right" timestamp="1583065790438">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="174" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1583065246657" />
+    <state width="1306" height="174" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1583065790438" />
+    <state x="177" y="0" key="SettingsEditor" timestamp="1583065774030">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="177" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1583065774030" />
     <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1583064566697">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1583064566697" />
+    <state x="377" y="185" key="com.intellij.ide.util.TipDialog" timestamp="1583065727509">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="377" y="185" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1583065727509" />
     <state x="481" y="152" width="805" height="417" key="git4idea.merge.GitMergeDialog" timestamp="1583064325743">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
