@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
+import javax.websocket.server.PathParam;
+
 /**
  * @ClassName AdminController
  * @Description: TODO
@@ -31,15 +33,41 @@ public class AdminController {
     }
 
     /*获取用户列表*/
-    @RequestMapping("users")
-    public DataResult findUsers(){
-        return adminService.adminList();
+    @RequestMapping("admins")
+    public DataResult findAdmin(String query,Integer pagenum,Integer pagesize){
+        return adminService.adminList(query,pagenum,pagesize);
+    }
+
+    /*查询用户主要信息*/
+    @GetMapping("admins/{id}")
+    public DataResult findAdminAnd(@PathVariable("id") Integer id){
+        return adminService.findAdminAndPwd(id);
     }
 
     /*添加*/
-    @PostMapping("addAdmin")
-    public DataResult addAdmin(){
+    @PostMapping("admins")
+    public DataResult addAdmin(Admin admin){
 
-        return null;
+        return adminService.insertAdmin(admin);
     }
+
+    /*修改用户信息*/
+    @PostMapping("admins/{id}")
+    public DataResult updataAdmin(@PathVariable("id")Integer id ,Admin admin){
+        return adminService.updetaAdmin(id,admin);
+    }
+
+    /*修改用户状态*/
+    @PutMapping("admins/{id}/status/{status}")
+    public DataResult updataAdminStatus(@PathVariable("id")Integer id,@PathVariable("status")Integer status){
+        return adminService.updataAdminStatus(id, status);
+    }
+
+    /*删除用户*/
+    @DeleteMapping("admins/{id}")
+    public DataResult deleteAdmin(@PathVariable("id")Integer id){
+        return adminService.daleteAdmin(id);
+    }
+
+
 }
