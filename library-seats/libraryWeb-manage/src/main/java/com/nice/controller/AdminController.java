@@ -53,7 +53,7 @@ public class AdminController {
 
     /*修改用户信息*/
     @PostMapping("admins/{id}")
-    public DataResult updataAdmin(@PathVariable("id")Integer id ,Admin admin){
+    public DataResult updataAdmin(@PathVariable("id")Integer id,Admin admin){
         return adminService.updetaAdmin(id,admin);
     }
 
