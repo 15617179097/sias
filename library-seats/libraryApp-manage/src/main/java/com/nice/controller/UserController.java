@@ -38,16 +38,16 @@ public class UserController {
     /*
         根据登陆态获取用户信息
      */
-    @RequestMapping("findUserByLoginStateUUid")
-    public DataResult findUserByLoginStateUUid(String loginStateUUID){
+    @GetMapping("userInfo/{loginStateUUID}")
+    public DataResult findUserByLoginStateUUid(@PathVariable("loginStateUUID") String loginStateUUID){
         return  userService.findUserByLoginStateUUid(loginStateUUID);
     }
 
     /*
         添加学号
      */
-    @GetMapping("saveUserByLoginStateUUid")
-    public DataResult saveUserByLoginStateUUid(String loginStateUUID, String studentId){
+    @PostMapping("userInfo/{loginStateUUID}")
+    public DataResult saveUserByLoginStateUUid(@PathVariable("loginStateUUID") String loginStateUUID, String studentId){
         return  userService.saveUserByLoginStateUUid(loginStateUUID, studentId);
     }
 

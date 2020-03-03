@@ -8,6 +8,6 @@ package com.nice.service;
  * @Version V1.0
  **/
 public interface WxUserService {
-    //获取用户id
+    //获取openid
     int getWxUserId(String loginStateUUID);
 }

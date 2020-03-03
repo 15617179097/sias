@@ -37,8 +37,7 @@ public class WxLoginController {
      */
     @RequestMapping("/checkLogin")
     public DataResult checkLogin(String code, HttpServletRequest request){
-        String token = checkLoginService.checkLogin(code, request);
-        return DataResult.ok(token);
+        return checkLoginService.checkLogin(code, request);
     }
     /*
     wx注册
