@@ -1,11 +1,12 @@
 package com.nice.mapper;
 
-import com.nice.pojo.Subscribe;
+
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Company:  <br>
@@ -17,8 +18,8 @@ import java.util.List;
  */
 @Component
 @Mapper
-public interface SubscribeMapper {
+public interface WxUserMapper {
 
-    //获取今天或者明天 已经预约过的座位
-    public List<Subscribe> findSubscribeSeats(@Param("time") String time, @Param("endTime") String endTime, @Param("createTime") String createTime);
+    //查询微信用户列表
+    public List< Map<String, Object>> findWxUser(@Param("studentId") Integer studentId);
 }

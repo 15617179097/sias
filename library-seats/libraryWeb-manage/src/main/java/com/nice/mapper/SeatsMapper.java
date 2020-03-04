@@ -1,7 +1,11 @@
 package com.nice.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
+
+import java.util.List;
+import java.util.Map;
 
 /**
  * Company:  <br>
@@ -14,5 +18,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Mapper
 public interface SeatsMapper {
+
+    List<Map<String, Object>> findSeatsByClassRoomId(@Param("classroomId") Integer classroomId);
 
 }

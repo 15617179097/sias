@@ -13,7 +13,11 @@ import java.util.Map;
 public interface UserInfoMapper {
     List<Map<String,Object>> findUserInfo();
 
+    //根据userId修改学号以及状态
+    public int updateUserInfoState(UserInfo userInfo);
 
+    //删除学号信息
+    public int deleteUserInfo(@Param("userId")Integer userId);
 }
 
 
