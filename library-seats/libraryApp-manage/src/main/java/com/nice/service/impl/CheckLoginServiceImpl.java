@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
@@ -25,7 +26,7 @@ public class CheckLoginServiceImpl implements CheckLoginService {
     private UserInfoMapper userInfoMapper;
     //登陆
     @Override
-    public String checkLogin(String code, HttpServletRequest request) {
+    public DataResult checkLogin(String code, HttpServletRequest request) {
         StringBuffer url=new StringBuffer("https://api.weixin.qq.com/sns/jscode2session?");
         url.append("&appid=");
         url.append("wxab05f784f49f7837");
@@ -37,7 +38,7 @@ public class CheckLoginServiceImpl implements CheckLoginService {
         String sessionData = HttpClientUtil.httpsRequestToString(url.toString(), "GET", null);
         UUID token= UUID.randomUUID();
         redisService.setV(token.toString(),sessionData);
-        return token.toString();
+        return DataResult.ok(token.toString());
     }
 
     //注册
@@ -64,7 +65,7 @@ public class CheckLoginServiceImpl implements CheckLoginService {
         }else {
             //登陆态过期
         }
-        return null;
+        return DataResult.ok();
     }
 
     @Override

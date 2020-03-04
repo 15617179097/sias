@@ -4,7 +4,7 @@
   <select id="findUserInfo" parameterType="com.nice.pojo.UserInfo" resultType="java.util.Map">
   select id,studentId,credit_score creditScore from userInfo where state=0
   <if test="userId!=null">
-    and id=#{userId}
+    and user_id=#{userId}
   </if>
   </select>
   <select id="login" parameterType="com.nice.pojo.UserInfo" resultType="java.util.Map">

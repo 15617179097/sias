@@ -1,8 +1,13 @@
 package com.nice.service.impl;
 
+import com.alibaba.druid.support.json.JSONUtils;
 import com.nice.mapper.WxUserInfoMapper;
+import com.nice.pojo.WxUserInfo;
 import com.nice.service.RedisService;
 import com.nice.service.WxUserService;
+import com.nice.utils.JsonUtils;
+import com.nice.utils.WxCheckPojo;
+import com.nice.utils.WxUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,7 +30,8 @@ public class WxUserSerivceImpl implements WxUserService {
     @Override
     public int getWxUserId(String loginStateUUID) {
         String json = redisService.getV(loginStateUUID);
-        int id = Integer.parseInt(json);
-        return id;
+        WxCheckPojo parse = JsonUtils.jsonToPojo(json,WxCheckPojo.class);
+        WxUserInfo wxUserInfoByOpenId = wxUserInfoMapper.findWxUserInfoByOpenId(parse.getOpenid());
+        return wxUserInfoByOpenId.getId();
     }
 }

@@ -25,7 +25,7 @@
     </insert>
 
     <update id="updataAdmin" parameterType="com.nice.pojo.Admin">
-        update admin set  email=#{email},phone=#{phone},password=#{password} where id=#{id}
+        update admin set  email=#{email},phone=#{phone} where id=#{id}
     </update>
 
     <update id="updataAdminStatus" parameterType="com.nice.pojo.Admin">

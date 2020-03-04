@@ -40,7 +40,7 @@ public class SubscribeController {
     @RequestMapping("/saveSubscribe")
     public DataResult saveSubscribe(String loginStateUUID, String createTime, String endTime, Integer seatsId, Integer classroomId) throws ParseException {
 
-        boolean saveSubscribe = subscribeService.saveSubscribe(loginStateUUID,endTime,createTime,seatsId,classroomId);
+        boolean saveSubscribe = subscribeService.saveSubscribe(loginStateUUID,createTime,endTime,seatsId,classroomId);
         return DataResult.ok(saveSubscribe);
     }
 

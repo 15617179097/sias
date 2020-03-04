@@ -38,6 +38,11 @@
 
     <!-- 接口跨域配置 -->
     <mvc:cors>
-        <mvc:mapping path="/**"/>
+        <mvc:mapping path="/**"
+                     allowed-origins="*"
+                     allowed-methods="POST, GET, OPTIONS, DELETE, PUT"
+                     allowed-headers="Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+                     allow-credentials="true"
+                     max-age="3600" />
     </mvc:cors>
 </beans>
