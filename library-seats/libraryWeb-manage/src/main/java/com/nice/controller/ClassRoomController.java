@@ -3,8 +3,7 @@ package com.nice.controller;
 import com.nice.service.ClassRoomService;
 import com.nice.utils.DataResult;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Company:  <br>
@@ -37,4 +36,11 @@ public class ClassRoomController {
     public DataResult findClassRoom(){
         return  DataResult.ok(classRoomService.findClassRoom());
     }
+    /*删除教室*/
+
+    @RequestMapping("delete")
+    public DataResult delClassRoom(int id){
+        return DataResult.ok(classRoomService.delClassRoom(id));
+    }
+
 }

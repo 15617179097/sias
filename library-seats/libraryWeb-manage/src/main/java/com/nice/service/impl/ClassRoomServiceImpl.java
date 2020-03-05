@@ -19,7 +19,7 @@ public class ClassRoomServiceImpl implements ClassRoomService {
     private ClassRoomMapper classRoomMapper;
 
     @Override
-    public List<Map<String,Object>> findTomorrowClassRoom() {
+    public List<Map<String, Object>> findTomorrowClassRoom() {
 
         return classRoomMapper.findAllClassRoom(null, DateUtil.TomorrowCreateTime(), DateUtil.TomorrowEndTime());
     }
@@ -33,6 +33,17 @@ public class ClassRoomServiceImpl implements ClassRoomService {
     public DataResult findClassRoom() {
         List<String> classRoom = classRoomMapper.findClassRoom();
         return DataResult.ok(classRoom);
+    }
+
+
+    @Override
+    public DataResult delClassRoom(int id) {
+        try {
+            classRoomMapper.delClassRoom(id);
+        } catch (Exception e) {
+            return DataResult.fail(500, "删除失败！！", e);
+        }
+        return DataResult.ok();
     }
 
 }

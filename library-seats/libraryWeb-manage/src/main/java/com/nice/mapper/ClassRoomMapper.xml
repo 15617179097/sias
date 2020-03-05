@@ -48,4 +48,8 @@
       </if>
   </select>
 
+  <delete id="delClassRoom">
+    delete from classroom where
+            classroom_name= #{classroom_name}
+  </delete>
 </mapper>
