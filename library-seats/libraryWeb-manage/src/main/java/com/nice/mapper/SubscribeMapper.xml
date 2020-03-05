@@ -11,4 +11,12 @@
         <result column="state" property="state" jdbcType="INTEGER" />
     </resultMap>
 
+    <!--获取今天或者明天的已经预约的座位-->
+    <select id="findSubscribeSeats" resultMap="SubscribeMap">
+        SELECT * from subscribe where create_time BETWEEN #{time} and #{endTime} and state=0
+        <if test="createTime!=null and createTime!='null'">
+            and create_time BETWEEN #{createTime} and end_time
+        </if>
+    </select>
+
 </mapper>
