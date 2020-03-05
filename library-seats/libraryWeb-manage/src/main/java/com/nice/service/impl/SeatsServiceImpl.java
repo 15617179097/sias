@@ -1,7 +1,9 @@
 package com.nice.service.impl;
 
+import com.nice.mapper.ClassRoomMapper;
 import com.nice.mapper.SeatsMapper;
 import com.nice.mapper.SubscribeMapper;
+import com.nice.pojo.Classroom;
 import com.nice.pojo.Subscribe;
 import com.nice.service.SeatsService;
 import com.nice.utils.DataResult;
@@ -9,6 +11,8 @@ import com.nice.utils.DateUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -29,6 +33,8 @@ public class SeatsServiceImpl implements SeatsService {
     private SeatsMapper seatsMapper;
     @Autowired
     private SubscribeMapper subscribeMapper;
+    @Autowired
+    private ClassRoomMapper classRoomMapper;
 
     //查询根据classroomId已经预约的座位信息
     @Override
@@ -51,9 +57,26 @@ public class SeatsServiceImpl implements SeatsService {
                 map.put("sT",false);
             }
         }
+        //查询教室x y
+        Classroom roomById = classRoomMapper.findClassRoomById(classroomId);
+        int x = roomById.getX();
+        List<Object> lis=new ArrayList<>();
+        List<Map<String,Object>> li=new ArrayList<>();
+        for (int i=0;i<=seatsByClassRoomId.size()-1;i++){
+
+            if((i+1)%x!=0){
+                li.add(seatsByClassRoomId.get(i));
+
+            }else {
+                li.add(seatsByClassRoomId.get(i));
+                lis.add(li);
+                li=new ArrayList<>();
+
+            }
+        }
         Map<String,Object> maps=new HashMap<>();
         //获取已经预约的数量
-        maps.put("seatsList",seatsByClassRoomId);
+        maps.put("seatsList",lis);
         if (subscribeSeats.size()==0) maps.put("suNum",0);
         else   maps.put("suNum",subscribeSeats.size());
         return DataResult.ok(maps);
