@@ -1,5 +1,6 @@
 com\nice\utils\SginInState.class
 com\nice\mapper\UserInfoMapper.class
+com\nice\service\ClassRoomService.class
 com\nice\controller\SuspentController.class
 com\nice\mapper\SuspendMapper.class
 com\nice\mapper\SignInMapper.class
@@ -38,5 +39,6 @@ com\nice\mapper\UserRecordMapper.class
 com\nice\pojo\SignIn.class
 com\nice\interceptor\LoginInterceptor.class
 com\nice\controller\SeatsController.class
+com\nice\service\impl\ClassRoomServiceImpl.class
 com\nice\pojo\Suspend.class
 com\nice\service\UserInfoService.class

@@ -16,4 +16,8 @@ public interface ClassRoomService {
     public List<Map<String,Object>> findTomorrowClassRoom();
     //查询教室的信息
     public DataResult findClassRoom();
+    //删除教室的信息
+     DataResult delClassRoom(int id);
+
+
 }
