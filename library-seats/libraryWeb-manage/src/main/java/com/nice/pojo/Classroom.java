@@ -32,7 +32,7 @@ public class Classroom {
     }
 
     public void setClassroomName(String classroomName) {
-        this.classroomName = classroomName == null ? null : classroomName.trim();
+        this.classroomName = classroomName;
     }
 
     public Integer getClassroomNumber() {
@@ -51,14 +51,6 @@ public class Classroom {
         this.floor = floor;
     }
 
-    public Integer getState() {
-        return state;
-    }
-
-    public void setState(Integer state) {
-        this.state = state;
-    }
-
     public Integer getX() {
         return x;
     }
@@ -75,4 +67,11 @@ public class Classroom {
         this.y = y;
     }
 
+    public Integer getState() {
+        return state;
+    }
+
+    public void setState(Integer state) {
+        this.state = state;
+    }
 }

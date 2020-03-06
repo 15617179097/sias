@@ -84,7 +84,7 @@ public class AdminServiceImpl implements AdminService {
     public DataResult updetaAdmin(Integer id, Admin admin) {
         admin.setId(id);
         try{
-            adminMapper.updataAdmin(admin);
+              ;
         }catch (Exception e){
             return DataResult.fail(500,"修改失败！",e);
         }

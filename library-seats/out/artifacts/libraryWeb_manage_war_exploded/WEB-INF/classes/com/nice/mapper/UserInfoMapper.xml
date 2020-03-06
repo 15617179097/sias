@@ -9,4 +9,12 @@
     <select id="login" resultType="com.nice.pojo.UserInfo">
         select * from UserInfo where studentId=#{studentId} and password = #{password};
     </select>
+
+    <update id="updateUserInfoState" parameterType="UserInfo">
+        update userinfo set state=#{state} where user_id=#{userId}
+    </update>
+
+    <delete id="deleteUserInfo">
+        delete from userinfo where user_id=#{userId}
+    </delete>
 </mapper>

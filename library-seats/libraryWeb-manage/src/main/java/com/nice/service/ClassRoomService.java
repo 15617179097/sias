@@ -1,6 +1,7 @@
 package com.nice.service;
 
 
+import com.nice.pojo.Classroom;
 import com.nice.utils.DataResult;
 
 import java.util.List;
@@ -17,7 +18,8 @@ public interface ClassRoomService {
     //查询教室的信息
     public DataResult findClassRoom();
     //删除教室的信息
-     DataResult delClassRoom(int id);
-
+     DataResult delete(Integer id);
+    /*添加教室*/
+    DataResult insertClassroom(Classroom classroom);
 
 }

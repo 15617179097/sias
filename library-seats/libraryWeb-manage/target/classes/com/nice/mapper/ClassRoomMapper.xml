@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.nice.mapper.ClassRoomMapper" >
+
   <select id="findAllClassRoom"  resultType="java.util.Map">
     SELECT
     classroom.id,
@@ -31,8 +32,14 @@
     state
     from classroom where state=0
   </select>
-  <delete id="delClassRoom">
+
+  <delete id="delete">
     delete from classroom where
-            classroom_name= #{classroom_name}
+            id= #{id}
   </delete>
+
+    <insert id="insertClassroom" parameterType="Classroom">
+        insert into classroom(classroom_name,classroom_number,floor,x,y,state)
+           values ("qrgs", #{classroomNumber},#{floor}, #{x},#{y},#{state})
+    </insert>
 </mapper>

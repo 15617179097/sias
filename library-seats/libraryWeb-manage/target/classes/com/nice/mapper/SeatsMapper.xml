@@ -14,4 +14,8 @@
     <result column="state" property="state" jdbcType="INTEGER" />
   </resultMap>
 
+  <select id="findSeatsByClassRoomId" resultType="java.util.Map">
+    select id,classroom_id classroomId,seat_Munber seatNumber,state from seats where classroom_id = #{classroomId}
+  </select>
+
 </mapper>
