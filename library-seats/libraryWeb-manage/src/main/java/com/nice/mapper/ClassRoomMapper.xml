@@ -48,8 +48,11 @@
       </if>
   </select>
 
-  <delete id="delClassRoom">
+  <delete id="delete">
     delete from classroom where
-            classroom_name= #{classroom_name}
+            id= #{id}
   </delete>
+    <insert id="insertClassroom">
+        insert into classroom(classroom_name,classroom_number,floor,x,y,state)values(#{classroomName},#{classroomNumber},#{floor},#{x},#{y},#{state})
+    </insert>
 </mapper>
