@@ -47,13 +47,13 @@ public class ClassRoomController {
 
     /*删除教室*/
     @GetMapping("/delete/{id}")
-    public DataResult delClassRoom(@PathVariable("id")Integer id){
+    public DataResult delete(@PathVariable("id")Integer id){
 
         return DataResult.ok(classRoomService.delete(id));
     }
 
     //增加教室
-    @RequestMapping("/insertclassroom")
+    @RequestMapping("/classroom")
     public DataResult insertClassroom(Classroom classroom){
         return DataResult.ok(classRoomService.insertClassroom(classroom));
     }
