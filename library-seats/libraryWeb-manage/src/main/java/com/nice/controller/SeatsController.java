@@ -24,8 +24,8 @@ public class SeatsController {
     @Autowired
     private SeatsService seatsService;
     //查询以及预约的座位数据
-    @GetMapping("seats/classroomId/{classroomId}")
-    public DataResult findSubscribeSeats(@PathVariable("classroomId")Integer classroomId){
-        return seatsService.findSubscribeSeats(classroomId);
+    @GetMapping("seats/classroomId/{classroomId}/state/{state}")
+    public DataResult findSubscribeSeats(String createTime,@PathVariable("classroomId")Integer classroomId,@PathVariable("state")String state){
+        return seatsService.findSubscribeSeats(classroomId,createTime,state);
     }
 }

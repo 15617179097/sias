@@ -1,7 +1,6 @@
 package com.nice.service.impl;
 
 import com.nice.mapper.ClassRoomMapper;
-import com.nice.pojo.Classroom;
 import com.nice.service.ClassRoomService;
 import com.nice.utils.DataResult;
 import com.nice.utils.DateUtil;
@@ -26,6 +25,11 @@ public class ClassRoomServiceImpl implements ClassRoomService {
     }
 
     @Override
+    public DataResult findAllClassRoom() {
+        return DataResult.ok(classRoomMapper.findClassRoomById(null));
+    }
+
+    @Override
     public List<Map<String, Object>> findTodayClassRoom() {
         return classRoomMapper.findAllClassRoom(null, DateUtil.nowCreateTime(), DateUtil.nowEndTime());
     }
@@ -36,25 +40,15 @@ public class ClassRoomServiceImpl implements ClassRoomService {
         return DataResult.ok(classRoom);
     }
 
+
     @Override
-    public DataResult delete(Integer id) {
+    public DataResult delClassRoom(int id) {
         try {
-            classRoomMapper.delete(id);
-        }catch (Exception e){
-            return DataResult.fail(500,"删除失败！",e);
-        }
-        return DataResult.ok();
-}
-//增加教室
-    @Override
-    public DataResult insertClassroom(Classroom classroom) {
-        try {
-            classRoomMapper.insertClassroom(classroom);
-        }catch (Exception e){
-            return  DataResult.fail(500,"添加失败",e);
+            classRoomMapper.delClassRoom(id);
+        } catch (Exception e) {
+            return DataResult.fail(500, "删除失败！！", e);
         }
         return DataResult.ok();
     }
-
 
 }

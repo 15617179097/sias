@@ -15,7 +15,7 @@ public class RedisServiceImpl implements RedisService {
     @Override
     public String setV(String key, String value) {
         //10小时过期时间
-        jedisPool.expire(key, 18000);
+        jedisPool.expire(key, 50);
         return jedisPool.set(key,value);
     }
 

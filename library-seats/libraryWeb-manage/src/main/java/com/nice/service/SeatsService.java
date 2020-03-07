@@ -13,5 +13,6 @@ import org.springframework.web.bind.annotation.PathVariable;
  */
 public interface SeatsService {
 
-    DataResult findSubscribeSeats(Integer classroomId);
+    //查询预约座位
+    DataResult findSubscribeSeats(Integer classroomId,String createTime,String state);
 }

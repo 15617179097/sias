@@ -14,9 +14,17 @@
     <!--获取今天或者明天的已经预约的座位-->
     <select id="findSubscribeSeats" resultMap="SubscribeMap">
         SELECT * from subscribe where create_time BETWEEN #{time} and #{endTime} and state=0
-        <if test="createTime!=null and createTime!='null'">
+        <if test="classroomId">
+            and classroom_id = #{classroomId}
+        </if>
+        <if test="createTime!=null and createTime!=''">
             and create_time BETWEEN #{createTime} and end_time
         </if>
     </select>
+
+    <!--添加预约-->
+    <insert id="insertSubscribe" parameterType="com.nice.pojo.Subscribe" useGeneratedKeys="true" keyProperty="id">
+        insert into Subscribe (user_id,classroom_id,seats_id,create_time,end_time,state) value (#{userId},#{classroomId},#{seatsId},#{createTime},#{endTime},0)
+    </insert>
 
 </mapper>

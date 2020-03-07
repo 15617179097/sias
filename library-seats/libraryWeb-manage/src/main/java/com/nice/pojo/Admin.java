@@ -19,6 +19,8 @@ public class Admin {
 
     private String phone;
 
+    private Integer userId;
+
     private Integer status;
 
     public Integer getId() {
@@ -59,6 +61,14 @@ public class Admin {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 
     public Integer getStatus() {

@@ -1,5 +1,8 @@
 package com.nice.service;
 
+import com.nice.pojo.Subscribe;
+import com.nice.utils.DataResult;
+
 /**
  * Company: 预约 <br>
  * Description:  <br>
@@ -10,6 +13,7 @@ package com.nice.service;
  */
 public interface SubscribeService {
 
-    //查询今天已经预约座位数量
+    //进行预约座位
+    DataResult insertSubscribe(Subscribe subscribe, String token);
 
 }

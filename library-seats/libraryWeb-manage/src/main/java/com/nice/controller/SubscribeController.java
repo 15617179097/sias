@@ -1,9 +1,15 @@
 package com.nice.controller;
 
+import com.nice.pojo.Subscribe;
+import com.nice.service.SubscribeService;
 import com.nice.utils.DataResult;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * Company:  <br>
@@ -16,6 +22,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SubscribeController {
 
+    @Autowired
+    private SubscribeService subscribeService;
 
+    @PostMapping("subscribe")
+    public DataResult insertSubscribe(Subscribe subscribe, HttpServletRequest request){
+        String token = request.getHeader("Authorization");
+
+        return subscribeService.insertSubscribe(subscribe,token);
+    }
 
 }

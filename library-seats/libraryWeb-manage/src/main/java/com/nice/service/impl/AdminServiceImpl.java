@@ -7,6 +7,7 @@ import com.nice.pojo.Admin;
 import com.nice.service.AdminService;
 import com.nice.service.RedisService;
 import com.nice.utils.DataResult;
+import com.nice.utils.JsonUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -84,7 +85,7 @@ public class AdminServiceImpl implements AdminService {
     public DataResult updetaAdmin(Integer id, Admin admin) {
         admin.setId(id);
         try{
-              ;
+            adminMapper.updataAdmin(admin);
         }catch (Exception e){
             return DataResult.fail(500,"修改失败！",e);
         }
@@ -116,10 +117,24 @@ public class AdminServiceImpl implements AdminService {
         return DataResult.ok();
     }
 
+    //根据token获取用户信息
+    @Override
+    public Admin findAdminByToken(String token) {
+        String v = redisService.getV(token);
+        Admin admin=null;
+        try {
+             admin= JsonUtils.jsonToPojo(v, Admin.class);
+        }catch (Exception e){
+            return admin;
+        }
+
+        return admin;
+    }
+
     //获取token
     private Map<String,Object> getToken(Admin admins){
         String token = UUID.randomUUID().toString();
-        redisService.setV(token,admins.getId().toString());
+        redisService.setV(token, JsonUtils.objectToJson(admins));
         Map<String,Object> reslt=new HashMap<>();
         reslt.put("token",token);
         return reslt;

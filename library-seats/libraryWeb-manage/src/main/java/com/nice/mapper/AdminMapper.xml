@@ -3,7 +3,7 @@
 <mapper namespace="com.nice.mapper.AdminMapper" >
 
     <select id="findAdminAndLogin" resultType="com.nice.pojo.Admin" parameterType="com.nice.pojo.Admin">
-        SELECT id,username,password,email,phone,status from admin where 1=1
+        SELECT id,username,password,email,phone,user_id userId,status from admin where 1=1
         <if test="id!=null and id!=''">
            and id = #{id}
         </if>
@@ -13,7 +13,7 @@
     </select>
 
     <select id="findAdmin" resultType="com.nice.pojo.Admin" parameterType="com.nice.pojo.Admin">
-           SELECT id,username,email,phone,status from admin where 1=1
+           SELECT id,username,email,phone,user_id userId,status from admin where 1=1
 
            <if test="username!=null and username!=''">
             and   username  like concat('%',#{username},'%')

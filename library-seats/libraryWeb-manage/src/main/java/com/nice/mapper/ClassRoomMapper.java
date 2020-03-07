@@ -21,11 +21,10 @@ import java.util.Map;
 public interface ClassRoomMapper {
     public List<Map<String,Object>> findAllClassRoom(@Param("classroomId") Integer classroomId, @Param("createTime") String createTime, @Param("endTime") String endTime);
     public List<String> findClassRoom();
-    //根据教室id查询
-    Classroom findClassRoomById(@Param("id")Integer id);
 
     //删除教室
-    public void delete(Integer id);
+    public void delClassRoom(int id);
 
-    public void insertClassroom(Classroom classroom);
+    //根据教室id查询
+    List<Classroom> findClassRoomById(@Param("id")Integer id);
 }

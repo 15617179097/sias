@@ -1,5 +1,13 @@
 package com.nice.interceptor;
 
+import org.springframework.stereotype.Component;
+import org.springframework.web.servlet.HandlerInterceptor;
+import org.springframework.web.servlet.ModelAndView;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.xml.ws.handler.Handler;
+
 /**
  * @ClassName LoginInterceptor
  * @Description: TODO
@@ -7,13 +15,13 @@ package com.nice.interceptor;
  * @Date 2020/2/2
  * @Version V1.0
  **/
-public class LoginInterceptor{
+@Component
+public class LoginInterceptor{}/* implements HandlerInterceptor{
 
-    /*@Override   implements HandlerInterceptor
+/*
+    @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        Enumeration authorization1 = request.getHeaders("Authorization");
-
-        System.out.println(authorization1);
+        request.getHeader("Authorization");
         return false;
     }
 
@@ -25,5 +33,5 @@ public class LoginInterceptor{
     @Override
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
 
-    }*/
-}
+    }
+}*/

@@ -1,6 +1,7 @@
 package com.nice.mapper;
 
 
+import com.nice.pojo.SignIn;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Component;
 
@@ -16,4 +17,5 @@ import org.springframework.stereotype.Component;
 @Mapper
 public interface SignInMapper {
 
+    int insertSignIn(SignIn signIn);
 }

@@ -20,5 +20,8 @@ import java.util.List;
 public interface SubscribeMapper {
 
     //获取今天或者明天 已经预约过的座位
-    public List<Subscribe> findSubscribeSeats(@Param("time") String time, @Param("endTime") String endTime, @Param("createTime") String createTime);
+    public List<Subscribe> findSubscribeSeats(@Param("time") String time, @Param("endTime") String endTime,@Param("classroomId")Integer classroomId, @Param("createTime") String createTime);
+
+    //预约座位
+    public int insertSubscribe(Subscribe subscribe);
 }

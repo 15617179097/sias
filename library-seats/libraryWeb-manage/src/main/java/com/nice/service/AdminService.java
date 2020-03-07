@@ -31,4 +31,7 @@ public interface AdminService {
 
     //删除用户
     DataResult daleteAdmin(Integer id);
+
+    //根据token获取用户信息
+    Admin findAdminByToken(String token);
 }

@@ -12,10 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Company:  <br>
@@ -38,27 +35,45 @@ public class SeatsServiceImpl implements SeatsService {
 
     //查询根据classroomId已经预约的座位信息
     @Override
-    public DataResult findSubscribeSeats(Integer classroomId) {
+    public DataResult findSubscribeSeats(Integer classroomId,String createTime,String state) {
 
         //根据教室id获取对应的座位
         List<Map<String, Object>> seatsByClassRoomId = seatsMapper.findSeatsByClassRoomId(classroomId);
 
+//        int index = createTime.lastIndexOf(" ");
+//        createTime=createTime.substring(0,index);
+//        Date date = new Date();
+//        String newDate = DateUtil.DateToString(date);
+//        int nIndex = newDate.lastIndexOf(" ");
+//        newDate=newDate.substring(0,nIndex);
+//        if(DateUtil.StringToLong(createTime) > DateUtil.StringToLong(newDate)){
+//            System.out.println(222);
+//        }
+//        System.out.println(createTime);
+//        System.out.println(newDate);
         //查询今天已经预约座位数量
-        List<Subscribe> subscribeSeats = subscribeMapper.findSubscribeSeats(DateUtil.nowCreateTime(), DateUtil.nowEndTime(), null);
+        List<Subscribe> subscribeSeats = null;
+        //判断是查询今天还是明天
+        if(state.equals("Today"))
+            subscribeSeats = subscribeMapper.findSubscribeSeats(DateUtil.nowCreateTime(), DateUtil.nowEndTime(),classroomId, createTime);
+        else
+            subscribeSeats = subscribeMapper.findSubscribeSeats(DateUtil.TomorrowCreateTime(), DateUtil.TomorrowEndTime(),classroomId, createTime);
+
         for(Map<String,Object> map:seatsByClassRoomId){
             for (Subscribe subscribe:subscribeSeats){
-                if(map.get("id")==subscribe.getSeatsId()){
+                if(map.get("id").equals(subscribe.getSeatsId())){
                     map.put("sT",false);
                 }else {
-                    map.put("sT",false);
+                    map.put("sT",true);
                 }
             }
             if(subscribeSeats.size()==0){
-                map.put("sT",false);
+                map.put("sT",true);
             }
         }
         //查询教室x y
-        Classroom roomById = classRoomMapper.findClassRoomById(classroomId);
+        List<Classroom> classRoomById = classRoomMapper.findClassRoomById(classroomId);
+        Classroom roomById = classRoomById.get(0);
         int x = roomById.getX();
         List<Object> lis=new ArrayList<>();
         List<Map<String,Object>> li=new ArrayList<>();

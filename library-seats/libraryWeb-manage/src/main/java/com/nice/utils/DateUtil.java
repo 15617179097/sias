@@ -66,6 +66,18 @@ public class DateUtil {
         return parse;
     }
 
+    //String 转long
+    public static  long StringToLong(String time){
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date parse = null;
+        try {
+            parse = simpleDateFormat.parse(time);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return parse.getTime();
+    }
+
     //获取明天的日期
     private static Date resultTomorrowDate(){
         Calendar calendar=Calendar.getInstance();

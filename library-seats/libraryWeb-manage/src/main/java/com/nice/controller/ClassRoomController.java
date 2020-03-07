@@ -1,13 +1,8 @@
 package com.nice.controller;
 
-import com.nice.mapper.ClassRoomMapper;
-import com.nice.pojo.Admin;
-import com.nice.pojo.Classroom;
 import com.nice.service.ClassRoomService;
 import com.nice.utils.DataResult;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -19,13 +14,15 @@ import org.springframework.web.bind.annotation.*;
  * @version 1.0
  */
 @RestController
-
 @RequestMapping("/classRoom")
 public class ClassRoomController {
     @Autowired
     private ClassRoomService classRoomService;
-
-
+    //查询所以的教室是
+    @RequestMapping("/findAllClassRoom")
+    public DataResult findAllClassRoom(){
+        return classRoomService.findAllClassRoom();
+    }
     //查询今天教室信息以及预约的座位数量
     @RequestMapping("/findTodayClassRoom")
     public DataResult findTodayClassRoom(){
@@ -44,19 +41,11 @@ public class ClassRoomController {
     public DataResult findClassRoom(){
         return  DataResult.ok(classRoomService.findClassRoom());
     }
-
     /*删除教室*/
-    @GetMapping("/delete/{id}")
-    public DataResult delete(@PathVariable("id")Integer id){
 
-        return DataResult.ok(classRoomService.delete(id));
+    @RequestMapping("delete")
+    public DataResult delClassRoom(int id){
+        return DataResult.ok(classRoomService.delClassRoom(id));
     }
-
-    //增加教室
-    @RequestMapping("/classroom")
-    public DataResult insertClassroom(Classroom classroom){
-        return DataResult.ok(classRoomService.insertClassroom(classroom));
-    }
-
 
 }
