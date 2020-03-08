@@ -27,4 +27,15 @@
         insert into Subscribe (user_id,classroom_id,seats_id,create_time,end_time,state) value (#{userId},#{classroomId},#{seatsId},#{createTime},#{endTime},0)
     </insert>
 
+    <!--查询本月预约的数据    -->
+    <select id="findMonthSubscribe" resultType="java.util.Map">
+       SELECT date_format(create_time,'%Y-%m-%d') date,count(date_format(create_time,'%Y-%m-%d')) count FROM subscribe WHERE 1=1
+        <if test="month=='' and month ==null">
+           and date_format(create_time,'%Y-%m') = date_format(curdate(),'%Y-%m')
+        </if>
+        <if test="month!=null and month!=''">
+            and date_format(create_time,'%Y-%m') = #{month}
+        </if>
+        GROUP BY date_format(create_time,'%Y-%m-%d')
+    </select>
 </mapper>

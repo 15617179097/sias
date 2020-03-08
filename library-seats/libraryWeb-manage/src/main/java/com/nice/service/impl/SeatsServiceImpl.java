@@ -11,7 +11,6 @@ import com.nice.utils.DateUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.lang.reflect.Array;
 import java.util.*;
 
 /**
@@ -25,9 +24,8 @@ import java.util.*;
 @Service
 public class SeatsServiceImpl implements SeatsService {
 
-    //座位mapper
-    @Autowired
-    private SeatsMapper seatsMapper;
+   @Autowired
+    private SeatsMapper seatMapper;
     @Autowired
     private SubscribeMapper subscribeMapper;
     @Autowired
@@ -38,19 +36,8 @@ public class SeatsServiceImpl implements SeatsService {
     public DataResult findSubscribeSeats(Integer classroomId,String createTime,String state) {
 
         //根据教室id获取对应的座位
-        List<Map<String, Object>> seatsByClassRoomId = seatsMapper.findSeatsByClassRoomId(classroomId);
+        List<Map<String, Object>> seatsByClassRoomId = seatMapper.findSeatsByClassRoomId(classroomId);
 
-//        int index = createTime.lastIndexOf(" ");
-//        createTime=createTime.substring(0,index);
-//        Date date = new Date();
-//        String newDate = DateUtil.DateToString(date);
-//        int nIndex = newDate.lastIndexOf(" ");
-//        newDate=newDate.substring(0,nIndex);
-//        if(DateUtil.StringToLong(createTime) > DateUtil.StringToLong(newDate)){
-//            System.out.println(222);
-//        }
-//        System.out.println(createTime);
-//        System.out.println(newDate);
         //查询今天已经预约座位数量
         List<Subscribe> subscribeSeats = null;
         //判断是查询今天还是明天

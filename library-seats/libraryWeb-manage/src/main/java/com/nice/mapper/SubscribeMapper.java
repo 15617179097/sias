@@ -6,6 +6,7 @@ import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Company:  <br>
@@ -24,4 +25,7 @@ public interface SubscribeMapper {
 
     //预约座位
     public int insertSubscribe(Subscribe subscribe);
+
+    //本月预约数据
+    public  List<Map<String,Object>> findMonthSubscribe(@Param("month") String month);
 }

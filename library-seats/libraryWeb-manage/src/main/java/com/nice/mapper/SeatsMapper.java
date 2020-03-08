@@ -10,7 +10,7 @@ import java.util.Map;
 /**
  * Company:  <br>
  * Description:  <br>
- * Date: 2020-01-13 12:30
+ * Date: 2020-03-08 13:13
  *
  * @author wmj
  * @version 1.0
@@ -20,5 +20,4 @@ import java.util.Map;
 public interface SeatsMapper {
 
     List<Map<String, Object>> findSeatsByClassRoomId(@Param("classroomId") Integer classroomId);
-
 }
