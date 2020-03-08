@@ -44,12 +44,12 @@ public class ClassRoomController {
     }
 
     /*删除教室*/
-    @RequestMapping("delete/{id}")
+    @PostMapping("delete/{id}")
     public DataResult delClassRoom(@PathVariable("id")Integer id){
         return DataResult.ok(classRoomService.delete(id));
     }
     //添加教室
-    @RequestMapping("insert")
+    @PostMapping("insert")
     public DataResult insertClassroom(Classroom classroom){
         return DataResult.ok(classRoomService.insertClassroom(classroom));
     }
