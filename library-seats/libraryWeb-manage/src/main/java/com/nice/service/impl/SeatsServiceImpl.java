@@ -4,6 +4,7 @@ import com.nice.mapper.ClassRoomMapper;
 import com.nice.mapper.SeatsMapper;
 import com.nice.mapper.SubscribeMapper;
 import com.nice.pojo.Classroom;
+import com.nice.pojo.Seats;
 import com.nice.pojo.Subscribe;
 import com.nice.service.SeatsService;
 import com.nice.utils.DataResult;
@@ -83,4 +84,25 @@ public class SeatsServiceImpl implements SeatsService {
         else   maps.put("suNum",subscribeSeats.size());
         return DataResult.ok(maps);
     }
+    //添加座位
+    @Override
+    public DataResult insertSeats(Seats seats) {
+        try {
+            seatMapper.insertSeats(seats);
+        }catch (Exception e){
+            return DataResult.fail(500, "添加失败！！", e);
+        }
+        return DataResult.ok(seats);
+    }
+
+    @Override
+    public DataResult deleteSeats(Integer id) {
+        try {
+            seatMapper.deleteSeates(id);
+        }catch (Exception e){
+            return DataResult.fail(500, "删除失败！！", e);
+        }
+        return DataResult.ok(id);
+    }
+
 }

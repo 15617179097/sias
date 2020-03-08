@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.nice.mapper.ClassRoomMapper" >
+
+<!--  查询今天或者明天的教室 和以及预约的数量  -->
   <select id="findAllClassRoom"  resultType="java.util.Map">
     SELECT
     classroom.id,
@@ -52,7 +54,7 @@
     delete from classroom where
             id= #{id}
   </delete>
-    <insert id="insertClassroom">
+    <insert id="insertClassroom" parameterType="Classroom">
         insert into classroom(classroom_name,classroom_number,floor,x,y,state)values(#{classroomName},#{classroomNumber},#{floor},#{x},#{y},#{state})
     </insert>
 </mapper>
