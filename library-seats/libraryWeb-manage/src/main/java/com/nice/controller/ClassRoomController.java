@@ -1,5 +1,6 @@
 package com.nice.controller;
 
+import com.nice.pojo.Classroom;
 import com.nice.service.ClassRoomService;
 import com.nice.utils.DataResult;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,11 +42,16 @@ public class ClassRoomController {
     public DataResult findClassRoom(){
         return  DataResult.ok(classRoomService.findClassRoom());
     }
-    /*删除教室*/
 
-    @RequestMapping("delete")
-    public DataResult delClassRoom(int id){
-        return DataResult.ok(classRoomService.delClassRoom(id));
+    /*删除教室*/
+    @RequestMapping("delete/{id}")
+    public DataResult delClassRoom(@PathVariable("id")Integer id){
+        return DataResult.ok(classRoomService.delete(id));
+    }
+    //添加教室
+    @RequestMapping("insert")
+    public DataResult insertClassroom(Classroom classroom){
+        return DataResult.ok(classRoomService.insertClassroom(classroom));
     }
 
 }
