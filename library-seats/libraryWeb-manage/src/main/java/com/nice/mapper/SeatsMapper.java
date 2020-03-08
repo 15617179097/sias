@@ -1,5 +1,7 @@
 package com.nice.mapper;
 
+import com.nice.pojo.Classroom;
+import com.nice.pojo.Seats;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
@@ -18,6 +20,11 @@ import java.util.Map;
 @Component
 @Mapper
 public interface SeatsMapper {
-
+    //查询以及预约的座位数据
     List<Map<String, Object>> findSeatsByClassRoomId(@Param("classroomId") Integer classroomId);
+    //增加座位
+    public void insertSeats(Seats seats);
+    //删除座位
+    public void deleteSeates(Integer id);
+
 }

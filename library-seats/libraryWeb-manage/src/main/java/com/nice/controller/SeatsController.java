@@ -1,6 +1,7 @@
 package com.nice.controller;
 
 
+import com.nice.pojo.Seats;
 import com.nice.service.SeatsService;
 import com.nice.utils.DataResult;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,5 +28,16 @@ public class SeatsController {
     @GetMapping("seats/classroomId/{classroomId}/state/{state}")
     public DataResult findSubscribeSeats(String createTime,@PathVariable("classroomId")Integer classroomId,@PathVariable("state")String state){
         return seatsService.findSubscribeSeats(classroomId,createTime,state);
+    }
+
+    //添加座位
+    @RequestMapping("insertSeats")
+    public DataResult insertSeats(Seats seats){
+        return DataResult.ok(seatsService.insertSeats(seats));
+    }
+    //删除座位
+    @RequestMapping("deleteSeats/{id}")
+    public DataResult deleteSeats(@PathVariable("id")Integer id){
+        return DataResult.ok(seatsService.deleteSeats(id));
     }
 }

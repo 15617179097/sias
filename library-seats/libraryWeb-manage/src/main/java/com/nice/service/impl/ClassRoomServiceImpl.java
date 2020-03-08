@@ -49,7 +49,7 @@ public class ClassRoomServiceImpl implements ClassRoomService {
         } catch (Exception e) {
             return DataResult.fail(500, "删除失败！！", e);
         }
-        return DataResult.ok();
+        return DataResult.ok(id);
     }
     @Override
     public DataResult insertClassroom(Classroom classroom) {
@@ -58,7 +58,7 @@ public class ClassRoomServiceImpl implements ClassRoomService {
         } catch (Exception e) {
             return DataResult.fail(500, "添加失败！！", e);
         }
-        return DataResult.ok();
+        return DataResult.ok(classroom);
     }
 
 

@@ -1,5 +1,6 @@
 package com.nice.service;
 
+import com.nice.pojo.Seats;
 import com.nice.utils.DataResult;
 import org.springframework.web.bind.annotation.PathVariable;
 
@@ -15,4 +16,8 @@ public interface SeatsService {
 
     //查询预约座位
     DataResult findSubscribeSeats(Integer classroomId,String createTime,String state);
+    //添加座位
+    DataResult insertSeats(Seats seats);
+    //删除座位
+    DataResult deleteSeats(Integer id);
 }

@@ -5,5 +5,11 @@
     <select id="findSeatsByClassRoomId" parameterType="java.util.Map">
     select id,classroom_id classroomId, from seats where classroom_id = #{classroomId}
   </select>
-
+    <insert id="insertSeats">
+        insert into seats(classroom_id,seat_munber,state)values(#{classroomId},#{seatMunber},#{state})
+    </insert>
+    <delete id="deleteSeates">
+        delete from Seats where
+            id=#{id}
+    </delete>
 </mapper>
