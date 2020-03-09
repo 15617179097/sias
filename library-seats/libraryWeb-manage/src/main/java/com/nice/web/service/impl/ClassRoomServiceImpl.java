@@ -41,7 +41,11 @@ public class ClassRoomServiceImpl implements ClassRoomService {
         return DataResult.ok(classRoom);
     }
 
-
+    /**
+     * 根据id删除教室
+     * @param id
+     * @return
+     */
     @Override
     public DataResult delete(Integer id) {
         try {
@@ -51,6 +55,12 @@ public class ClassRoomServiceImpl implements ClassRoomService {
         }
         return DataResult.ok(id);
     }
+
+    /**
+     * 添加教室
+     * @param classroom
+     * @return
+     */
     @Override
     public DataResult insertClassroom(Classroom classroom) {
         try {

@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Company:  <br>
@@ -30,12 +32,12 @@ public class SeatsController {
     }
 
     //添加座位
-    @RequestMapping("insertSeats")
+    @PostMapping("insertSeats")
     public DataResult insertSeats(Seats seats){
         return DataResult.ok(seatsService.insertSeats(seats));
     }
     //删除座位
-    @RequestMapping("deleteSeats/{id}")
+    @PostMapping("deleteSeats/{id}")
     public DataResult deleteSeats(@PathVariable("id")Integer id){
         return DataResult.ok(seatsService.deleteSeats(id));
     }

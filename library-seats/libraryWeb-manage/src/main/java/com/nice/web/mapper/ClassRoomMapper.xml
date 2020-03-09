@@ -49,11 +49,13 @@
         and  id = #{id}
       </if>
   </select>
-
+    <!--根据id删除教室-->
   <delete id="delete">
     delete from classroom where
             id= #{id}
   </delete>
+
+    <!--增加教室-->
     <insert id="insertClassroom" parameterType="Classroom">
         insert into classroom(classroom_name,classroom_number,floor,x,y,state)values(#{classroomName},#{classroomNumber},#{floor},#{x},#{y},#{state})
     </insert>

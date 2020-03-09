@@ -84,7 +84,12 @@ public class SeatsServiceImpl implements SeatsService {
         else   maps.put("suNum",subscribeSeats.size());
         return DataResult.ok(maps);
     }
-    //添加座位
+
+    /**
+     * 增加座位
+     * @param seats
+     * @return
+     */
     @Override
     public DataResult insertSeats(Seats seats) {
         try {
@@ -95,6 +100,11 @@ public class SeatsServiceImpl implements SeatsService {
         return DataResult.ok(seats);
     }
 
+    /**
+     * 删除座位
+     * @param id
+     * @return
+     */
     @Override
     public DataResult deleteSeats(Integer id) {
         try {
