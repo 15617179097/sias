@@ -11,7 +11,7 @@ import java.util.Map;
 
  */
 public interface ClassRoomService {
-
+    //查询所有教室
     DataResult findAllClassRoom();
     //查询今天的教室信息
     public List<Map<String,Object>> findTodayClassRoom();

@@ -23,9 +23,11 @@ public class ModularServiceImpl implements ModularService{
         @Autowired
         private ModularMapper modularMapper;
 
-        /*
-            查询左侧菜单模板列表
-         */
+        /**
+         * @Description 查询左侧菜单模板列表
+         * @Param
+         * @return
+         **/
         @Override
         public DataResult findModular() {
             List<Map<String,Object>> modular = modularMapper.findModular();

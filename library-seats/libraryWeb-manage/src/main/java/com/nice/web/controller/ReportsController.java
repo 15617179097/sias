@@ -20,7 +20,11 @@ public class ReportsController {
     @Autowired
     private ReportsService reportsService;
 
-    /*根据月份查数据报表*/
+    /**
+     * @Description 根据月份查数据报表
+     * @Param
+     * @return
+     **/
     @GetMapping("reports")
     public DataResult findReportsByMonth(String month){
         return reportsService.findReportsByMonth(month);

@@ -24,8 +24,11 @@ public class ReportsServiceImpl implements ReportsService {
     @Autowired
     private SubscribeMapper subscribeMapper;
 
-
-    /*根据月份查询数据报表*/
+    /**
+     * @Description 根据月份查询数据报表
+     * @Param month
+     * @return
+     **/
     @Override
     public DataResult findReportsByMonth(String month) {
         List<Map<String, Object>> monthSubscribe = subscribeMapper.findMonthSubscribe(month);

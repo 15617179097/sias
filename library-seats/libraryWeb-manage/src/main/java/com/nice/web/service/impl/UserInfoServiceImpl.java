@@ -17,6 +17,11 @@ import org.springframework.stereotype.Service;
 public class UserInfoServiceImpl implements UserInfoService {
     @Autowired
     private UserInfoMapper userInfoMapper;
+    /**
+     * @Description 获取用户信息
+     * @param
+     * @return com.nice.web.utils.DataResult
+     **/
     @Override
     public DataResult findUserInfo() {
         return DataResult.ok(userInfoMapper.findUserInfo());

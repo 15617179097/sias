@@ -23,10 +23,15 @@ public class SubscribeController {
     @Autowired
     private SubscribeService subscribeService;
 
+    /**
+     * @Description 进行预约座位
+     * @param subscribe
+     * @param request
+     * @return com.nice.web.utils.DataResult
+     **/
     @PostMapping("subscribe")
     public DataResult insertSubscribe(Subscribe subscribe, HttpServletRequest request){
         String token = request.getHeader("Authorization");
-
         return subscribeService.insertSubscribe(subscribe,token);
     }
 

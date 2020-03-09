@@ -27,7 +27,13 @@ public class SubscribeServiceImpl implements SubscribeService {
     private SubscribeMapper subscribeMapper;
     @Autowired
     private SignInMapper signInMapper;
-    /*预约座位*/
+
+    /**
+     * @Description 预约座位
+     * @param subscribe
+     * @param token
+     * @return com.nice.web.utils.DataResult
+     **/
     @Override
     public DataResult insertSubscribe(Subscribe subscribe, String token) {
         Admin adminByToken = adminService.findAdminByToken(token);

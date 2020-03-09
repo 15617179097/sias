@@ -10,6 +10,7 @@ import com.nice.web.utils.DataResult;
  * @Version V1.0
  **/
 public interface UserInfoService {
+    //获取用户信息
     DataResult findUserInfo();
 
 

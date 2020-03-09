@@ -19,11 +19,13 @@ import org.springframework.web.bind.annotation.*;
 public class ClassRoomController {
     @Autowired
     private ClassRoomService classRoomService;
+
     //查询所以的教室是
     @RequestMapping("/findAllClassRoom")
     public DataResult findAllClassRoom(){
         return classRoomService.findAllClassRoom();
     }
+
     //查询今天教室信息以及预约的座位数量
     @RequestMapping("/findTodayClassRoom")
     public DataResult findTodayClassRoom(){

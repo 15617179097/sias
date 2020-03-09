@@ -19,6 +19,11 @@ public class UserController {
     @Autowired
     private UserInfoService userInfoService;
 
+    /**
+     * @Description 获取用户信息
+     * @param
+     * @return com.nice.web.utils.DataResult
+     **/
     @GetMapping("/findUserInfo")
     public DataResult findUser(){
         return userInfoService.findUserInfo();

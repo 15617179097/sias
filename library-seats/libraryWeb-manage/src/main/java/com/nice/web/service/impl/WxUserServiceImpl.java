@@ -30,7 +30,13 @@ public class WxUserServiceImpl implements WxUserService {
     @Autowired
     private UserInfoMapper userInfoMapper;
 
-    //查询微信用户列表
+     /**
+      * @Description 禁用 查询微信用户列表
+      * @param studentId
+      * @param pagenum
+      * @param pagesize
+      * @return com.nice.web.utils.DataResult
+      **/
     @Override
     public DataResult findWxUser(Integer studentId, Integer pagenum, Integer pagesize) {
         PageHelper.startPage(pagenum,pagesize);
@@ -42,7 +48,12 @@ public class WxUserServiceImpl implements WxUserService {
         return DataResult.ok(res);
     }
 
-    //禁用 开启用户
+    /**
+     * @Description 禁用 与开启用户
+     * @param id
+     * @param state
+     * @return com.nice.web.utils.DataResult
+     **/
     @Override
     public DataResult updataWxUserState(Integer id,Integer state) {
         UserInfo userInfo = new UserInfo();
@@ -56,7 +67,11 @@ public class WxUserServiceImpl implements WxUserService {
         return DataResult.ok();
     }
 
-    //禁用 开启用户
+    /**
+     * @Description 删除用户
+     * @param id
+     * @return com.nice.web.utils.DataResult
+     **/
     @Override
     public DataResult deleteUserInfo(Integer id) {
         try{

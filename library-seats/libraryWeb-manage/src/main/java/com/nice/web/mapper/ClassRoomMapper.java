@@ -19,6 +19,7 @@ import java.util.Map;
 @Component
 @Mapper
 public interface ClassRoomMapper {
+    //获取所有教室
     public List<Map<String,Object>> findAllClassRoom(@Param("classroomId") Integer classroomId, @Param("createTime") String createTime, @Param("endTime") String endTime);
     public List<String> findClassRoom();
     //根据教室id查询

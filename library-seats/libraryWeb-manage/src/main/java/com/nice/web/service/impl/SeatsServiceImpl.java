@@ -32,7 +32,13 @@ public class SeatsServiceImpl implements SeatsService {
     @Autowired
     private ClassRoomMapper classRoomMapper;
 
-    //查询根据classroomId已经预约的座位信息
+    /**
+     * @Description 询根据classroomId已经预约的座位信息
+     * @param classroomId
+     * @param createTime
+     * @param state
+     * @return com.nice.web.utils.DataResult
+     **/
     @Override
     public DataResult findSubscribeSeats(Integer classroomId, String createTime, String state) {
 

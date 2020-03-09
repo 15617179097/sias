@@ -11,7 +11,11 @@ public class RedisServiceImpl implements RedisService {
     @Autowired
     private RedisClinet jedisPool;
 
-    //添加缓存
+    /**
+     * @Description 添加缓存
+     * @Param key,value
+     * @return
+     **/
     @Override
     public String setV(String key, String value) {
         //10小时过期时间

@@ -25,18 +25,34 @@ public class SeatsController {
 
     @Autowired
     private SeatsService seatsService;
-    //查询以及预约的座位数据
+
+    /**
+     * @Description 查询以及预约的座位数据
+     * @param createTime
+     * @param classroomId
+     * @param state
+     * @return com.nice.web.utils.DataResult
+     **/
     @GetMapping("seats/classroomId/{classroomId}/state/{state}")
     public DataResult findSubscribeSeats(String createTime, @PathVariable("classroomId")Integer classroomId, @PathVariable("state")String state){
         return seatsService.findSubscribeSeats(classroomId,createTime,state);
     }
 
-    //添加座位
+    /**
+     * @Description  添加座位
+     * @param seats
+     * @return com.nice.web.utils.DataResult
+     **/
     @PostMapping("insertSeats")
     public DataResult insertSeats(Seats seats){
         return DataResult.ok(seatsService.insertSeats(seats));
     }
-    //删除座位
+
+    /**
+     * @Description 删除座位
+     * @param id
+     * @return com.nice.web.utils.DataResult
+     **/
     @PostMapping("deleteSeats/{id}")
     public DataResult deleteSeats(@PathVariable("id")Integer id){
         return DataResult.ok(seatsService.deleteSeats(id));

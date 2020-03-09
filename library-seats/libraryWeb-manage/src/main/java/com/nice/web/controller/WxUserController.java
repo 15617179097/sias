@@ -18,19 +18,34 @@ public class WxUserController {
     @Autowired
     private WxUserService wxUserService;
 
-    //查询用户列表
+    /**
+     * @Description 分页查询用户列表
+     * @param query
+     * @param pagenum
+     * @param pagesize
+     * @return com.nice.web.utils.DataResult
+     **/
     @GetMapping("users")
     public DataResult findWxUser(Integer query, Integer pagenum, Integer pagesize){
         return wxUserService.findWxUser(query,pagenum,pagesize);
     }
 
-    //禁用用户
+    /**
+     * @Description 禁用用户
+     * @param id
+     * @param state
+     * @return com.nice.web.utils.DataResult
+     **/
     @PutMapping("users/{id}/state/{state}")
     public DataResult updataWxUserState(@PathVariable("id")Integer id,@PathVariable("state")Integer state){
         return wxUserService.updataWxUserState(id,state);
     }
 
-    //删除用户绑定的信息
+    /**
+     * @Description 删除用户绑定的信息
+     * @param id
+     * @return com.nice.web.utils.DataResult
+     **/
     @DeleteMapping("users/{id}")
     public DataResult updataWxUserState(@PathVariable("id")Integer id){
         return wxUserService.deleteUserInfo(id);

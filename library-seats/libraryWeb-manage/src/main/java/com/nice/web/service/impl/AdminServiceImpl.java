@@ -31,7 +31,12 @@ public class AdminServiceImpl implements AdminService {
 
     @Autowired
     private RedisService redisService;
-    //后台登陆
+
+    /**
+     * @Description 后台登陆
+     * @Param username, pagenum, pagesize
+     * @return
+     **/
     @Override
     public DataResult adminLogin(String username, String password) {
         //校验是否为空
@@ -46,15 +51,24 @@ public class AdminServiceImpl implements AdminService {
         Map<String, Object> token = getToken(adminList);
         return DataResult.ok(token);
     }
-    /*查询密码以及用户信息*/
+
+    /**
+     * @Description 查询密码以及用户信息
+     * @Param username, pagenum, pagesize
+     * @return
+     **/
     @Override
     public DataResult findAdminAndPwd(Integer id) {
         Admin admin = new Admin();
         admin.setId(id);
         return DataResult.ok(adminMapper.findAdminAndLogin(admin));
     }
-
-    /*查询用户列表*/
+    
+    /**
+     * @Description 查询用户列表
+     * @Param username, pagenum, pagesize
+     * @return 
+     **/
     @Override
     public DataResult adminList(String username,Integer pagenum,Integer pagesize) {
         //分页插件
@@ -69,7 +83,11 @@ public class AdminServiceImpl implements AdminService {
         return DataResult.ok(map);
     }
 
-    /*添加用户*/
+    /**
+     * @Description 添加用户
+     * @Param admin
+     * @return 
+     **/
     @Override
     public DataResult insertAdmin(Admin admin) {
         try{
@@ -80,7 +98,11 @@ public class AdminServiceImpl implements AdminService {
         return DataResult.ok();
     }
 
-    /*修改信息*/
+    /**
+     * @Description 修改信息
+     * @Param admin，id
+     * @return
+     **/
     @Override
     public DataResult updetaAdmin(Integer id, Admin admin) {
         admin.setId(id);
@@ -92,7 +114,11 @@ public class AdminServiceImpl implements AdminService {
         return DataResult.ok();
     }
 
-    //修改用户状态
+    /**
+     * @Description 修改用户状态
+     * @Param id, status
+     * @return
+     **/
     @Override
     public DataResult updataAdminStatus(Integer id, Integer status) {
         Admin admin=new Admin();
@@ -106,7 +132,11 @@ public class AdminServiceImpl implements AdminService {
         return DataResult.ok();
     }
 
-    //删除用户
+    /**
+     * @Description 删除管理员
+     * @Param  id
+     * @return
+     **/
     @Override
     public DataResult daleteAdmin(Integer id) {
         try {
@@ -117,7 +147,11 @@ public class AdminServiceImpl implements AdminService {
         return DataResult.ok();
     }
 
-    //根据token获取用户信息
+    /**
+     * @Description 根据token获取用户信息
+     * @Param token
+     * @return
+     **/
     @Override
     public Admin findAdminByToken(String token) {
         String v = redisService.getV(token);
@@ -131,7 +165,11 @@ public class AdminServiceImpl implements AdminService {
         return admin;
     }
 
-    //获取token
+    /**
+     * @Description 获取token
+     * @Param admin
+     * @return
+     **/
     private Map<String,Object> getToken(Admin admins){
         String token = UUID.randomUUID().toString();
         redisService.setV(token, JsonUtils.objectToJson(admins));
