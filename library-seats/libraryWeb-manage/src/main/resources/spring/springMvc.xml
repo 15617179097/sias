@@ -9,7 +9,7 @@
 	http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
     http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd">
     <!--扫描controller 进行sping管理-->
-    <context:component-scan base-package="com.nice.controller"></context:component-scan>
+    <context:component-scan base-package="com.nice.web.controller"></context:component-scan>
     <!--注解驱动 解析注解-->
     <mvc:annotation-driven/>
     <!-- 配置视图解析器 -->
@@ -34,7 +34,7 @@
     <task:scheduler id="scheduler" pool-size="10"></task:scheduler>
     <!-- 启用注解驱动的定时任务,定时任务配置 scheduler 方式 注解 -->
     <task:annotation-driven executor="executor" scheduler="scheduler" ></task:annotation-driven>
-    <context:component-scan base-package="com.nice.service.common"></context:component-scan>
+    <context:component-scan base-package="com.nice.web.service.common"></context:component-scan>
 
     <!-- 接口跨域配置 -->
     <mvc:cors>

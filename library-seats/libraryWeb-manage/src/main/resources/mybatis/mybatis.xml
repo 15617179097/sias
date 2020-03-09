@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <typeAliases>
-        <package name="com.nice.pojo"/>
+        <package name="com.nice.web.pojo"/>
     </typeAliases>
 
     <!-- 配置分页插件 -->

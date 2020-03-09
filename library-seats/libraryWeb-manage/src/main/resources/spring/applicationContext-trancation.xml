@@ -28,6 +28,6 @@
     </tx:advice>
     <!--aop切面编程 加强事务 事务管理-->
     <aop:config>
-        <aop:advisor advice-ref="txAdvice" pointcut="execution(* com.nice.service.impl.*.*(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut="execution(* com.nice.web.service.impl.*.*(..))"/>
     </aop:config>
 </beans>
