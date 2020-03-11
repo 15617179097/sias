@@ -23,6 +23,8 @@ public interface ClassRoomService {
      DataResult delete(Integer id);
      //增加教室
      DataResult insertClassroom(Classroom classroom);
+    //分页查询教室列表
+    DataResult classroomList(String classroomName,Integer pagenum,Integer pagesize);
 
 
 }

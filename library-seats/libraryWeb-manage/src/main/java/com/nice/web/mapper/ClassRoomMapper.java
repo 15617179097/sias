@@ -28,4 +28,6 @@ public interface ClassRoomMapper {
     public void delete(Integer id);
     //添加教室
     public void insertClassroom(Classroom classroom);
+    //分页查询所有教室
+    public List<Classroom> SelectAllClassRoom(Classroom classroom);
 }

@@ -1,5 +1,7 @@
 package com.nice.web.service.impl;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.nice.web.pojo.Classroom;
 import com.nice.web.utils.DataResult;
 import com.nice.web.utils.DateUtil;
@@ -8,6 +10,7 @@ import com.nice.web.service.ClassRoomService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -84,6 +87,24 @@ public class ClassRoomServiceImpl implements ClassRoomService {
             return DataResult.fail(500, "添加失败！！", e);
         }
         return DataResult.ok(classroom);
+    }
+    /**
+     * @Description 分页查询教室列表
+     * @Param username, pagenum, pagesize
+     * @return
+     **/
+    @Override
+    public DataResult classroomList(String classroomName,Integer pagenum,Integer pagesize) {
+        //分页插件
+        PageHelper.startPage(pagenum,pagesize);
+        Classroom classrooms=new Classroom();
+        classrooms.setClassroomName(classroomName);
+        List<Classroom> classroom = classRoomMapper.SelectAllClassRoom(classrooms);
+        PageInfo<Classroom> classroomList = new PageInfo<Classroom>(classroom);
+        Map<String, Object> map =new HashMap<>();
+        map.put("admins",classroomList);
+        map.put("total",classroomList.getTotal());
+        return DataResult.ok(map);
     }
 
 
