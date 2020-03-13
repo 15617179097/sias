@@ -32,9 +32,18 @@ public class NoticeServiceImpl implements NoticeService {
         return DataResult.ok(notice);
     }
 
+    /**
+     * 删除公告
+     * @param id
+     * @return
+     */
     @Override
     public DataResult deleteNotice(Integer id){
-        noticeMapper.deleteNotice(id);
+        try {
+            noticeMapper.deleteNotice(id);
+        }catch (Exception e){
+            return DataResult.fail(500, "删除失败！！", e);
+        }
         return DataResult.ok(id);
     }
 

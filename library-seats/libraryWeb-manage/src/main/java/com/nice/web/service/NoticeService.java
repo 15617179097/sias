@@ -11,6 +11,7 @@ import com.nice.web.utils.DataResult;
 public interface NoticeService {
     //添加公告
     DataResult addNotice(Notice notice);
+
     //删除公告
     DataResult deleteNotice(Integer id);
 }

@@ -24,7 +24,7 @@ public class NoticeController {
     public DataResult addNotice(Notice notice){
         return DataResult.ok(noticeService.addNotice(notice));
     }
-
+    //删除公告
     @RequestMapping("deleteNotice/{id}")
     public DataResult deleteNotice(@PathVariable("id") Integer id){
         return DataResult.ok(noticeService.deleteNotice(id));
