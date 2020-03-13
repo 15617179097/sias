@@ -3,7 +3,6 @@ package com.nice.common;
 import com.nice.utils.QRBarCodeUtil;
 
 import java.io.File;
-import java.util.Date;
 
 /**
  * @ClassName Scan

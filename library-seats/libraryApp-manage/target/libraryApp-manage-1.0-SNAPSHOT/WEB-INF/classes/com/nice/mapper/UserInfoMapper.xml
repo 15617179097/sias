@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.nice.mapper.UserInfoMapper" >
+
   <select id="findUserInfo" parameterType="com.nice.pojo.UserInfo" resultType="java.util.Map">
   select id,studentId,credit_score creditScore from userInfo where state=0
   <if test="userId!=null">
     and user_id=#{userId}
   </if>
   </select>
+
   <select id="login" parameterType="com.nice.pojo.UserInfo" resultType="java.util.Map">
     select id,studentId,credit_score creditScore,password from userInfo where state=0 and studentid=#{studentId}
   </select>
+
   <insert id="insertUserInfo" parameterType="com.nice.pojo.UserInfo">
     insert into userInfo (studentId,name,user_id,state)
     value (#{studentId},#{name},#{userId},0)
   </insert>
+
   <update id="updateAllUserInfo" >
     update userInfo  set  credit_score=#{creditScore} where credit_score!=5
   </update>
+
   <update id="updateUserInfoCreditScore" >
     UPDATE userinfo set credit_score=credit_score-1 WHERE credit_score>0
   </update>
@@ -25,4 +30,7 @@
     select id,name,nickName,phone,studentId,credit_score creditScore,state from userInfo
   </select>
 
+  <delete id="deleteUserInfo">
+    delete studentId from userinfo where user_id=#{userId}
+  </delete>
 </mapper>

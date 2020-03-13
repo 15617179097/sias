@@ -1,7 +1,6 @@
 package com.nice.service.impl;
 
 import com.nice.common.RedisClinet;
-import com.nice.common.impl.RedisClusterClinet;
 import com.nice.service.RedisService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,7 +23,12 @@ public class RedisServiceImpl implements RedisService {
 
     @Override
     public long expire(String key, int second) {
-        return jedisPool.expire(key, 50);
+        return jedisPool.expire(key, second);
+    }
+
+    @Override
+    public Boolean exists(String key) {
+        return jedisPool.exists(key);
     }
 
 }

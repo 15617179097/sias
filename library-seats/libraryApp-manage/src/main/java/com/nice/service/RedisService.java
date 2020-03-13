@@ -6,4 +6,6 @@ public interface RedisService {
     public String getV(String key);
 
     public long expire(String key,int second);
+
+    public Boolean exists(String key);
 }

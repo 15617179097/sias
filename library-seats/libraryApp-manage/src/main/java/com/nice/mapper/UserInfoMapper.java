@@ -5,7 +5,6 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
 
-import java.awt.*;
 import java.util.List;
 import java.util.Map;
 
@@ -36,4 +35,7 @@ public interface UserInfoMapper {
 
     //用户列表
     List<Map<String,Object>> findAllUsers();
+
+    //删除用户信息
+    int deleteUserInfo(@Param("userId")Integer userId);
 }

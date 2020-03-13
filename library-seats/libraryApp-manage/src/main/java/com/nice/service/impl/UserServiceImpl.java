@@ -11,6 +11,7 @@ import com.nice.utils.DataResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Map;
 
@@ -27,16 +28,13 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserInfoMapper userMapper;
     @Autowired
-    private WxUserService wxUserService;
-    @Autowired
     private UserRecordMapper userRecordMapper;
     @Autowired
     private SubscribeMapper subscribeMapper;
     @Override
-    public DataResult findUserByLoginStateUUid(String loginStateUUID) {
-        int userId = wxUserService.getWxUserId(loginStateUUID);
+    public DataResult findUserByLoginStateUUid(HttpServletRequest request) {
         UserInfo userInfo=new UserInfo();
-        userInfo.setUerId(userId);
+        userInfo.setUerId((Integer) request.getAttribute("token"));
         Map<String,Object> user = userMapper.findUserInfo(userInfo);
         if (user==null)
             return DataResult.ok();
@@ -48,11 +46,10 @@ public class UserServiceImpl implements UserService {
         添加学号
      */
     @Override
-    public DataResult saveUserByLoginStateUUid(String loginStateUUID, String studentId) {
-        int userId = wxUserService.getWxUserId(loginStateUUID);
+    public DataResult saveUserByLoginStateUUid(HttpServletRequest request, String studentId) {
         UserInfo userInfo=new UserInfo();
         userInfo.setStudentId(studentId);
-        userInfo.setUerId(userId);
+        userInfo.setUerId((Integer) request.getAttribute("userId"));
         Map<String,Object> info =null;
         try {
             userMapper.insertUserInfo(userInfo);
@@ -64,21 +61,37 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public DataResult findUserRecordByUserId(String loginStateUUID) {
+    public DataResult findUserRecordByUserId(HttpServletRequest request) {
         UserRecord userRecord=new UserRecord();
-        userRecord.setUserId( wxUserService.getWxUserId(loginStateUUID));
+        userRecord.setUserId( (Integer) request.getAttribute("userId"));
         List<UserRecord> userRecordByUserId = userRecordMapper.findUserRecordByUserId(userRecord);
         return DataResult.ok(userRecordByUserId);
     }
 
     @Override
-    public DataResult findMyAllSubscribe(String loginStateUUID) {
-        return DataResult.ok(subscribeMapper.findMyAllSubscribe( wxUserService.getWxUserId(loginStateUUID)));
+    public DataResult findMyAllSubscribe(HttpServletRequest request) {
+        return DataResult.ok(subscribeMapper.findMyAllSubscribe((Integer) request.getAttribute("userId")));
     }
 
     @Override
     public DataResult findAllUsers() {
         return DataResult.ok(userMapper.findAllUsers());
+    }
+
+    /**
+     * @Description 删除用户绑定信息
+     * @param request
+     * @return com.nice.utils.DataResult
+     **/
+    @Override
+    public DataResult deleteUserInfo(HttpServletRequest request) {
+        try{
+            Integer token = (Integer) request.getAttribute("userId");
+            userMapper.deleteUserInfo(token);
+        }catch (Exception e){
+            return DataResult.fail(500,"删除失败！",e);
+        }
+        return DataResult.ok();
     }
 
 }

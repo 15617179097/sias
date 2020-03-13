@@ -56,4 +56,10 @@ public class ModularServiceImpl implements ModularService{
             }
             return DataResult.ok(modularParent);
         }
+
+    @Override
+    public DataResult findAllModular() {
+        List<Map<String, Object>> modular = modularMapper.findModular();
+        return DataResult.ok(modular);
+    }
 }

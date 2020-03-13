@@ -9,6 +9,8 @@ public interface RedisClinet {
     String hGet(String hName, String hKey);
     //自增
     long incr(String key);
+    //判断key 是否存在
+    Boolean exists(String key);
     //设置过期时间
     long expire(String key, int second);
     //查询失效时间

@@ -2,6 +2,8 @@ package com.nice.service;
 
 import com.nice.utils.DataResult;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * Company:  <br>
  * Description:  <br>
@@ -13,17 +15,20 @@ import com.nice.utils.DataResult;
 public interface UserService {
 
     //查询用户信息
-    DataResult findUserByLoginStateUUid(String loginStateUUID);
+    DataResult findUserByLoginStateUUid(HttpServletRequest request);
 
     // 添加学号
-    DataResult saveUserByLoginStateUUid(String loginStateUUID, String studentId);
+    DataResult saveUserByLoginStateUUid(HttpServletRequest request, String studentId);
 
     //查询我的违约记录
-    DataResult findUserRecordByUserId(String loginStateUUID);
+    DataResult findUserRecordByUserId(HttpServletRequest request);
 
     //查询我的预约记录
-    DataResult findMyAllSubscribe(String loginStateUUID);
+    DataResult findMyAllSubscribe(HttpServletRequest request);
 
     //用户列表
     DataResult findAllUsers();
+
+    //删除用户信息
+    DataResult deleteUserInfo(HttpServletRequest request);
 }
