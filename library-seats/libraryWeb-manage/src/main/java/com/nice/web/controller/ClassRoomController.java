@@ -26,6 +26,11 @@ public class ClassRoomController {
         return classRoomService.findAllClassRoom();
     }
 
+    //分页查询所有的教室
+    @RequestMapping("selectAllClassRoom")
+    public DataResult selectAllClassRoom(String query,Integer pagenum,Integer pagesize){
+        return classRoomService.classroomList(query,pagenum,pagesize);
+    }
     //查询今天教室信息以及预约的座位数量
     @RequestMapping("/findTodayClassRoom")
     public DataResult findTodayClassRoom(){
