@@ -31,4 +31,11 @@ public class NoticeServiceImpl implements NoticeService {
         }
         return DataResult.ok(notice);
     }
+
+    @Override
+    public DataResult deleteNotice(Integer id){
+        noticeMapper.deleteNotice(id);
+        return DataResult.ok(id);
+    }
+
 }

@@ -5,6 +5,7 @@ import com.nice.web.pojo.Notice;
 import com.nice.web.service.NoticeService;
 import com.nice.web.utils.DataResult;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,5 +23,10 @@ public class NoticeController {
     @RequestMapping("addNotice")
     public DataResult addNotice(Notice notice){
         return DataResult.ok(noticeService.addNotice(notice));
+    }
+
+    @RequestMapping("deleteNotice/{id}")
+    public DataResult deleteNotice(@PathVariable("id") Integer id){
+        return DataResult.ok(noticeService.deleteNotice(id));
     }
 }

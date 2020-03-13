@@ -6,7 +6,10 @@
     insert into noticetable(id,ntitle,ncontent,ntime)
     values(null,#{ntitle},#{ncontent},now())
 </insert>
+<delete id="deleteNotice" parameterType="Integer">
+    delete from noticetable where id=#{id}
 
+</delete>
 
 
 </mapper>

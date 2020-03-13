@@ -14,6 +14,7 @@ import org.springframework.stereotype.Component;
 public interface NoticeMapper {
     //添加公告
     public void addNotice(Notice notice);
+
     //删除公告
     public void deleteNotice(Integer id);
 
