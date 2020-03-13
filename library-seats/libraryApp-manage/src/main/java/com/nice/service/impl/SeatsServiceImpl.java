@@ -36,10 +36,14 @@ public class SeatsServiceImpl implements SeatsService {
         return seatsMapper.findSeats(seats);
     }
 
-    /*
-        查询 座位信息 是否 被预约
-     */
 
+    /**
+     * @Description 查询 座位信息 是否 被预约
+     * @param classroomId
+     * @param createTime
+     * @param timeState
+     * @return java.util.List<java.util.Map<java.lang.String,java.lang.Object>>
+     **/
     @Override
     public List<Map<String,Object>> findSeatsByClassRoomIdAndCreateTime(int classroomId,String createTime,Integer timeState) {
         Seats seats=new Seats();
@@ -51,22 +55,15 @@ public class SeatsServiceImpl implements SeatsService {
             allSubscribe = subscribeMapper.findSubscribe(DateUtil.nowCreateTime(),DateUtil.nowEndTime(),createTime,null);
         else
             allSubscribe = subscribeMapper.findSubscribe(DateUtil.TomorrowCreateTime(),DateUtil.TomorrowEndTime(),createTime,null);
-
         int i=0;
         for(Subscribe su:allSubscribe){
         for (Map<String,Object> s:seats1){
-            System.out.println(s.get("id"));
-            System.out.println(su.getSeatsId());
                 if(s.get("id").equals(su.getSeatsId())){
-                    System.out.println(s.get("id"));
-                    System.out.println(su.getSeatsId());
                     s.put("seatsV",true);
-                    System.out.println(s.get("id")+"=="+su.getSeatsId());
                     break;
                 }
             }
         }
-        System.out.println(i);
         return seats1;
     }
 

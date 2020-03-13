@@ -23,17 +23,25 @@ public class ClassRoomServiceImpl implements ClassRoomService {
     @Autowired
     private ClassRoomMapper classRoomMapper;
 
-    /* 查询明天的教室 信息  */
+    /**
+     * @Description 查询明天的教室信息
+     * @param
+     * @return com.nice.utils.DataResult
+     **/
     @Override
-    public List<Map<String,Object>> findTomorrowClassRoom() {
+    public DataResult findTomorrowClassRoom() {
 
-        return classRoomMapper.findAllClassRoom(null, DateUtil.TomorrowCreateTime(), DateUtil.TomorrowEndTime());
+        return DataResult.ok(classRoomMapper.findAllClassRoom(null, DateUtil.TomorrowCreateTime(), DateUtil.TomorrowEndTime()));
     }
 
-    /*查询今天的教室 信息 */
+    /**
+     * @Description 查询今天的教室 信息
+     * @param
+     * @return com.nice.utils.DataResult
+     **/
     @Override
-    public List<Map<String, Object>> findTodayClassRoom() {
-        return classRoomMapper.findAllClassRoom(null, DateUtil.nowCreateTime(), DateUtil.nowEndTime());
+    public DataResult findTodayClassRoom() {
+        return DataResult.ok(classRoomMapper.findAllClassRoom(null, DateUtil.nowCreateTime(), DateUtil.nowEndTime()));
     }
 
     @Override

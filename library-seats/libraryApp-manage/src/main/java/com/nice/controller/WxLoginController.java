@@ -24,23 +24,31 @@ public class WxLoginController {
     @Autowired
     private CheckLoginService checkLoginService;
 
-    //用户登陆
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public DataResult login(String studentId,String password, HttpServletRequest request){
+//    //用户登陆
+//    @RequestMapping(value = "/login", method = RequestMethod.POST)
+//    public DataResult login(String studentId,String password, HttpServletRequest request){
+//
+//        return checkLoginService.login(studentId,password,request);
+//    }
 
-        return checkLoginService.login(studentId,password,request);
-    }
-
-    /*
-    wx登陆
-     */
+    /**
+     * @Description  wx登陆
+     * @param code
+     * @param request
+     * @return com.nice.utils.DataResult
+     **/
     @RequestMapping("/checkLogin")
     public DataResult checkLogin(String code, HttpServletRequest request){
         return checkLoginService.checkLogin(code, request);
     }
-    /*
-    wx注册
-   */
+
+    /**
+     * @Description wx注册
+     * @param loginStateUUID
+     * @param encryptedData
+     * @param iv
+     * @return com.nice.utils.DataResult
+     **/
     @RequestMapping("/saveUserInfo")
     public DataResult saveUserInfo(String loginStateUUID,String encryptedData ,String iv){
         return  checkLoginService.saveUserInfo(loginStateUUID,encryptedData,iv);

@@ -23,7 +23,13 @@ public class CheckLoginServiceImpl implements CheckLoginService {
     private WxUserInfoMapper wxUserInfoMapper;
     @Autowired
     private UserInfoMapper userInfoMapper;
-    //登陆
+
+    /**
+     * @Description 微信登陆
+     * @param code
+     * @param request
+     * @return com.nice.utils.DataResult
+     **/
     @Override
     public DataResult checkLogin(String code, HttpServletRequest request) {
         StringBuffer url=new StringBuffer("https://api.weixin.qq.com/sns/jscode2session?");
@@ -41,7 +47,13 @@ public class CheckLoginServiceImpl implements CheckLoginService {
         return DataResult.ok(token.toString());
     }
 
-    //注册
+    /**
+     * @Description 微信注册
+     * @param loginStateUUID
+     * @param encryptedData
+     * @param iv
+     * @return com.nice.utils.DataResult
+     **/
     @Override
     public DataResult saveUserInfo(String loginStateUUID,String encryptedData ,String iv) {
        //根据登陆标识loginStateUUID 从缓存中查询数据

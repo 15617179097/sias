@@ -1,14 +1,11 @@
 package com.nice.controller;
 
-import com.nice.service.ModularService;
 import com.nice.service.UserService;
 import com.nice.utils.DataResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.context.request.NativeWebRequest;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.ws.rs.DELETE;
 
 /**
  * Company:  <br>
@@ -25,54 +22,60 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @Autowired
-    private ModularService modularService;
 
     @RequestMapping(value = "/index",method = RequestMethod.GET)
     public DataResult index(){
-        return  modularService.findModular();
+        return  null;
     }
 
-    /*
-        根据登陆态获取用户信息
-     */
-    @GetMapping("userInfo/{loginStateUUID}")
-    public DataResult findUserByLoginStateUUid(HttpServletRequest request, @PathVariable("loginStateUUID") String loginStateUUID){
+    /**
+     * @Description 根据token获取用户信息
+     * @param request
+     * @return com.nice.utils.DataResult
+     **/
+    @GetMapping("userInfo")
+    public DataResult findUserByLoginStateUUid(HttpServletRequest request){
         return  userService.findUserByLoginStateUUid(request);
     }
 
-    /*
-        添加学号
-     */
-    @PostMapping("userInfo/{loginStateUUID}")
+    /**
+     * @Description 添加学号
+     * @param request
+     * @param studentId
+     * @return com.nice.utils.DataResult
+     **/
+    @PostMapping("userInfo")
     public DataResult saveUserByLoginStateUUid(HttpServletRequest request, String studentId){
         return  userService.saveUserByLoginStateUUid(request, studentId);
     }
 
-    /*
-    查询我的违约记录
-     */
+
+    /**
+     * @Description 查询我的违约记录
+     * @param request
+     * @return com.nice.utils.DataResult
+     **/
     @GetMapping("/findUserRecordByUserId")
     public DataResult findUserRecordByUserId(HttpServletRequest request){
         return userService.findUserRecordByUserId(request);
     }
 
-    /*
-    查询我的预约记录
-     */
+    /**
+     * @Description 查询我的预约记录
+     * @param request
+     * @return com.nice.utils.DataResult
+     **/
     @GetMapping("/findMyAllSubscribe")
     public DataResult findMyAllSubscribe(HttpServletRequest request) {
         return userService.findMyAllSubscribe(request);
     }
 
-    /*用户列表 */
-    @RequestMapping("/users")
-    public DataResult findAllUsers(){
-
-        return userService.findAllUsers();
-    }
-
-    @PostMapping("userInfo/del")
+    /**
+     * @Description 解除绑定学号
+     * @param request
+     * @return com.nice.utils.DataResult
+     **/
+    @DeleteMapping("userInfo")
     public DataResult deleteUserInfo(HttpServletRequest request){
         return userService.deleteUserInfo(request);
     }

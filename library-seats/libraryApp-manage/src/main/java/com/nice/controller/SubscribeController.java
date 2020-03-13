@@ -4,9 +4,7 @@ import com.nice.pojo.Subscribe;
 import com.nice.service.SubscribeService;
 import com.nice.utils.DataResult;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.text.ParseException;
 import java.util.List;
@@ -25,48 +23,53 @@ public class SubscribeController {
     @Autowired
     private SubscribeService subscribeService;
 
-    /*
-        查询所以预约
-     */
-    @RequestMapping("/findAllSubscribe")
-    public DataResult findAllSubscribe(){
-        List<Subscribe> allSubscribe = subscribeService.findAllSubscribe();
-        return DataResult.ok(allSubscribe);
-    }
 
-    /*
-    进行预约
-     */
-    @RequestMapping("/saveSubscribe")
-    public DataResult saveSubscribe(String loginStateUUID, String createTime, String endTime, Integer seatsId, Integer classroomId) throws ParseException {
+    /**
+     * @Description  用户预约
+     * @param classroomId
+     * @param seatsId
+     * @param loginStateUUID
+     * @param createTime
+     * @param endTime
+     * @return com.nice.utils.DataResult
+     **/
+    @PostMapping("/{classroomId}/{seatsId}")
+    public DataResult saveSubscribe(@PathVariable("classroomId") Integer classroomId,@PathVariable("seatsId") Integer seatsId, String loginStateUUID, String createTime, String endTime) throws ParseException {
 
         boolean saveSubscribe = subscribeService.saveSubscribe(loginStateUUID,createTime,endTime,seatsId,classroomId);
         return DataResult.ok(saveSubscribe);
     }
 
-    /*
-     校验是否已经预约
-     */
-    @RequestMapping("/checkTomorrowSubscribe")
-    public DataResult checkSubscribe(String loginStateUUID, int classRoomId){
+
+    /**
+     * @Description 校验用户是否已经预约
+     * @param loginStateUUID
+     * @return com.nice.utils.DataResult
+     **/
+    @GetMapping("/check")
+    public DataResult checkSubscribe(String loginStateUUID){
         boolean checkSubscribe = subscribeService.checkSubscribe(loginStateUUID);
         return DataResult.ok(checkSubscribe);
     }
 
-    /*
-     查询我的预约 在主页
-    */
-    @RequestMapping("/findMySubscribe")
+    /**
+     * @Description 查询我的预约
+     * @param loginStateUUID
+     * @return com.nice.utils.DataResult
+     **/
+    @GetMapping("/my")
     public DataResult findMySubscribe(String loginStateUUID){
-
          return subscribeService.findMySubscribe(loginStateUUID);
     }
 
-    /*
-        取消预约
-     */
-    @RequestMapping(value = "/delSubscribe",method = RequestMethod.POST)
-    public DataResult delSubscribe(String loginStateUUID, Integer subscribeId){
+    /**
+     * @Description 取消预约
+     * @param subscribeId
+     * @param loginStateUUID
+     * @return com.nice.utils.DataResult
+     **/
+    @DeleteMapping("/{subscribeId}")
+    public DataResult delSubscribe(@PathVariable("subscribeId") Integer subscribeId,String loginStateUUID){
         return  subscribeService.delSubscribe(loginStateUUID,subscribeId);
     }
 

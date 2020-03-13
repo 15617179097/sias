@@ -17,10 +17,10 @@ import java.util.Map;
 public interface ClassRoomService {
 
     //查询今天的教室信息
-    public List<Map<String,Object>> findTodayClassRoom();
+    public DataResult findTodayClassRoom();
 
     //查询明天的教室信息
-    public List<Map<String,Object>> findTomorrowClassRoom();
+    public DataResult findTomorrowClassRoom();
 
     //查询教室的信息
     public DataResult findClassRoom();

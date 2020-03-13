@@ -3,6 +3,7 @@ package com.nice.controller;
 import com.nice.service.ClassRoomService;
 import com.nice.utils.DataResult;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,20 +22,23 @@ public class ClassRoomController {
     private ClassRoomService classRoomService;
 
     //查询今天教室信息以及预约的座位数量
-    @RequestMapping("/findTodayClassRoom")
+    @GetMapping("/today")
     public DataResult findTodayClassRoom(){
-        return  DataResult.ok(classRoomService.findTodayClassRoom());
+        return  classRoomService.findTodayClassRoom();
     }
 
     //查询今天教室信息以及预约的座位数量
-    @RequestMapping("/findTomorrowClassRoom")
+    @GetMapping("/tomorrow")
     public DataResult findTomorrowClassRoom(){
-        return  DataResult.ok(classRoomService.findTomorrowClassRoom());
+        return  classRoomService.findTomorrowClassRoom();
     }
 
-
-    //查询教室信息的
-    @RequestMapping("/findClassRoom")
+    /**
+     * @Description 查询教室列表
+     * @param
+     * @return com.nice.utils.DataResult
+     **/
+    @GetMapping("/findClassRoom")
     public DataResult findClassRoom(){
         return  DataResult.ok(classRoomService.findClassRoom());
     }
