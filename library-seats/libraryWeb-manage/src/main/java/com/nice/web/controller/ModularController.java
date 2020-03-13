@@ -32,5 +32,8 @@ public class ModularController {
         return modularService.findModular();
     }
 
-
+    @GetMapping("/modular/list")
+    public DataResult findAllModular(){
+        return modularService.findAllModular();
+    }
 }

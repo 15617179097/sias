@@ -34,12 +34,13 @@ public class ReportsServiceImpl implements ReportsService {
         List<Map<String, Object>> monthSubscribe = subscribeMapper.findMonthSubscribe(month);
         List<Object> xAxisList = new ArrayList<>();
         List<Object> seriesList = new ArrayList<>();
+        List<String> legendList = new ArrayList<>();
         for (Map<String,Object> map:monthSubscribe){
             xAxisList.add(map.get("date"));
             seriesList.add(map.get("count"));
         }
         Reports reports = new Reports();
-        Map<String, Object> ss = reports.ss(xAxisList, seriesList);
+        Map<String, Object> ss = reports.ss(legendList,xAxisList, seriesList);
        /* Map<String,Object> xAxis = new HashMap<>();
         xAxis.put("data",xAxisList);
 

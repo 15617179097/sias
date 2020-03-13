@@ -13,4 +13,7 @@ public interface ModularService {
 
     //查询左菜单列表
     DataResult findModular();
+
+    //查询模块列表
+    DataResult findAllModular();
 }
