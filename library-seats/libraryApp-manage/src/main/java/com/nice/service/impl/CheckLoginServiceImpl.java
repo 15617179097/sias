@@ -12,7 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
@@ -38,6 +37,7 @@ public class CheckLoginServiceImpl implements CheckLoginService {
         String sessionData = HttpClientUtil.httpsRequestToString(url.toString(), "GET", null);
         UUID token= UUID.randomUUID();
         redisService.setV(token.toString(),sessionData);
+        redisService.expire(token.toString(),60*60*1000*24);
         return DataResult.ok(token.toString());
     }
 
@@ -79,7 +79,7 @@ public class CheckLoginServiceImpl implements CheckLoginService {
         if (login.get("password").equals(password)){
             UUID token= UUID.randomUUID();
             redisService.setV(token.toString(),login.get("id").toString());
-            redisService.expire(token.toString(),0);
+            redisService.expire(token.toString(),10);
             return DataResult.ok(token.toString());
         }
         return DataResult.ok();

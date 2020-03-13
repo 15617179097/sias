@@ -63,6 +63,14 @@ public class RedisClusterClinet implements RedisClinet {
     }
 
     @Override
+    public Boolean exists(String key) {
+        Jedis jedis = JedisPool.getResource();
+        Boolean exists = jedis.exists(key);
+        jedis.close();
+        return exists;
+    }
+
+    @Override
     public long expire(String key, int second) {
         Jedis jedis = JedisPool.getResource();
         Long string = jedis.expire(key, second);

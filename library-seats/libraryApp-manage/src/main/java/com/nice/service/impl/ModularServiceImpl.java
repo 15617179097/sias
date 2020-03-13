@@ -1,14 +1,12 @@
 package com.nice.service.impl;
 
 import com.nice.mapper.ModularMapper;
-import com.nice.pojo.Modular;
 import com.nice.service.ModularService;
 import com.nice.utils.DataResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
