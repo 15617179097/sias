@@ -1,11 +1,15 @@
 package com.nice.web.service.impl;
 
+
 import com.nice.web.mapper.NoticeMapper;
 import com.nice.web.pojo.Notice;
 import com.nice.web.service.NoticeService;
 import com.nice.web.utils.DataResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.ui.Model;
+
+import java.util.List;
 
 /**
  * @author msl
@@ -26,7 +30,7 @@ public class NoticeServiceImpl implements NoticeService {
     public DataResult addNotice(Notice notice){
         try {
             noticeMapper.addNotice(notice);
-        }catch (Exception e) {
+        }catch (Exception e){
             return DataResult.fail(500, "添加失败！！", e);
         }
         return DataResult.ok(notice);
@@ -45,6 +49,27 @@ public class NoticeServiceImpl implements NoticeService {
             return DataResult.fail(500, "删除失败！！", e);
         }
         return DataResult.ok(id);
+    }
+
+    /**
+     * 根据id查询单个公告
+     * @param id
+     * @return
+     */
+    @Override
+    public DataResult selectANotice(Integer id){
+        List<Notice> notice = noticeMapper.selectANotice(id);
+        return DataResult.ok(notice);
+    }
+
+    /**
+     * 查询所有公告信息
+     * @return
+     */
+    @Override
+    public DataResult findAllNotice(){
+        List<Notice> notice = noticeMapper.findAllNotice();
+        return DataResult.ok(notice);
     }
 
 }

@@ -3,6 +3,9 @@ package com.nice.web.mapper;
 import com.nice.web.pojo.Notice;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Component;
+import org.springframework.ui.Model;
+
+import java.util.List;
 
 /**
  * @author msl
@@ -15,8 +18,12 @@ public interface NoticeMapper {
     //添加公告
     public void addNotice(Notice notice);
 
-
     //删除公告
     public void deleteNotice(Integer id);
+
+    //根据id查询单个公告
+    public List<Notice> selectANotice(Integer id);
+    //查询所有公告信息
+    public List<Notice> findAllNotice();
 
 }

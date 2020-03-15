@@ -29,4 +29,16 @@ public class NoticeController {
     public DataResult deleteNotice(@PathVariable("id") Integer id){
         return DataResult.ok(noticeService.deleteNotice(id));
     }
+    //根据id查询单个公告
+    @RequestMapping("selectANotice/{id}")
+    public DataResult selectANotice(@PathVariable("id") Integer id){
+        return DataResult.ok(noticeService.selectANotice(id));
+    }
+
+    //查询所有公告信息
+    @RequestMapping("findAllNotice")
+    public DataResult findAllNotice(){
+        return DataResult.ok(noticeService.findAllNotice());
+    }
+
 }

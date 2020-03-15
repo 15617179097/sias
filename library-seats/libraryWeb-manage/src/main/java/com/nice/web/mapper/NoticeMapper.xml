@@ -9,8 +9,16 @@
     <!--删除公告-->
 <delete id="deleteNotice" parameterType="Integer">
     delete from noticetable where id=#{id}
-
 </delete>
+    <!--根据id查询单个公告-->
+    <select id="selectANotice" resultType="Notice" parameterType="Integer">
+        select id,ntime,ncontent,ntime from noticetable where id = #{id}
+    </select>
+    <!--查询所有公告信息-->
+<select id="findAllNotice" resultType="Notice">
+    SELECT id,ntitle,ncontent,ntime from noticetable where 1=1
 
+
+</select>
 
 </mapper>
