@@ -60,7 +60,10 @@
         insert into classroom(classroom_name,classroom_number,floor,x,y,state)values(#{classroomName},#{classroomNumber},#{floor},#{x},#{y},#{state})
     </insert>
     <!--分页查询教室列表-->
-    <select id="SelectAllClassRoom" resultType="com.nice.web.pojo.Classroom" parameterType="com.nice.web.pojo.Classroom">
-        SELECT id,classroom_name classroomName,classroom_number classroomNumber,floor, x,y,state from Classroom where 1=1
+    <select id="selectAllClassRoom" resultType="com.nice.web.pojo.Classroom" parameterType="com.nice.web.pojo.Classroom">
+        SELECT id,classroom_name classroomName,classroom_number classroomNumber,floor, x,y,state from classroom where 1=1
+        <if test="classroomName!=null">
+          and  classroom_name like concat('%',#{classroomName},'%')
+        </if>
     </select>
 </mapper>

@@ -99,10 +99,10 @@ public class ClassRoomServiceImpl implements ClassRoomService {
         PageHelper.startPage(pagenum,pagesize);
         Classroom classrooms=new Classroom();
         classrooms.setClassroomName(classroomName);
-        List<Classroom> classroom = classRoomMapper.SelectAllClassRoom(classrooms);
+        List<Classroom> classroom = classRoomMapper.selectAllClassRoom(classrooms);
         PageInfo<Classroom> classroomList = new PageInfo<Classroom>(classroom);
         Map<String, Object> map =new HashMap<>();
-        map.put("admins",classroomList);
+        map.put("classroomList",classroomList.getList());
         map.put("total",classroomList.getTotal());
         return DataResult.ok(map);
     }

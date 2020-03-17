@@ -29,5 +29,5 @@ public interface ClassRoomMapper {
     //添加教室
     public void insertClassroom(Classroom classroom);
     //分页查询所有教室
-    public List<Classroom> SelectAllClassRoom(Classroom classroom);
+    public List<Classroom> selectAllClassRoom(Classroom classroom);
 }

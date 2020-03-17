@@ -9,7 +9,7 @@ import javax.websocket.server.ServerEndpoint;
  * @Date 2020/2/8
  * @Version V1.0
  **/
-@ServerEndpoint("/webSocket/{username}")
+
 public class WebSocket {
 }
 
