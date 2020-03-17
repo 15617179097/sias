@@ -119,6 +119,24 @@ public class ClassRoomServiceImpl implements ClassRoomService {
         map.put("total",classroomList.getTotal());
         return DataResult.ok(map);
     }
+    /**
+     * 修改教室状态
+     * @param id
+     * @param state
+     * @return
+     */
+    @Override
+    public DataResult updateClassRoomState(Integer id,Integer state){
+        Classroom classroom = new Classroom();
+        classroom.setId(id);
+        classroom.setState(state);
+        try {
+            classRoomMapper.updateClassRoomState(classroom);
+        }catch (Exception e){
+            return DataResult.fail(500, "修改失败！！", e);
+        }
+        return DataResult.ok();
+    }
 
 
 }

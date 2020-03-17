@@ -30,4 +30,6 @@ public interface ClassRoomMapper {
     public int insertClassroom(Classroom classroom);
     //分页查询所有教室
     public List<Classroom> selectAllClassRoom(Classroom classroom);
+    //修改教室状态 0&1
+    public int updateClassRoomState(Classroom classroom);
 }

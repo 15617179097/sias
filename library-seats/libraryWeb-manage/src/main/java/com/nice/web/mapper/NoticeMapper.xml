@@ -3,8 +3,8 @@
 <mapper namespace="com.nice.web.mapper.NoticeMapper" >
     <!--添加公告-->
 <insert id="addNotice" parameterType="Notice">
-    insert into noticetable(id,ntitle,ncontent,ntime)
-    values(null,#{ntitle},#{ncontent},now())
+    insert into noticetable(id,title,content,time)
+    values(null,#{title},#{content},now())
 </insert>
     <!--删除公告-->
 <delete id="deleteNotice" parameterType="Integer">
@@ -12,11 +12,11 @@
 </delete>
     <!--根据id查询单个公告-->
     <select id="selectANotice" resultType="Notice" parameterType="Integer">
-        select id,ntime,ncontent,ntime from noticetable where id = #{id}
+        select id,time,content,time from noticetable where id = #{id}
     </select>
     <!--查询所有公告信息-->
 <select id="findAllNotice" resultType="Notice">
-    SELECT id,ntitle,ncontent,ntime from noticetable where 1=1
+    SELECT id,title,content,time from noticetable
 
 
 </select>

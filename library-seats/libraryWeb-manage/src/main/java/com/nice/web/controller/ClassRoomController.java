@@ -60,5 +60,10 @@ public class ClassRoomController {
     public DataResult insertClassroom(Classroom classroom){
         return DataResult.ok(classRoomService.insertClassroom(classroom));
     }
+    //修改教室状态
+    @RequestMapping("update/{id}/state/{state}")
+    public DataResult updateClassRoomState(@PathVariable("id") Integer id,@PathVariable("state") Integer state){
+        return DataResult.ok(classRoomService.updateClassRoomState(id,state));
+    }
 
 }

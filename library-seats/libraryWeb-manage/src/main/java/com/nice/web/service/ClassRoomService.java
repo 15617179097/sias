@@ -25,6 +25,7 @@ public interface ClassRoomService {
      DataResult insertClassroom(Classroom classroom);
     //分页查询教室列表
     DataResult classroomList(String classroomName,Integer pagenum,Integer pagesize);
-
+    //修改教室状态
+    DataResult updateClassRoomState(Integer id,Integer state);
 
 }

@@ -66,4 +66,8 @@
           and  classroom_name like concat('%',#{classroomName},'%')
         </if>
     </select>
+    <!--修改教室状态-->
+    <update id="updateClassRoomState" parameterType="com.nice.pojo.Classroom">
+        update classroom set  state=#{state} where id=#{id}
+    </update>
 </mapper>

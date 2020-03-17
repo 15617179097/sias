@@ -8,9 +8,9 @@ package com.nice.web.pojo;
 //公告内容
 public class Notice {
     private Integer id;
-    private String ntitle;
-    private String ncontent;
-    private String ntime;//YYYY-MM-DD HH:MM:SS
+    private String title;
+    private String content;
+    private String time;//YYYY-MM-DD HH:MM:SS
 
     public Integer getId() {
         return id;
@@ -20,28 +20,28 @@ public class Notice {
         this.id = id;
     }
 
-    public String getNtitle() {
-        return ntitle;
+    public String getTitle() {
+        return title;
     }
 
-    public void setNtitle(String ntitle) {
-        this.ntitle = ntitle;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public String getNcontent() {
-        return ncontent;
+    public String getContent() {
+        return content;
     }
 
-    public void setNcontent(String ncontent) {
-        this.ncontent = ncontent;
+    public void setContent(String content) {
+        this.content = content;
     }
 
-    public String getNtime() {
-        return ntime;
+    public String getTime() {
+        return time;
     }
 
-    public void setNtime(String ntime) {
-        this.ntime = ntime;
+    public void setTime(String time) {
+        this.time = time;
     }
 }
 
