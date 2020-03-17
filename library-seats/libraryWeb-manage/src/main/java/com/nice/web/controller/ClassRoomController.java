@@ -51,7 +51,7 @@ public class ClassRoomController {
     }
 
     /*删除教室*/
-    @PostMapping("delete/{id}")
+    @DeleteMapping("delete/{id}")
     public DataResult delClassRoom(@PathVariable("id")Integer id){
         return DataResult.ok(classRoomService.delete(id));
     }

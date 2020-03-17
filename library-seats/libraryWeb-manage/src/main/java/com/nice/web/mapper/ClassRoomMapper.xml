@@ -56,8 +56,8 @@
   </delete>
 
     <!--增加教室-->
-    <insert id="insertClassroom" parameterType="Classroom">
-        insert into classroom(classroom_name,classroom_number,floor,x,y,state)values(#{classroomName},#{classroomNumber},#{floor},#{x},#{y},#{state})
+    <insert id="insertClassroom" parameterType="Classroom" useGeneratedKeys="true" keyProperty="id">
+        insert into classroom(classroom_name,classroom_number,floor,x,y,state)values(#{classroomName},#{classroomNumber},#{floor},#{x},#{y},0)
     </insert>
     <!--分页查询教室列表-->
     <select id="selectAllClassRoom" resultType="com.nice.web.pojo.Classroom" parameterType="com.nice.web.pojo.Classroom">

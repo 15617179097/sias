@@ -2,7 +2,9 @@ package com.nice.web.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.nice.web.mapper.SeatsMapper;
 import com.nice.web.pojo.Classroom;
+import com.nice.web.pojo.Seats;
 import com.nice.web.utils.DataResult;
 import com.nice.web.utils.DateUtil;
 import com.nice.web.mapper.ClassRoomMapper;
@@ -21,6 +23,9 @@ import java.util.Map;
 public class ClassRoomServiceImpl implements ClassRoomService {
     @Autowired
     private ClassRoomMapper classRoomMapper;
+
+    @Autowired
+    private SeatsMapper seatsMapper;
 
     /**
      * @Description 获取明天教室列表
@@ -68,6 +73,7 @@ public class ClassRoomServiceImpl implements ClassRoomService {
     public DataResult delete(Integer id) {
         try {
             classRoomMapper.delete(id);
+            seatsMapper.deleteSeates(id);
         } catch (Exception e) {
             return DataResult.fail(500, "删除失败！！", e);
         }
@@ -83,6 +89,13 @@ public class ClassRoomServiceImpl implements ClassRoomService {
     public DataResult insertClassroom(Classroom classroom) {
         try {
             classRoomMapper.insertClassroom(classroom);
+            for (int i=1;i<classroom.getClassroomNumber();i++){
+                Seats seats=new Seats();
+                seats.setClassroomId(classroom.getId());
+                seats.setSeatMunber(i);
+                seatsMapper.insertSeats(seats);
+            }
+
         } catch (Exception e) {
             return DataResult.fail(500, "添加失败！！", e);
         }

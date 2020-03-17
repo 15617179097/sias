@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.nice.web.mapper.SeatsMapper">
-
+    <!--查询对应的座位 -->
     <select id="findSeatsByClassRoomId" resultType="java.util.Map">
     select id,classroom_id classroomId,seat_Munber seatNumber,state from seats where classroom_id = #{classroomId}
   </select>
     <!--增加座位-->
     <insert id="insertSeats">
-        insert into seats(classroom_id,seat_munber,state)values(#{classroomId},#{seatMunber},#{state})
+        insert into seats(classroom_id,seat_munber,state)values(#{classroomId},#{seatMunber},0)
     </insert>
-    <!--根据id删除座位-->
+    <!--根据classroom_id删除座位-->
     <delete id="deleteSeates">
-        delete from Seats where
-            id=#{id}
+        delete from Seats where classroom_id=#{id}
     </delete>
 </mapper>
