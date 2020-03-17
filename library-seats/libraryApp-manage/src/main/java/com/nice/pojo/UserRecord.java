@@ -14,11 +14,11 @@ public class UserRecord {
 
     private Integer userId;
 
-    private Integer signInId;
+    private Integer subscribeId;
 
     private String illegalText;
 
-    private Date illegalTime;
+    private String illegalTime;
 
     public Integer getId() {
         return id;
@@ -36,12 +36,12 @@ public class UserRecord {
         this.userId = userId;
     }
 
-    public Integer getSignInId() {
-        return signInId;
+    public Integer getSubscribeId() {
+        return subscribeId;
     }
 
-    public void setSignInId(Integer signInId) {
-        this.signInId = signInId;
+    public void setSubscribeId(Integer subscribeId) {
+        this.subscribeId = subscribeId;
     }
 
     public String getIllegalText() {
@@ -52,11 +52,11 @@ public class UserRecord {
         this.illegalText = illegalText == null ? null : illegalText.trim();
     }
 
-    public Date getIllegalTime() {
+    public String getIllegalTime() {
         return illegalTime;
     }
 
-    public void setIllegalTime(Date illegalTime) {
+    public void setIllegalTime(String illegalTime) {
         this.illegalTime = illegalTime;
     }
 }

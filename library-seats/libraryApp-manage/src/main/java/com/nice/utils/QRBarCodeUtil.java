@@ -36,14 +36,14 @@ public class QRBarCodeUtil {
     private static final int FRONT_COLOR = 0x000000;
     private static final int BACKGROUND_COLOR = 0xFFFFFF;
 
-    /*public static void main(String[] args) {
+     public static void main(String[] args) {
        /* String codeContent1 = "https://www.baidu.com/";
         createCodeToFile(codeContent1, new File("D:/codes"), "1111.png");*/
 
-   /*     String codeContent2 = "4c86fed8-7ac9-4db7-956e-6cfe84268059";
-         createCodeToFile(codeContent2, new File("D:/codes"), "111.png");
+    // String codeContent2 = "4c86fed8-7ac9-4db7-956e-6cfe84268059";
+         createCodeToFile("131", new File("D:/codes"), "131.png");
 
-    }*/
+    }
 
     /**
      * 生成二维码 并 保存为图片

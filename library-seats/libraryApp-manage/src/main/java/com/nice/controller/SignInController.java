@@ -3,10 +3,8 @@ package com.nice.controller;
 import com.nice.service.SignInService;
 import com.nice.utils.DataResult;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
 /**
  * Company: 签到  <br>
  * Description:  <br>
@@ -27,7 +25,7 @@ public class SignInController {
      * @return com.nice.utils.DataResult
      **/
     @PostMapping("/{subscribeId}")
-    public DataResult insertSignInById(Integer subscribeId){
+    public DataResult insertSignInById(@PathVariable("subscribeId") Integer subscribeId){
 
         return signInService.insertSignInById(subscribeId);
     }

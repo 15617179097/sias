@@ -5,6 +5,21 @@
         select * from user_record where user_id=#{userId}
     </select>
     <insert id="insertUserRecord" parameterType="com.nice.pojo.UserRecord" >
-        insert into user_record  (user_id,signIn_id,illegal_text,illegal_time) value (#{userId},#{signInId},#{illegalText},#{illegalTime})
+        insert into user_record  (user_id,subscribe_id,illegal_text,illegal_time) value (#{userId},#{subscribeId},#{illegalText},#{illegalTime})
     </insert>
+
+    <select id="findUserRecord" resultType="java.util.Map">
+        SELECT * FROM user_record,
+        (SELECT subscribe.id,
+        sign_in.signIn_time createTime,
+        classroom.classroom_name classroomName,
+        classroom.floor,
+        seats.seat_munber seatNunber,
+        sign_in.state from subscribe,sign_in,classroom,seats
+        where subscribe.classroom_id=classroom.id
+        and subscribe.seats_id=seats.id
+        and sign_in.subscribe_id=subscribe.id
+        ) al
+        where user_record.subscribe_id = al.id and user_id=#{userId}
+    </select>
 </mapper>

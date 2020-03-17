@@ -7,6 +7,7 @@ import com.nice.mapper.UserRecordMapper;
 import com.nice.pojo.SignIn;
 import com.nice.pojo.Subscribe;
 import com.nice.pojo.UserRecord;
+import com.nice.service.SignInService;
 import com.nice.service.WxUserService;
 import com.nice.utils.DateUtil;
 import org.joda.time.DateTime;
@@ -38,6 +39,8 @@ public class TimerManage {
     @Autowired
     private WxUserService wxUserService;
     @Autowired
+    private SignInService signInService;
+    @Autowired
     private UserRecordMapper userRecordMapper;
     @Autowired
     private UserInfoMapper userInfoMapper;
@@ -63,14 +66,17 @@ public class TimerManage {
              signIn.forEach(list->{
                  long signInTime= DateUtil.StringToDate(list.getSignInTime()).getTime()+list.getRangeTime()*60*1000;
                  if (signInTime<nowTime){
-                     subscribeMapper.delSubscribe(list.getId(),null,1);
-                     signInMapper.updateSignIn(4,list.getId());
+                     signInService.updateSignInById(list.getSubscribeId());
+//                     subscribeMapper.delSubscribe(list.getSubscribeId(),null,1);
+//                     signInMapper.updateSignIn(4,list.getSubscribeId());
                      Subscribe subscribe=new Subscribe();
                      subscribe.setId(list.getSubscribeId());
                      List<Subscribe> allSubscribe1 = subscribeMapper.findAllSubscribe(subscribe);
-                     UserRecord userRecord=new UserRecord();
-                     userRecord.setUserId(allSubscribe1.get(0).getUserId());
-                     userRecordMapper.insertUserRecord(userRecord);
+//                     UserRecord userRecord=new UserRecord();
+//                     userRecord.setUserId(allSubscribe1.get(0).getUserId());
+//                     userRecordMapper.insertUserRecord(userRecord);
+                     //结束后进行双工通信 通知特定用户
+                     getWebSockte(allSubscribe1.get(0).getUserId(),"预约座位未签到！释放座位！");
                  }
              });
          }
@@ -85,7 +91,7 @@ public class TimerManage {
                      subscribeMapper.delSubscribe(list.getId(),null,1);
                      signInMapper.updateSignIn(2,list.getId());
                      //结束后进行双工通信 通知特定用户
-                     getWebSockte(list.getUserId());
+                     getWebSockte(list.getUserId(),"预约座位结束使用！");
 
                  }
 
@@ -106,7 +112,7 @@ public class TimerManage {
 
 
     //进行双工通信
-    private void getWebSockte(Integer userIds){
+    private void getWebSockte(Integer userIds,String msg){
         CopyOnWriteArraySet<WebSocket> webSockets=WebSocket.getWebSocketSet();
         ConcurrentHashMap<Session, Object> webSocketMap = WebSocket.getWebSocketMap();
         for (WebSocket item:webSockets){
@@ -114,7 +120,7 @@ public class TimerManage {
                 int userId = wxUserService.getWxUserId((String) web.getValue() );
                 if (userId==userIds){
                     try {
-                        item.sendMessage(web.getKey(),"你的预约结束");
+                        item.sendMessage(web.getKey(),msg);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }

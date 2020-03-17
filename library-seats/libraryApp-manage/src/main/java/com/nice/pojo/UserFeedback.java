@@ -14,9 +14,11 @@ public class UserFeedback {
 
     private Integer userId;
 
+    private String email;
+
     private String feedbackText;
 
-    private Date createTime;
+    private String createTime;
 
     private Integer state;
 
@@ -44,11 +46,11 @@ public class UserFeedback {
         this.feedbackText = feedbackText == null ? null : feedbackText.trim();
     }
 
-    public Date getCreateTime() {
+    public String getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(Date createTime) {
+    public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
 
@@ -58,5 +60,13 @@ public class UserFeedback {
 
     public void setState(Integer state) {
         this.state = state;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

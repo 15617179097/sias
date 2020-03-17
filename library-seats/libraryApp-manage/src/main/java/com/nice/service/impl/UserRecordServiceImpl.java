@@ -8,6 +8,7 @@ import com.nice.utils.DataResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -31,5 +32,15 @@ public class UserRecordServiceImpl implements UserRecordService {
         userRecord.setUserId( wxUserService.getWxUserId(loginStateUUID));
         List<UserRecord> userRecordByUserId = userRecordMapper.findUserRecordByUserId(userRecord);
         return DataResult.ok(userRecordByUserId);
+    }
+    /**
+     * @Description 查询我的违约记录
+     * @param request
+     * @return com.nice.utils.DataResult
+     **/
+    @Override
+    public DataResult findUserRecord(HttpServletRequest request) {
+        Integer userId = (Integer) request.getAttribute("userId");
+        return DataResult.ok(userRecordMapper.findUserRecord(userId));
     }
 }

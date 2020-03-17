@@ -2,6 +2,8 @@ package com.nice.service;
 
 import com.nice.utils.DataResult;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * Company:  <br>
  * Description:  <br>
@@ -14,4 +16,7 @@ public interface UserRecordService {
 
     //查询我的违约记录
     DataResult findUserRecordByUserId(String loginStateUUID);
+
+    //查询自己的违约记录
+    DataResult findUserRecord(HttpServletRequest request);
 }

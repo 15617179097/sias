@@ -1,5 +1,6 @@
 package com.nice.mapper;
 
+import com.nice.pojo.Classroom;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
@@ -19,5 +20,5 @@ import java.util.Map;
 @Mapper
 public interface ClassRoomMapper {
     public List<Map<String,Object>> findAllClassRoom(@Param("classroomId") Integer classroomId, @Param("createTime") String createTime, @Param("endTime") String endTime);
-    public List<String> findClassRoom();
+    public List<Classroom> findClassRoom();
 }

@@ -5,6 +5,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Company:  <br>
@@ -17,6 +18,10 @@ import java.util.List;
 @Component
 @Mapper
 public interface UserRecordMapper {
-   List<UserRecord> findUserRecordByUserId(UserRecord userRecord);
-  int  insertUserRecord(UserRecord userRecord);
+    List<UserRecord> findUserRecordByUserId(UserRecord userRecord);
+
+    int  insertUserRecord(UserRecord userRecord);
+
+    //查询所有违约记录
+    List<Map<String,Object>> findUserRecord(Integer userId);
 }

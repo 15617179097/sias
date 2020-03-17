@@ -8,9 +8,11 @@ import com.nice.pojo.Subscribe;
 import com.nice.pojo.UserRecord;
 import com.nice.service.SignInService;
 import com.nice.utils.DataResult;
+import com.nice.utils.DateUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -52,8 +54,11 @@ public class SignInServiceImpl implements SignInService {
             List<Subscribe> allSubscribe1 = subscribeMapper.findAllSubscribe(subscribe);
             UserRecord userRecord=new UserRecord();
             userRecord.setUserId(allSubscribe1.get(0).getUserId());
+            userRecord.setSubscribeId(subscribeId);
+            userRecord.setIllegalTime(DateUtil.DateToString(new Date()));
             userRecordMapper.insertUserRecord(userRecord);
             userInfoMapper.updateUserInfoCreditScore();
+            subscribeMapper.delSubscribe(subscribeId,null,1);
 
         }catch (Exception e){
             e.printStackTrace();

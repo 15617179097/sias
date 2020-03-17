@@ -3,9 +3,7 @@ package com.nice.controller;
 import com.nice.service.ClassRoomService;
 import com.nice.utils.DataResult;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Company: 教室 <br>
@@ -21,16 +19,29 @@ public class ClassRoomController {
     @Autowired
     private ClassRoomService classRoomService;
 
-    //查询今天教室信息以及预约的座位数量
+    /**
+     * @Description 查询今天教室信息以及预约的座位数量
+     * @param pagenum
+     * @param pagesize
+     * @return com.nice.utils.DataResult
+     **/
     @GetMapping("/today")
-    public DataResult findTodayClassRoom(){
-        return  classRoomService.findTodayClassRoom();
+    public DataResult findTodayClassRoom(@RequestParam(value = "pagenum",defaultValue = "1") Integer pagenum,
+                                         @RequestParam(value = "pagesize",defaultValue = "10") Integer pagesize){
+        return  classRoomService.findTodayClassRoom(pagenum,pagesize);
     }
 
-    //查询今天教室信息以及预约的座位数量
+    /**
+     * @Description 查询今天教室信息以及预约的座位数量
+     * @param pagenum
+     * @param pagesize
+     * @return com.nice.utils.DataResult
+     **/
+
     @GetMapping("/tomorrow")
-    public DataResult findTomorrowClassRoom(){
-        return  classRoomService.findTomorrowClassRoom();
+    public DataResult findTomorrowClassRoom(@RequestParam(value = "pagenum",defaultValue = "1") Integer pagenum,
+                                            @RequestParam(value = "pagesize",defaultValue = "10") Integer pagesize){
+        return  classRoomService.findTomorrowClassRoom(pagenum,pagesize);
     }
 
     /**
@@ -40,6 +51,6 @@ public class ClassRoomController {
      **/
     @GetMapping("/findClassRoom")
     public DataResult findClassRoom(){
-        return  DataResult.ok(classRoomService.findClassRoom());
+        return  classRoomService.findClassRoom();
     }
 }
