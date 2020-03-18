@@ -70,4 +70,9 @@
     <update id="updateClassRoomState" parameterType="com.nice.pojo.Classroom">
         update classroom set  state=#{state} where id=#{id}
     </update>
+    <!--修该教室信息-->
+    <update id="updateClassRoom" parameterType="com.nice.pojo.Classroom">
+        update classroom set classroom_name=#{classroomName},classroom_number=#{classroomNumber},floor=#{floor},x=#{x},y=#{y} where id=#{id}
+    </update>
+
 </mapper>

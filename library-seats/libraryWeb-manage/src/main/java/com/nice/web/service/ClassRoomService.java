@@ -27,5 +27,7 @@ public interface ClassRoomService {
     DataResult classroomList(String classroomName,Integer pagenum,Integer pagesize);
     //修改教室状态
     DataResult updateClassRoomState(Integer id,Integer state);
+    //修该教室信息 教室名称 教室层数
+    DataResult updateClassRoom(Integer id,Classroom classroom);
 
 }

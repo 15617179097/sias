@@ -138,5 +138,11 @@ public class ClassRoomServiceImpl implements ClassRoomService {
         return DataResult.ok();
     }
 
+    @Override
+    public DataResult updateClassRoom(Integer id,Classroom classroom){
+        classroom.setId(id);
+        classRoomMapper.updateClassRoom(classroom);
+        return DataResult.ok(classroom);
+    }
 
 }

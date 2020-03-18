@@ -32,4 +32,6 @@ public interface ClassRoomMapper {
     public List<Classroom> selectAllClassRoom(Classroom classroom);
     //修改教室状态 0&1
     public int updateClassRoomState(Classroom classroom);
+    //修该教室信息
+    public int updateClassRoom(Classroom classroom);
 }

@@ -51,7 +51,7 @@ public class ClassRoomController {
     }
 
     /*删除教室*/
-    @DeleteMapping("delete/{id}")
+    @RequestMapping("delete/{id}")
     public DataResult delClassRoom(@PathVariable("id")Integer id){
         return DataResult.ok(classRoomService.delete(id));
     }
@@ -61,9 +61,14 @@ public class ClassRoomController {
         return DataResult.ok(classRoomService.insertClassroom(classroom));
     }
     //修改教室状态
-    @RequestMapping("update/{id}/state/{state}")
+    @RequestMapping("updateState/{id}/state/{state}")
     public DataResult updateClassRoomState(@PathVariable("id") Integer id,@PathVariable("state") Integer state){
         return DataResult.ok(classRoomService.updateClassRoomState(id,state));
+    }
+    //修改教室信息
+    @RequestMapping("updateClassroom/{id}")
+    public DataResult updateClassRoom(@PathVariable("id") Integer id,Classroom classroom){
+        return DataResult.ok(classRoomService.updateClassRoom(id,classroom));
     }
 
 }
