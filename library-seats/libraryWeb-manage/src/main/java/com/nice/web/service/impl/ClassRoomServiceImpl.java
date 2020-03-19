@@ -44,8 +44,8 @@ public class ClassRoomServiceImpl implements ClassRoomService {
      * @return
      **/
     @Override
-    public DataResult findAllClassRoom() {
-        return DataResult.ok(classRoomMapper.findClassRoomById(null));
+    public DataResult findAllClassRoom(Integer id) {
+        return DataResult.ok(classRoomMapper.findClassRoomById(id));
     }
 
     /**
@@ -72,8 +72,8 @@ public class ClassRoomServiceImpl implements ClassRoomService {
     @Override
     public DataResult delete(Integer id) {
         try {
-            classRoomMapper.delete(id);
             seatsMapper.deleteSeates(id);
+            classRoomMapper.delete(id);
         } catch (Exception e) {
             return DataResult.fail(500, "删除失败！！", e);
         }
@@ -89,7 +89,7 @@ public class ClassRoomServiceImpl implements ClassRoomService {
     public DataResult insertClassroom(Classroom classroom) {
         try {
             classRoomMapper.insertClassroom(classroom);
-            for (int i=1;i<classroom.getClassroomNumber();i++){
+            for (int i=1;i<classroom.getClassroomNumber()+1;i++){
                 Seats seats=new Seats();
                 seats.setClassroomId(classroom.getId());
                 seats.setSeatMunber(i);
@@ -112,8 +112,12 @@ public class ClassRoomServiceImpl implements ClassRoomService {
         PageHelper.startPage(pagenum,pagesize);
         Classroom classrooms=new Classroom();
         classrooms.setClassroomName(classroomName);
-        List<Classroom> classroom = classRoomMapper.selectAllClassRoom(classrooms);
-        PageInfo<Classroom> classroomList = new PageInfo<Classroom>(classroom);
+        List<Map<String, Object>> classroom = classRoomMapper.selectAllClassRoom(classrooms);
+        for(Map<String, Object> c:classroom){
+            List<Map<String, Object>> seatsByClassRoomId = seatsMapper.findSeatsByClassRoomId((Integer) c.get("id"));
+            c.put("children",seatsByClassRoomId);
+        }
+        PageInfo<Map<String, Object>> classroomList = new PageInfo<>(classroom);
         Map<String, Object> map =new HashMap<>();
         map.put("classroomList",classroomList.getList());
         map.put("total",classroomList.getTotal());

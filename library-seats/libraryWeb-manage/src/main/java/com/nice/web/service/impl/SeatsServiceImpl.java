@@ -64,6 +64,9 @@ public class SeatsServiceImpl implements SeatsService {
             if(subscribeSeats.size()==0){
                 map.put("sT",true);
             }
+            if(map.get("state").equals(1)){
+                map.put("sT",false);
+            }
         }
         //查询教室x y
         List<Classroom> classRoomById = classRoomMapper.findClassRoomById(classroomId);

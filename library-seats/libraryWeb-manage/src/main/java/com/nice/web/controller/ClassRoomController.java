@@ -22,8 +22,8 @@ public class ClassRoomController {
 
     //查询所以的教室是
     @RequestMapping("/findAllClassRoom")
-    public DataResult findAllClassRoom(){
-        return classRoomService.findAllClassRoom();
+    public DataResult findAllClassRoom(Integer id){
+        return classRoomService.findAllClassRoom(id);
     }
 
     //分页查询所有的教室
@@ -51,7 +51,7 @@ public class ClassRoomController {
     }
 
     /*删除教室*/
-    @RequestMapping("delete/{id}")
+    @DeleteMapping("{id}")
     public DataResult delClassRoom(@PathVariable("id")Integer id){
         return DataResult.ok(classRoomService.delete(id));
     }
@@ -61,12 +61,12 @@ public class ClassRoomController {
         return DataResult.ok(classRoomService.insertClassroom(classroom));
     }
     //修改教室状态
-    @RequestMapping("updateState/{id}/state/{state}")
+    @PutMapping("updateState/{id}/state/{state}")
     public DataResult updateClassRoomState(@PathVariable("id") Integer id,@PathVariable("state") Integer state){
         return DataResult.ok(classRoomService.updateClassRoomState(id,state));
     }
     //修改教室信息
-    @RequestMapping("updateClassroom/{id}")
+    @PostMapping("updateClassroom/{id}")
     public DataResult updateClassRoom(@PathVariable("id") Integer id,Classroom classroom){
         return DataResult.ok(classRoomService.updateClassRoom(id,classroom));
     }
