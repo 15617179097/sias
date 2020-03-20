@@ -19,4 +19,6 @@ public interface NoticeService {
     DataResult selectANotice(Integer id);
     //查询所有公告信息
     DataResult findAllNotice();
+    //分页查询公告
+    DataResult noticeList(String title,Integer pagenum,Integer pagesize);
 }

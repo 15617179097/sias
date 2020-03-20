@@ -1,7 +1,10 @@
 package com.nice.web.service.impl;
 
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.nice.web.mapper.NoticeMapper;
+import com.nice.web.pojo.Classroom;
 import com.nice.web.pojo.Notice;
 import com.nice.web.service.NoticeService;
 import com.nice.web.utils.DataResult;
@@ -9,7 +12,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author msl
@@ -23,14 +28,15 @@ public class NoticeServiceImpl implements NoticeService {
 
     /**
      * 添加公告
+     *
      * @param notice
      * @return
      */
     @Override
-    public DataResult addNotice(Notice notice){
+    public DataResult addNotice(Notice notice) {
         try {
             noticeMapper.addNotice(notice);
-        }catch (Exception e){
+        } catch (Exception e) {
             return DataResult.fail(500, "添加失败！！", e);
         }
         return DataResult.ok(notice);
@@ -38,14 +44,15 @@ public class NoticeServiceImpl implements NoticeService {
 
     /**
      * 删除公告
+     *
      * @param id
      * @return
      */
     @Override
-    public DataResult deleteNotice(Integer id){
+    public DataResult deleteNotice(Integer id) {
         try {
             noticeMapper.deleteNotice(id);
-        }catch (Exception e){
+        } catch (Exception e) {
             return DataResult.fail(500, "删除失败！！", e);
         }
         return DataResult.ok(id);
@@ -53,23 +60,47 @@ public class NoticeServiceImpl implements NoticeService {
 
     /**
      * 根据id查询单个公告
+     *
      * @param id
      * @return
      */
     @Override
-    public DataResult selectANotice(Integer id){
+    public DataResult selectANotice(Integer id) {
         List<Notice> notice = noticeMapper.selectANotice(id);
         return DataResult.ok(notice);
     }
 
     /**
      * 查询所有公告信息
+     *
      * @return
      */
     @Override
-    public DataResult findAllNotice(){
+    public DataResult findAllNotice() {
         List<Notice> notice = noticeMapper.findAllNotice();
         return DataResult.ok(notice);
+    }
+
+    /**
+     * 分页查询公告
+     * @param title
+     * @param pagenum
+     * @param pagesize
+     * @return
+     */
+    @Override
+    public DataResult noticeList(String title, Integer pagenum, Integer pagesize) {
+        //分页插件
+        PageHelper.startPage(pagenum, pagesize);
+        Notice notices = new Notice();
+        notices.setTitle(title);
+        List<Map<String, Object>> notice = noticeMapper.findNotice(notices);
+        PageInfo<Map<String, Object>> noticeList = new PageInfo<>(notice);
+        Map<String,Object> map = new HashMap<>();
+        map.put("noticeList",noticeList.getList());
+        map.put("total",noticeList.getTotal());
+        return DataResult.ok(map);
+
     }
 
 }

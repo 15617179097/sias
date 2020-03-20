@@ -20,5 +20,12 @@
 
 
 </select>
+    <!--分页查询公告-->
+<select id="findNotice" resultType="java.util.Map" parameterType="com.nice.web.pojo.Notice">
+    SELECT id,title,content,time from noticetable where 1=1
+    <if test="title!=null">
+        and  title like concat('%',#{title},'%')
+    </if>
+</select>
 
 </mapper>

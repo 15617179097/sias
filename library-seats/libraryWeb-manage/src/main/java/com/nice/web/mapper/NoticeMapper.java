@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.ui.Model;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author msl
@@ -25,5 +26,6 @@ public interface NoticeMapper {
     public List<Notice> selectANotice(Integer id);
     //查询所有公告信息
     public List<Notice> findAllNotice();
-
+    //分页查询公告
+    public List<Map<String,Object>> findNotice(Notice notice);
 }

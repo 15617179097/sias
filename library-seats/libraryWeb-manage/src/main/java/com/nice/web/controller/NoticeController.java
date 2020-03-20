@@ -42,4 +42,9 @@ public class NoticeController {
         return DataResult.ok(noticeService.findAllNotice());
     }
 
+    //分页查询公告
+    @RequestMapping("findNotice")
+    public DataResult findNotice(String query,Integer pagenum,Integer pagesize){
+        return noticeService.noticeList(query,pagenum,pagesize);
+    }
 }
