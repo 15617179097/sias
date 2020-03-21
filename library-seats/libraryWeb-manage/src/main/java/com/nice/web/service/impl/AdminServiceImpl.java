@@ -90,11 +90,7 @@ public class AdminServiceImpl implements AdminService {
      **/
     @Override
     public DataResult insertAdmin(Admin admin) {
-        try{
-            adminMapper.insertAdmin(admin);
-        }catch (Exception e){
-            return DataResult.fail(500,"修改失败！",e);
-        }
+        adminMapper.insertAdmin(admin);
         return DataResult.ok();
     }
 
@@ -106,11 +102,7 @@ public class AdminServiceImpl implements AdminService {
     @Override
     public DataResult updetaAdmin(Integer id, Admin admin) {
         admin.setId(id);
-        try{
-            adminMapper.updataAdmin(admin);
-        }catch (Exception e){
-            return DataResult.fail(500,"修改失败！",e);
-        }
+        adminMapper.updataAdmin(admin);
         return DataResult.ok();
     }
 
@@ -124,11 +116,7 @@ public class AdminServiceImpl implements AdminService {
         Admin admin=new Admin();
         admin.setId(id);
         admin.setStatus(status);
-        try {
-            adminMapper.updataAdminStatus(admin);
-        }catch (Exception e) {
-            return DataResult.fail(500,"修改失败！",e);
-        }
+        adminMapper.updataAdminStatus(admin);
         return DataResult.ok();
     }
 
@@ -139,11 +127,7 @@ public class AdminServiceImpl implements AdminService {
      **/
     @Override
     public DataResult daleteAdmin(Integer id) {
-        try {
-            adminMapper.daleteAdmin(id);
-        }catch(Exception e){
-            return DataResult.fail(500,"删除失败！！",e);
-        }
+        adminMapper.daleteAdmin(id);
         return DataResult.ok();
     }
 

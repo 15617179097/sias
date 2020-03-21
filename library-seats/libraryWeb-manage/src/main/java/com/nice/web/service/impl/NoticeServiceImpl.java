@@ -8,10 +8,12 @@ import com.nice.web.pojo.Classroom;
 import com.nice.web.pojo.Notice;
 import com.nice.web.service.NoticeService;
 import com.nice.web.utils.DataResult;
+import com.nice.web.utils.DateUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -34,11 +36,8 @@ public class NoticeServiceImpl implements NoticeService {
      */
     @Override
     public DataResult addNotice(Notice notice) {
-        try {
-            noticeMapper.addNotice(notice);
-        } catch (Exception e) {
-            return DataResult.fail(500, "添加失败！！", e);
-        }
+        notice.setTime(DateUtil.getStringTime(new Date()));
+        noticeMapper.addNotice(notice);
         return DataResult.ok(notice);
     }
 

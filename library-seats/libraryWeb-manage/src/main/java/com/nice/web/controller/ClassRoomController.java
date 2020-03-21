@@ -23,6 +23,8 @@ public class ClassRoomController {
     //查询所以的教室是
     @RequestMapping("/findAllClassRoom")
     public DataResult findAllClassRoom(Integer id){
+
+
         return classRoomService.findAllClassRoom(id);
     }
 

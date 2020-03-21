@@ -42,7 +42,7 @@ public class DateUtil {
         return parse;
     }
     //获取当前时间 String类型
-    public static String getStringTime(){
+    public static String getStringTime(Date date){
         SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         Date date=new Date();
         String format = simpleDateFormat.format(date);

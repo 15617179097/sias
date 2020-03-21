@@ -2,30 +2,30 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.nice.web.mapper.NoticeMapper" >
     <!--添加公告-->
-<insert id="addNotice" parameterType="Notice">
-    insert into noticetable(id,title,content,time)
-    values(null,#{title},#{content},now())
-</insert>
+    <insert id="addNotice" parameterType="Notice">
+        insert into noticetable(id,title,content,time)
+        values(null,#{title},#{content},now())
+    </insert>
     <!--删除公告-->
-<delete id="deleteNotice" parameterType="Integer">
-    delete from noticetable where id=#{id}
-</delete>
+    <delete id="deleteNotice" parameterType="Integer">
+        delete from noticetable where id=#{id}
+    </delete>
     <!--根据id查询单个公告-->
     <select id="selectANotice" resultType="Notice" parameterType="Integer">
         select id,time,content,time from noticetable where id = #{id}
     </select>
     <!--查询所有公告信息-->
-<select id="findAllNotice" resultType="Notice">
-    SELECT id,title,content,time from noticetable
+    <select id="findAllNotice" resultType="Notice">
+        SELECT id,title,content,time from noticetable
 
 
-</select>
+    </select>
     <!--分页查询公告-->
-<select id="findNotice" resultType="java.util.Map" parameterType="com.nice.web.pojo.Notice">
-    SELECT id,title,content,time from noticetable where 1=1
-    <if test="title!=null">
-        and  title like concat('%',#{title},'%')
-    </if>
-</select>
+    <select id="findNotice" resultType="java.util.Map" parameterType="com.nice.web.pojo.Notice">
+        SELECT id,title,content,DATE_FORMAT(time,"%Y-%m-%d %H:%m") time from noticetable where 1=1
+        <if test="title!=null">
+            and  title like concat('%',#{title},'%')
+        </if>
+    </select>
 
 </mapper>
