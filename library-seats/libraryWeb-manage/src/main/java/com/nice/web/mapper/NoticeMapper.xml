@@ -12,13 +12,11 @@
     </delete>
     <!--根据id查询单个公告-->
     <select id="selectANotice" resultType="Notice" parameterType="Integer">
-        select id,time,content,time from noticetable where id = #{id}
+        select id,title,content,time from noticetable where id = #{id}
     </select>
     <!--查询所有公告信息-->
     <select id="findAllNotice" resultType="Notice">
         SELECT id,title,content,time from noticetable
-
-
     </select>
     <!--分页查询公告-->
     <select id="findNotice" resultType="java.util.Map" parameterType="com.nice.web.pojo.Notice">
@@ -27,5 +25,8 @@
             and  title like concat('%',#{title},'%')
         </if>
     </select>
-
+    <!-- 修改公告信息 -->
+    <update id="updateNotice" parameterType="Notice">
+        update noticetable set title=#{title},content=#{content},time = #{time}where  id = #{id}
+    </update>
 </mapper>

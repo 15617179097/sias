@@ -5,11 +5,9 @@ import com.nice.web.pojo.Notice;
 
 import com.nice.web.service.NoticeService;
 import com.nice.web.utils.DataResult;
+import org.apache.ibatis.annotations.Delete;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author msl
@@ -27,7 +25,7 @@ public class NoticeController {
         return noticeService.addNotice(notice);
     }
     //删除公告
-    @PostMapping("deleteNotice/{id}")
+    @DeleteMapping("deleteNotice/{id}")
     public DataResult deleteNotice(@PathVariable("id") Integer id){
         return noticeService.deleteNotice(id);
     }

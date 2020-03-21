@@ -44,8 +44,8 @@ public class DateUtil {
     //获取当前时间 String类型
     public static String getStringTime(Date date){
         SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        Date date=new Date();
-        String format = simpleDateFormat.format(date);
+        Date date1=new Date();
+        String format = simpleDateFormat.format(date1);
         return format;
     }
     //date 转String
