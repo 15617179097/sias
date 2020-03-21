@@ -49,11 +49,7 @@ public class NoticeServiceImpl implements NoticeService {
      */
     @Override
     public DataResult deleteNotice(Integer id) {
-        try {
-            noticeMapper.deleteNotice(id);
-        } catch (Exception e) {
-            return DataResult.fail(500, "删除失败！！", e);
-        }
+        noticeMapper.deleteNotice(id);
         return DataResult.ok(id);
     }
 
@@ -100,6 +96,12 @@ public class NoticeServiceImpl implements NoticeService {
         map.put("total",noticeList.getTotal());
         return DataResult.ok(map);
 
+    }
+    @Override
+    public DataResult updateNotice(Integer id,Notice notice){
+        notice.setId(id);
+        noticeMapper.updateNotice(notice);
+        return DataResult.ok(notice);
     }
 
 }

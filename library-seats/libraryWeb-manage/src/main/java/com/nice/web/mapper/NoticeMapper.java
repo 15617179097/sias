@@ -28,4 +28,6 @@ public interface NoticeMapper {
     public List<Notice> findAllNotice();
     //分页查询公告
     public List<Map<String,Object>> findNotice(Notice notice);
+    //公告修改
+    public int updateNotice(Notice notice);
 }

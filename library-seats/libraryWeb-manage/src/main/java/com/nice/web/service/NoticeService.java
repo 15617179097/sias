@@ -21,4 +21,6 @@ public interface NoticeService {
     DataResult findAllNotice();
     //分页查询公告
     DataResult noticeList(String title,Integer pagenum,Integer pagesize);
+    //修改公告
+    DataResult updateNotice(Integer id,Notice notice);
 }

@@ -49,28 +49,28 @@ public class ClassRoomController {
     //查询教室信息
     @RequestMapping("/findClassRoom")
     public DataResult findClassRoom(){
-        return  DataResult.ok(classRoomService.findClassRoom());
+        return classRoomService.findClassRoom();
     }
 
     /*删除教室*/
     @DeleteMapping("{id}")
     public DataResult delClassRoom(@PathVariable("id")Integer id){
-        return DataResult.ok(classRoomService.delete(id));
+        return classRoomService.delete(id);
     }
     //添加教室
     @PostMapping("insert")
     public DataResult insertClassroom(Classroom classroom){
-        return DataResult.ok(classRoomService.insertClassroom(classroom));
+        return classRoomService.insertClassroom(classroom);
     }
     //修改教室状态
     @PutMapping("updateState/{id}/state/{state}")
     public DataResult updateClassRoomState(@PathVariable("id") Integer id,@PathVariable("state") Integer state){
-        return DataResult.ok(classRoomService.updateClassRoomState(id,state));
+        return classRoomService.updateClassRoomState(id,state);
     }
     //修改教室信息
     @PostMapping("updateClassroom/{id}")
     public DataResult updateClassRoom(@PathVariable("id") Integer id,Classroom classroom){
-        return DataResult.ok(classRoomService.updateClassRoom(id,classroom));
+        return classRoomService.updateClassRoom(id,classroom);
     }
 
 }
