@@ -102,5 +102,11 @@ public class NoticeServiceImpl implements NoticeService {
         return DataResult.ok(map);
 
     }
+    @Override
+    public DataResult updateNotice(Integer id,Notice notice){
+        notice.setId(id);
+        noticeMapper.updateNotice(notice);
+        return DataResult.ok(notice);
+    }
 
 }

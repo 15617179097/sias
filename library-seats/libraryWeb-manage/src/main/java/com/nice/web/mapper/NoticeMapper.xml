@@ -27,5 +27,9 @@
         and  title like concat('%',#{title},'%')
     </if>
 </select>
+    <!--公告修改-->
+    <update id="updateNotice" parameterType="com.nice.web.pojo.Notice">
+        update noticetable set title=#{title},content=#{content} where id=#{id}
+    </update>
 
 </mapper>
