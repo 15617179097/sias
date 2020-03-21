@@ -28,7 +28,8 @@ public class Reports {
     //展示数据列表
     private final List<Object> series =new ArrayList<>();
 
-    public Map<String,Object> ss(List<String> legendList,List<Object> xList,List<Object> seriesList){
+    public Map<String,Object> ss(List<Integer> signInReportsList,List<Object> xList,List<Object> seriesList){
+        tooltip.put("trigger","axis");
         axisLabel.put("interval",0);
         axisLabel.put("rotate",40);
         title.put("text","当月预约数据");
@@ -42,9 +43,14 @@ public class Reports {
 
         //数据内容
         Map<String,Object> seriesItem=new HashMap<>();
-        seriesItem.put("name","数量");
+        seriesItem.put("name","预约数量");
         seriesItem.put("type","line");
         seriesItem.put("data",seriesList);
+        //数据内容
+        Map<String,Object> seriesItems=new HashMap<>();
+        seriesItems.put("name","未签到数量");
+        seriesItems.put("type","line");
+        seriesItems.put("data",signInReportsList);
 
         //echarts option数据
         Map<String,Object> resMap = new HashMap<>();
@@ -54,6 +60,7 @@ public class Reports {
         resMap.put("xAxis",xAxis);
         resMap.put("yAxis",yAxis);
         series.add(seriesItem);
+        series.add(seriesItems);
         resMap.put("series",series);
         return  resMap;
     }

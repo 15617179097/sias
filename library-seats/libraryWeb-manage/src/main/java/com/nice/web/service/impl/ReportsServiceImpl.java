@@ -1,5 +1,6 @@
 package com.nice.web.service.impl;
 
+import com.nice.web.mapper.SignInMapper;
 import com.nice.web.utils.DataResult;
 import com.nice.web.utils.Reports;
 import com.nice.web.mapper.SubscribeMapper;
@@ -24,6 +25,8 @@ public class ReportsServiceImpl implements ReportsService {
     @Autowired
     private SubscribeMapper subscribeMapper;
 
+    @Autowired
+    private SignInMapper signInMapper;
     /**
      * @Description 根据月份查询数据报表
      * @Param month
@@ -31,16 +34,18 @@ public class ReportsServiceImpl implements ReportsService {
      **/
     @Override
     public DataResult findReportsByMonth(String month) {
+        //获取预约数据
         List<Map<String, Object>> monthSubscribe = subscribeMapper.findMonthSubscribe(month);
+        //获取未签到数据
+        List<Integer> signInReportsList = signInMapper.findSignInReports(month);
         List<Object> xAxisList = new ArrayList<>();
         List<Object> seriesList = new ArrayList<>();
-        List<String> legendList = new ArrayList<>();
         for (Map<String,Object> map:monthSubscribe){
             xAxisList.add(map.get("date"));
             seriesList.add(map.get("count"));
         }
         Reports reports = new Reports();
-        Map<String, Object> ss = reports.ss(legendList,xAxisList, seriesList);
+        Map<String, Object> ss = reports.ss(signInReportsList,xAxisList, seriesList);
        /* Map<String,Object> xAxis = new HashMap<>();
         xAxis.put("data",xAxisList);
 

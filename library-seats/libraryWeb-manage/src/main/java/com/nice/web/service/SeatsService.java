@@ -19,4 +19,7 @@ public interface SeatsService {
     DataResult insertSeats(Seats seats);
     //删除座位
     DataResult deleteSeats(Integer id);
+
+    //修改座位状态
+    DataResult updateState(Integer id,Integer state);
 }

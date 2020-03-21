@@ -124,4 +124,20 @@ public class SeatsServiceImpl implements SeatsService {
         return DataResult.ok(id);
     }
 
+    /**
+     * @Description 修改座位状态
+     * @param id
+     * @param state
+     * @return com.nice.web.utils.DataResult
+     **/
+    @Override
+    public DataResult updateState(Integer id, Integer state) {
+        try{
+            seatMapper.updateSeatesState(state,id);
+        }catch (Exception e){
+            return DataResult.fail(500,"e",e);
+        }
+        return DataResult.ok();
+    }
+
 }

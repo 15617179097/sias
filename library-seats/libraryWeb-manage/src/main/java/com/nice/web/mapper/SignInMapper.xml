@@ -4,6 +4,17 @@
 
     <!--  后台预约直接签到  -->
     <insert id="insertSignIn" parameterType="SignIn">
-    insert into sign_in (subscribe_id,signIn_time,state) value (#{subscribeId},#{signInTime},1)
-  </insert>
+        insert into sign_in (subscribe_id,signIn_time,state) value (#{subscribeId},#{signInTime},1)
+    </insert>
+    <!--  根据月 当月 年 获取未签到/的数据   -->
+    <select id="findSignInReports"  resultType="java.lang.Integer">
+         SELECT count(date_format(signIn_time,'%Y-%m-%d')) count FROM sign_in WHERE state=4 and 1=1
+        <if test="month=='' and month ==null">
+            and date_format(signIn_time,'%Y-%m') = date_format(curdate(),'%Y-%m')
+        </if>
+        <if test="month!=null and month!=''">
+            and date_format(signIn_time,'%Y-%m') = #{month}
+        </if>
+        GROUP BY date_format(signIn_time,'%Y-%m-%d')
+    </select>
 </mapper>

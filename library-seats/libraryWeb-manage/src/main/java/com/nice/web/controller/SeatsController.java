@@ -30,14 +30,23 @@ public class SeatsController {
      * @Description 查询以及预约的座位数据
      * @param createTime
      * @param classroomId
-     * @param state
+     * @param state 代表今天或者明天
      * @return com.nice.web.utils.DataResult
      **/
     @GetMapping("seats/classroomId/{classroomId}/state/{state}")
     public DataResult findSubscribeSeats(String createTime, @PathVariable("classroomId")Integer classroomId, @PathVariable("state")String state){
         return seatsService.findSubscribeSeats(classroomId,createTime,state);
     }
-
+    /**
+     * @Description 修改座位状态
+     * @param id
+     * @param state
+     * @return com.nice.web.utils.DataResult
+     **/
+    @PutMapping("seats/{id}/{state}")
+    public DataResult updateState(@PathVariable("id")Integer id,@PathVariable("state")Integer state){
+        return seatsService.updateState(id, state);
+    }
     /**
      * @Description  添加座位
      * @param seats

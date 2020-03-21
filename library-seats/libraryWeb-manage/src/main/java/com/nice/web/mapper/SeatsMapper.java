@@ -26,4 +26,7 @@ public interface SeatsMapper {
     //删除座位
     public void deleteSeates(Integer id);
 
+    //updateSeatesState
+    int updateSeatesState(@Param("state")Integer state,@Param("id")Integer id);
+
 }
