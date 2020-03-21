@@ -48,6 +48,7 @@ public class NoticeController {
     public DataResult findNotice(String query,Integer pagenum,Integer pagesize){
         return noticeService.noticeList(query,pagenum,pagesize);
     }
+
     //修改公告
     @PostMapping("updateNotice/{id}")
     public DataResult updateNotice(@PathVariable("id") Integer id, Notice notice){

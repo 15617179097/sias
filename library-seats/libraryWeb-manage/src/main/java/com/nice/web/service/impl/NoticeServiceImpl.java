@@ -34,11 +34,7 @@ public class NoticeServiceImpl implements NoticeService {
      */
     @Override
     public DataResult addNotice(Notice notice) {
-        try {
-            noticeMapper.addNotice(notice);
-        } catch (Exception e) {
-            return DataResult.fail(500, "添加失败！！", e);
-        }
+        noticeMapper.addNotice(notice);
         return DataResult.ok(notice);
     }
 
@@ -50,11 +46,7 @@ public class NoticeServiceImpl implements NoticeService {
      */
     @Override
     public DataResult deleteNotice(Integer id) {
-        try {
-            noticeMapper.deleteNotice(id);
-        } catch (Exception e) {
-            return DataResult.fail(500, "删除失败！！", e);
-        }
+        noticeMapper.deleteNotice(id);
         return DataResult.ok(id);
     }
 

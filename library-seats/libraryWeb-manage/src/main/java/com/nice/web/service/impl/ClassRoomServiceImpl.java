@@ -71,12 +71,8 @@ public class ClassRoomServiceImpl implements ClassRoomService {
      */
     @Override
     public DataResult delete(Integer id) {
-        try {
-            seatsMapper.deleteSeates(id);
-            classRoomMapper.delete(id);
-        } catch (Exception e) {
-            return DataResult.fail(500, "删除失败！！", e);
-        }
+        seatsMapper.deleteSeates(id);
+        classRoomMapper.delete(id);
         return DataResult.ok(id);
     }
 
@@ -87,18 +83,13 @@ public class ClassRoomServiceImpl implements ClassRoomService {
      */
     @Override
     public DataResult insertClassroom(Classroom classroom) {
-        try {
-            classRoomMapper.insertClassroom(classroom);
+        classRoomMapper.insertClassroom(classroom);
             for (int i=1;i<classroom.getClassroomNumber()+1;i++){
                 Seats seats=new Seats();
                 seats.setClassroomId(classroom.getId());
                 seats.setSeatMunber(i);
                 seatsMapper.insertSeats(seats);
             }
-
-        } catch (Exception e) {
-            return DataResult.fail(500, "添加失败！！", e);
-        }
         return DataResult.ok(classroom);
     }
     /**
@@ -134,11 +125,8 @@ public class ClassRoomServiceImpl implements ClassRoomService {
         Classroom classroom = new Classroom();
         classroom.setId(id);
         classroom.setState(state);
-        try {
             classRoomMapper.updateClassRoomState(classroom);
-        }catch (Exception e){
-            return DataResult.fail(500, "修改失败！！", e);
-        }
+
         return DataResult.ok();
     }
 
