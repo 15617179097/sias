@@ -24,7 +24,7 @@ public interface UserService {
     DataResult findUserRecordByUserId(HttpServletRequest request);
 
     //查询我的预约记录
-    DataResult findMyAllSubscribe(HttpServletRequest request);
+    DataResult findMyAllSubscribe(HttpServletRequest request,Integer pagenum,Integer pagesize);
 
     //用户列表
     DataResult findAllUsers();

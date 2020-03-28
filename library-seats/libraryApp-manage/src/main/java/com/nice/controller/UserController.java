@@ -66,8 +66,10 @@ public class UserController {
      * @return com.nice.utils.DataResult
      **/
     @GetMapping("/findMyAllSubscribe")
-    public DataResult findMyAllSubscribe(HttpServletRequest request) {
-        return userService.findMyAllSubscribe(request);
+    public DataResult findMyAllSubscribe(HttpServletRequest request,
+                                         @RequestParam(value = "pagenum",defaultValue = "1") Integer pagenum,
+                                         @RequestParam(value = "pagesize",defaultValue = "10")Integer pagesize) {
+        return userService.findMyAllSubscribe(request,pagenum,pagesize);
     }
 
     /**

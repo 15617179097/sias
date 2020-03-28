@@ -18,5 +18,5 @@ public interface UserRecordService {
     DataResult findUserRecordByUserId(String loginStateUUID);
 
     //查询自己的违约记录
-    DataResult findUserRecord(HttpServletRequest request);
+    DataResult findUserRecord(HttpServletRequest request,Integer pagenum,Integer pagesize);
 }

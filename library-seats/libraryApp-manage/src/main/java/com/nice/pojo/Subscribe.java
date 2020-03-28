@@ -1,5 +1,7 @@
 package com.nice.pojo;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 /**
  * @ClassName Seats  预约
  * @Description: TODO

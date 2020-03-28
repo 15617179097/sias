@@ -1,5 +1,7 @@
 package com.nice.service.impl;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.nice.mapper.SubscribeMapper;
 import com.nice.mapper.UserInfoMapper;
 import com.nice.mapper.UserRecordMapper;
@@ -12,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -34,7 +37,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public DataResult findUserByLoginStateUUid(HttpServletRequest request) {
         UserInfo userInfo=new UserInfo();
-        userInfo.setUerId((Integer) request.getAttribute("token"));
+        userInfo.setId((Integer) request.getAttribute("userId"));
         Map<String,Object> user = userMapper.findUserInfo(userInfo);
         if (user==null)
             return DataResult.ok();
@@ -42,35 +45,61 @@ public class UserServiceImpl implements UserService {
             return DataResult.ok(user);
     }
 
-    /*
-        添加学号
-     */
+    /**
+     * @Description 添加学号
+     * @param request
+     * @param studentId
+     * @return com.nice.utils.DataResult
+     **/
     @Override
     public DataResult saveUserByLoginStateUUid(HttpServletRequest request, String studentId) {
         UserInfo userInfo=new UserInfo();
         userInfo.setStudentId(studentId);
-        userInfo.setUerId((Integer) request.getAttribute("userId"));
+        userInfo.setId((Integer) request.getAttribute("userId"));
         Map<String,Object> info =null;
         try {
-            userMapper.insertUserInfo(userInfo);
-            info =userMapper.findUserInfo(userInfo);
+            info = userMapper.findUserInfo(userInfo);
+            if (info==null) {
+                userMapper.insertUserInfo(userInfo);
+                info =userMapper.findUserInfo(userInfo);
+            }
+            else {
+                userMapper.updateUserInfo((Integer) request.getAttribute("userId"),studentId);
+                info.put("studentId",studentId);
+            }
         }catch (Exception e){
             DataResult.fail(500,"error",e);
         }
         return DataResult.ok(info);
     }
 
+    /**
+     * @Description 查询用户违约信息
+     * @param request
+     * @return com.nice.utils.DataResult
+     **/
     @Override
     public DataResult findUserRecordByUserId(HttpServletRequest request) {
         UserRecord userRecord=new UserRecord();
-        userRecord.setUserId( (Integer) request.getAttribute("userId"));
+        userRecord.setUserId((Integer) request.getAttribute("userId"));
         List<UserRecord> userRecordByUserId = userRecordMapper.findUserRecordByUserId(userRecord);
         return DataResult.ok(userRecordByUserId);
     }
 
+    /**
+     * @Description 查询用户所有预约信息
+     * @param request
+     * @return com.nice.utils.DataResult
+     **/
     @Override
-    public DataResult findMyAllSubscribe(HttpServletRequest request) {
-        return DataResult.ok(subscribeMapper.findMyAllSubscribe((Integer) request.getAttribute("userId")));
+    public DataResult findMyAllSubscribe(HttpServletRequest request,Integer pagenum,Integer pagesize) {
+        PageHelper.startPage(pagenum,pagesize);
+        List<Map<String, Object>> userId = subscribeMapper.findMyAllSubscribe((Integer) request.getAttribute("userId"));
+        PageInfo<Map<String, Object>> pageInfo = new PageInfo<>(userId);
+        Map<String,Object> map= new HashMap<>();
+        map.put("allSubscribe",pageInfo.getList());
+        map.put("total",pageInfo.getPages());
+        return DataResult.ok(map);
     }
 
     @Override
@@ -86,8 +115,8 @@ public class UserServiceImpl implements UserService {
     @Override
     public DataResult deleteUserInfo(HttpServletRequest request) {
         try{
-            Integer token = (Integer) request.getAttribute("userId");
-            userMapper.deleteUserInfo(token);
+            Integer userId = (Integer) request.getAttribute("userId");
+            userMapper.updateUserInfo(userId,null);
         }catch (Exception e){
             return DataResult.fail(500,"删除失败！",e);
         }

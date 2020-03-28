@@ -3,6 +3,7 @@ package com.nice.service;
 import com.nice.pojo.Subscribe;
 import com.nice.utils.DataResult;
 
+import javax.servlet.http.HttpServletRequest;
 import java.text.ParseException;
 import java.util.List;
 /**
@@ -24,7 +25,7 @@ public interface SubscribeService {
     public boolean checkSubscribe(String loginStateUUID);
 
     //查询用户预约信息
-    public DataResult findMySubscribe(String loginStateUUID);
+    public DataResult findMySubscribe(HttpServletRequest request);
 
     //取消预约
     public DataResult delSubscribe(String loginStateUUID, Integer subscribeId);

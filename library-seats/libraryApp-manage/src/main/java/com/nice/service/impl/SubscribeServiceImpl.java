@@ -12,6 +12,7 @@ import com.nice.utils.DateUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Map;
 
@@ -75,9 +76,8 @@ public class SubscribeServiceImpl implements SubscribeService {
 
     //查询我的预约
     @Override
-    public DataResult findMySubscribe(String loginStateUUID) {
-        int userId = wxUserService.getWxUserId(loginStateUUID);
-        Map<String, Object> subscribe = subscribeMapper.findMySubscribe(userId);
+    public DataResult findMySubscribe(HttpServletRequest request) {
+        Map<String, Object> subscribe = subscribeMapper.findMySubscribe((Integer) request.getAttribute("userId"));
         if(subscribe!=null)
             return DataResult.ok(subscribe);
         else

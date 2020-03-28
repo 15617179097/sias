@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nice.mapper.NoticeMapper" >
+    <!--分页查询公告-->
+    <select id="findNotice" resultType="java.util.Map">
+        SELECT id,title,content,DATE_FORMAT(time,"%Y-%m-%d %H:%m") time from noticetable where 1=1
+        <if test="title!=null">
+            and  title like concat('%',#{title},'%')
+        </if>
+    </select>
+
+</mapper>

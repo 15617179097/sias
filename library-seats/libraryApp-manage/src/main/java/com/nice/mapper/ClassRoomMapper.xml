@@ -30,7 +30,8 @@
      id,
      floor,
      classroom_name classroomName,
-    state
+     classroom_number classroomNumber,
+     state
     from classroom where state=0
   </select>
 

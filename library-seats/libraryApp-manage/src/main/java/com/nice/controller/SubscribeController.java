@@ -6,6 +6,7 @@ import com.nice.utils.DataResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import java.text.ParseException;
 import java.util.List;
 /**
@@ -54,12 +55,12 @@ public class SubscribeController {
 
     /**
      * @Description 查询我的预约
-     * @param loginStateUUID
+     * @param request pagenum pagesize
      * @return com.nice.utils.DataResult
      **/
     @GetMapping("/my")
-    public DataResult findMySubscribe(String loginStateUUID){
-         return subscribeService.findMySubscribe(loginStateUUID);
+    public DataResult findMySubscribe(HttpServletRequest request){
+         return subscribeService.findMySubscribe(request);
     }
 
     /**

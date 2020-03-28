@@ -37,5 +37,5 @@ public interface UserInfoMapper {
     List<Map<String,Object>> findAllUsers();
 
     //删除用户信息
-    int deleteUserInfo(@Param("userId")Integer userId);
+    int updateUserInfo(@Param("userId")Integer userId,@Param("studentId")String studentId);
 }
