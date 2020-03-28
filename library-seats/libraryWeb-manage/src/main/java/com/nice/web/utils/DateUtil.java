@@ -68,7 +68,7 @@ public class DateUtil {
 
     //String 转long
     public static  long StringToLong(String time){
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-mm-dd HH:mm");
         Date parse = null;
         try {
             parse = simpleDateFormat.parse(time);

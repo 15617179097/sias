@@ -14,6 +14,11 @@ import com.nice.web.utils.DataResult;
 public interface SubscribeService {
 
     //进行预约座位
-    DataResult insertSubscribe(Subscribe subscribe, String token);
+    DataResult insertSubscribe(Subscribe subscribe, String token,String studentId);
 
+    //查询预约
+    DataResult findSubscribe(String query,int pagenum,int pagesize,String stundentId);
+
+    //结束预约
+    DataResult overSubscribe(int id);
 }

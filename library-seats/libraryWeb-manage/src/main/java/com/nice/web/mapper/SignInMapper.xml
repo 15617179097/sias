@@ -17,4 +17,8 @@
         </if>
         GROUP BY date_format(signIn_time,'%Y-%m-%d')
     </select>
+    <!-- 结束预约并结束完成签到  -->
+    <update id="overSignIn">
+        update sign_in set state = 2 where subscribe_id = #{subscribeId}
+    </update>
 </mapper>

@@ -38,4 +38,36 @@
         </if>
         GROUP BY date_format(create_time,'%Y-%m-%d')
     </select>
+    <!-- 查询预约列表   -->
+    <select id="findSubscribe" resultType="java.util.Map">
+        select
+        subscribe.id,
+        userinfo.studentId,
+        classroom.classroom_name classroomName,
+        classroom.floor floor,
+        seats.seat_munber seatNumber,
+        sign_in.state,
+        DATE_FORMAT(subscribe.create_time,'%Y-%m-%d %H:%m') createTime
+        from
+        subscribe ,seats,classroom,userinfo,sign_in
+        where
+        subscribe.classroom_id = classroom.id
+        and subscribe.seats_id = seats.id
+        and subscribe.user_id = userinfo.id
+        and subscribe.id = sign_in.subscribe_id
+        and sign_in.state != 2
+       <if test="studentId!=null and studentId!=''">
+           and subscribe.id like concat ('%',#{studentId},'%')
+       </if>
+
+    </select>
+<!-- and subscribe.create_time BETWEEN #{time} and #{endTime}-->
+    <select id="">
+        select * from subscribe where
+    </select>
+    <!-- 结束预约修改状态   -->
+    <update id="overSubscribe">
+        update subscribe set state=1 where id = #{id}
+    </update>
+
 </mapper>

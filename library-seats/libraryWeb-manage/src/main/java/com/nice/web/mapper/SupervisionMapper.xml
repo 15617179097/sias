@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nice.web.mapper.SupervisionMapper" >
+    <!--获取监督占位列表    -->
+    <select id="findSupervision" resultType="java.util.Map">
+        SELECT
+        supervision.id,
+        supervision.seats_num seatsNum,
+        classroom.classroom_name classroomName,
+        userinfo.studentId,
+        DATE_FORMAT(supervision.create_time,"%y-%m-%d %H:%m") createTime,
+        supervision.state
+        from
+            supervision,classroom,userinfo
+        WHERE
+        supervision.classroom_id = classroom.id
+        and supervision.user_id = userinfo.id
+        <if test="studentId!=''">
+            and userinfo.studentId = #{studentId}
+        </if>
+    </select>
+
+    <!--  完成监督作业  -->
+    <update id="updateSupervision">
+        update supervision set supervision.state=1 where supervision.id = #{id}
+    </update>
+</mapper>

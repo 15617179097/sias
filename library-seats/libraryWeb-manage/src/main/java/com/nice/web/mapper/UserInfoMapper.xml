@@ -3,11 +3,14 @@
 <mapper namespace="com.nice.web.mapper.UserInfoMapper" >
     <!-- 查询 用户信息-->
     <select id="findUserInfo" resultType="java.util.Map">
-    select * from UserInfo
+    select * from userInfo where 1=1
+    <if test="studentId != '' and studentId != null">
+        and studentId = #{studentId}
+    </if>
     </select>
 
     <select id="login" resultType="com.nice.web.pojo.UserInfo">
-        select * from UserInfo where studentId=#{studentId} and password = #{password};
+        select * from userInfo where studentId=#{studentId} and password = #{password};
     </select>
     <!-- 修改用户信息状态-->
     <update id="updateUserInfoState" parameterType="UserInfo">
@@ -17,4 +20,9 @@
     <delete id="deleteUserInfo">
         delete from userinfo where user_id=#{userId}
     </delete>
+    <!-- 添加用户信息   -->
+    <insert id="insertUserInfo" parameterType="com.nice.pojo.UserInfo">
+    insert into userInfo (studentId,name,user_id,state)
+    value (#{studentId},#{name},#{userId},0)
+    </insert>
 </mapper>

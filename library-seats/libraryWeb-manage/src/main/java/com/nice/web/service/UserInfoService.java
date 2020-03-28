@@ -13,5 +13,7 @@ public interface UserInfoService {
     //获取用户信息
     DataResult findUserInfo();
 
+    //
+    DataResult insertUserinfo(String studentId,String name);
 
 }

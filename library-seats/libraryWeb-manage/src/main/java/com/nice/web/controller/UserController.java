@@ -3,6 +3,7 @@ import com.nice.web.service.UserInfoService;
 import com.nice.web.utils.DataResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -29,4 +30,8 @@ public class UserController {
         return userInfoService.findUserInfo();
     }
 
+    @PostMapping("userinfo")
+    public DataResult insertUserinfo(String studentId,String name){
+        return userInfoService.insertUserinfo(studentId,name);
+    }
 }

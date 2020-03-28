@@ -4,8 +4,7 @@ import com.nice.web.pojo.Subscribe;
 import com.nice.web.service.SubscribeService;
 import com.nice.web.utils.DataResult;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -30,9 +29,26 @@ public class SubscribeController {
      * @return com.nice.web.utils.DataResult
      **/
     @PostMapping("subscribe")
-    public DataResult insertSubscribe(Subscribe subscribe, HttpServletRequest request){
+    public DataResult insertSubscribe(String studentId,Subscribe subscribe, HttpServletRequest request){
         String token = request.getHeader("Authorization");
-        return subscribeService.insertSubscribe(subscribe,token);
+        return subscribeService.insertSubscribe(subscribe,token,studentId);
+    }
+    /**
+     * @Description 查询预约
+     * @param pagenum
+     * @param pagesize
+     * @param query
+     * @return com.nice.web.utils.DataResult
+     **/
+    @GetMapping("subscribe")
+    public DataResult findSubscribe(@RequestParam(value = "pagenum",defaultValue = "1")int pagenum,
+                                    @RequestParam(value = "pagesize",defaultValue = "10")int pagesize,
+                                    String query,String stundentId){
+    return subscribeService.findSubscribe(query,pagenum,pagesize,stundentId);
     }
 
+    @PutMapping("subscribe/{id}")
+    public DataResult overSubscribe(@PathVariable("id") int id){
+        return subscribeService.overSubscribe(id);
+    }
 }

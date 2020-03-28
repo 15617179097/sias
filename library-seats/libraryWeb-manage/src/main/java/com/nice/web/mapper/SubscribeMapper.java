@@ -28,4 +28,10 @@ public interface SubscribeMapper {
 
     //本月预约数据
     public  List<Map<String,Object>> findMonthSubscribe(@Param("month") String month);
+
+    //查询预约
+    public List<Map<String,Object>> findSubscribe(@Param("studentId") String studentId);
+
+    //结束预约
+    public int overSubscribe(@Param("id")int id);
 }

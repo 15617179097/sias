@@ -25,4 +25,7 @@ public interface SignInMapper {
 
     //查询未签到记录
     List<Integer> findSignInReports(@Param("month") String month);
+
+    //结束签到
+    int overSignIn(@Param("subscribeId")int subscribeId);
 }

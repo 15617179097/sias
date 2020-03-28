@@ -17,10 +17,10 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class WebExceptionHandlerAdvice {
 
-    @ExceptionHandler(RuntimeException.class)
-    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-    public DataResult runtimeExceptionHandler(){
-        return DataResult.fail(500,"系统运行异常",null);
-    }
+//    @ExceptionHandler(RuntimeException.class)
+//    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+//    public DataResult runtimeExceptionHandler(){
+//        return DataResult.fail(500,"系统运行异常",null);
+//    }
 
 }

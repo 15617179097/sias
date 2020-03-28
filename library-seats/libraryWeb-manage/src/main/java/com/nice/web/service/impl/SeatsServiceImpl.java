@@ -57,6 +57,7 @@ public class SeatsServiceImpl implements SeatsService {
             for (Subscribe subscribe:subscribeSeats){
                 if(map.get("id").equals(subscribe.getSeatsId())){
                     map.put("sT",false);
+                    break;
                 }else {
                     map.put("sT",true);
                 }
