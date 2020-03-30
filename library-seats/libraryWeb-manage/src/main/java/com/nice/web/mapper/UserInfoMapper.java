@@ -16,10 +16,13 @@ public interface UserInfoMapper {
     public int updateUserInfoState(UserInfo userInfo);
 
     //删除学号信息
-    public int deleteUserInfo(@Param("userId")Integer userId);
+    public int deleteUserInfo(@Param("userId")Integer userId,@Param("studentId")String studentId);
 
     //添加用户信息
     int insertUserInfo(UserInfo userInfo);
+
+    //删除学号
+    int deleteUserInfoStudentId(@Param("id") int id);
 }
 
 

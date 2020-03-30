@@ -47,8 +47,8 @@ public class WxUserController {
      * @return com.nice.web.utils.DataResult
      **/
     @DeleteMapping("users/{id}")
-    public DataResult updataWxUserState(@PathVariable("id")Integer id){
-        return wxUserService.deleteUserInfo(id);
+    public DataResult updataWxUserState(@PathVariable("id")Integer id,String studentId){
+        return wxUserService.deleteUserInfo(id,studentId);
     }
 
 }

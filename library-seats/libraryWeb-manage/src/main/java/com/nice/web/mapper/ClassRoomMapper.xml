@@ -78,4 +78,14 @@
         update classroom set classroom_name=#{classroomName},classroom_number=#{classroomNumber},floor=#{floor},x=#{x},y=#{y} where id=#{id}
     </update>
 
+    <select id="findClassAndSeats" resultType="java.util.Map">
+      SELECT
+        classroom.id,
+        classroom.classroom_name classroomName,
+        seats.seat_munber seatNunber
+     FROM classroom,seats
+     WHERE
+     classroom.id = seats.classroom_id
+    </select>
+
 </mapper>

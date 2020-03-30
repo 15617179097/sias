@@ -3,8 +3,8 @@
 <mapper namespace="com.nice.web.mapper.NoticeMapper" >
     <!--添加公告-->
     <insert id="addNotice" parameterType="Notice">
-        insert into noticetable(id,title,content,time)
-        values(null,#{title},#{content},now())
+        insert into noticetable(title,content,time)
+        values(#{title},#{content},#{time})
     </insert>
     <!--删除公告-->
     <delete id="deleteNotice" parameterType="Integer">

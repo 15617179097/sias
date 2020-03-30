@@ -38,4 +38,7 @@ public interface ClassRoomService {
     //修该教室信息 教室名称 教室层数
     DataResult updateClassRoom(Integer id,Classroom classroom);
 
+    //查询教室以及座位打印二维码
+    List<Map<String,Object>> findClassAndSeats();
+
 }

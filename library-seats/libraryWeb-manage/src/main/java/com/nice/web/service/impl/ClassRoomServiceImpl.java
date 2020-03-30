@@ -129,12 +129,26 @@ public class ClassRoomServiceImpl implements ClassRoomService {
 
         return DataResult.ok();
     }
-
+    /**
+     * @Description修改教室
+     * @param id
+     * @param classroom
+     * @return com.nice.web.utils.DataResult
+     **/
     @Override
     public DataResult updateClassRoom(Integer id,Classroom classroom){
         classroom.setId(id);
         classRoomMapper.updateClassRoom(classroom);
         return DataResult.ok(classroom);
+    }
+    /**
+     * @Description 打印二维码
+     * @param
+     * @return java.util.List<java.util.Map<java.lang.String,java.lang.Object>>
+     **/
+    @Override
+    public List<Map<String, Object>> findClassAndSeats() {
+        return classRoomMapper.findClassAndSeats();
     }
 
 }

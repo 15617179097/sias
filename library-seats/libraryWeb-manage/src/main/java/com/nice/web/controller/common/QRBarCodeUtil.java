@@ -1,10 +1,16 @@
-package com.nice.web.utils;
+package com.nice.web.controller.common;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.EncodeHintType;
 import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
+import com.nice.web.mapper.ClassRoomMapper;
+import com.nice.web.service.ClassRoomService;
+import com.nice.web.utils.DataResult;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.imageio.ImageIO;
 import javax.swing.filechooser.FileSystemView;
@@ -12,12 +18,14 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
  * Created by Administrator on 2018/11/8 0008.
  * 二维码、条形码工具类
  */
+@RestController
 public class QRBarCodeUtil {
 
     /**
@@ -32,14 +40,18 @@ public class QRBarCodeUtil {
     private static final int FRONT_COLOR = 0x000000;
     private static final int BACKGROUND_COLOR = 0xFFFFFF;
 
-    /*public static void main(String[] args) {
-       /* String codeContent1 = "https://www.baidu.com/";
-        createCodeToFile(codeContent1, new File("D:/codes"), "1111.png");*/
-
-   /*     String codeContent2 = "4c86fed8-7ac9-4db7-956e-6cfe84268059";
-         createCodeToFile(codeContent2, new File("D:/codes"), "111.png");
-
-    }*/
+    @Autowired
+    private ClassRoomService classRoomService;
+    @GetMapping("scan")
+    public DataResult scan(){
+        createCodeToFile("131", new File("D:/codes"), "131.png");
+        return DataResult.ok();
+    }
+//    public static void main(String[] args) {
+//
+//        createCodeToFile("131", new File("D:/codes"), "131.png");
+//
+//    }
 
     /**
      * 生成二维码 并 保存为图片

@@ -73,12 +73,12 @@ public class WxUserServiceImpl implements WxUserService {
      * @return com.nice.web.utils.DataResult
      **/
     @Override
-    public DataResult deleteUserInfo(Integer id) {
-        try{
-            userInfoMapper.deleteUserInfo(id);
-        }catch(Exception e){
-            return DataResult.fail(500,"删除信息失败！",e);
+    public DataResult deleteUserInfo(Integer id,String studentId) {
+        List<Map<String, Object>> userInfo = userInfoMapper.findUserInfo(studentId);
+        if(userInfo.get(0).get("user_id").equals(0)){
+            userInfoMapper.deleteUserInfo(id,studentId);
         }
+        userInfoMapper.deleteUserInfoStudentId(id);
         return DataResult.ok();
     }
 }

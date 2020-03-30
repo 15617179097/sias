@@ -18,11 +18,15 @@
     </update>
     <!-- 删除用户信息状态-->
     <delete id="deleteUserInfo">
-        delete from userinfo where user_id=#{userId}
+        delete from userinfo where user_id=#{userId} and studentId = #{studentId}
     </delete>
     <!-- 添加用户信息   -->
     <insert id="insertUserInfo" parameterType="com.nice.pojo.UserInfo">
     insert into userInfo (studentId,name,user_id,state)
     value (#{studentId},#{name},#{userId},0)
     </insert>
+    <!--删除学号    -->
+    <delete id="deleteUserInfoStudentId">
+         UPDATE  userinfo set studentId=null where user_id=#{id}
+     </delete>
 </mapper>

@@ -34,4 +34,6 @@ public interface ClassRoomMapper {
     public int updateClassRoomState(Classroom classroom);
     //修该教室信息
     public int updateClassRoom(Classroom classroom);
+    //查询教室以及座位打印二维码
+    List<Map<String,Object>> findClassAndSeats();
 }

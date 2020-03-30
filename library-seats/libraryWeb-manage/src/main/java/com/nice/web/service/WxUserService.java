@@ -18,5 +18,5 @@ public interface WxUserService {
     DataResult updataWxUserState(Integer id,Integer state);
 
     //删除绑定学号等信息
-    DataResult deleteUserInfo(Integer id);
+    DataResult deleteUserInfo(Integer id,String studentId);
 }
