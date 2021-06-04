@@ -31,7 +31,7 @@
         <commons-io.version>1.3.2</commons-io.version>
         <commons-net.version>3.3</commons-net.version>
         <pagehelper.version>3.7.5</pagehelper.version>
-        <httpclient.version>4.3.5</httpclient.version>
+        <httpclient.version>4.5.13</httpclient.version>
         <bouncycastle.version>1.60</bouncycastle.version>
         <google-core.version>3.3.3</google-core.version>
         <google-javase.version>3.3.3</google-javase.version>
